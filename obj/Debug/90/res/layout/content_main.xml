@@ -1,0 +1,8 @@
+
+  <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" tools:showIn="@layout/activity_main" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"><ImageView android:id="@+id/HomeLogo" android:contentDescription="@string/cd_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="2dp" android:minWidth="2dp" android:src="@drawable/owu0ot" android:layout_centerHorizontal="true" /><Button android:id="@+id/LoginButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/HomeLogo" android:layout_centerHorizontal="true" android:text="@string/login" />
+    /&gt;  
+
+    <Button android:id="@+id/SignUpButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/LoginButton" android:layout_centerHorizontal="true" android:text="@string/sign_up" />
+    /&gt;  
+
+</RelativeLayout>
