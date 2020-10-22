@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.Page1">
+    <ContentPage.Content>
+      
+        <RelativeLayout>
+            <Label Text="Uploading Item"
+                VerticalOptions="Start"
+                HorizontalOptions="CenterAndExpand"
+                   TextColor="Cyan" 
+                  RelativeLayout.XConstraint="100" />
+            <Button Text="+Add picture" TextColor="Yellow" 
+                    RelativeLayout.YConstraint ="50"/>
+            <Label Text="Condition" TextColor="#C0C0C0" 
+                   RelativeLayout.YConstraint="120"/>
+            <Label Text="Price per night:" TextColor="#C0C0C0"
+                   RelativeLayout.YConstraint="200"/>
+            <Entry Placeholder="Price" PlaceholderColor="#C0C0C0"
+                   RelativeLayout.YConstraint="235"/>
+            
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
