@@ -15,8 +15,9 @@ namespace RentalsApp.DBObjects
     public class Cart
     {
         //Dictionary of Items as keys with the days 
-        public Dictionary<Item, int> cartList;
+        public Dictionary<Item, int> itemList;
         public double totalCost;
-        public DateTime cartCreationTime;
+        public DateTime creationTime;
+        public bool active;
     }
 }

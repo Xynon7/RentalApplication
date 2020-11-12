@@ -6,9 +6,9 @@ using RentalsApp.DBObjects;
 
 namespace RentalsApp
 {
-    public class SearchEngine
+    public static class SearchEngine
     {
-        public List<Item> SearchForItem(string username, string itemNum, string brand, string type, string costPerDay, bool isAvailable, DateTime availabilityDate)
+        public static List<Item> SearchForItem(string username, string itemNum, string brand, string type, string costPerDay, bool isAvailable, DateTime availabilityDate)
         {
             SearchResult result = RASQLManager.sqlManagerInstance.SearchForItems(username, itemNum, brand, type, costPerDay, isAvailable, availabilityDate);
             return result.items;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 
 using Android.App;
@@ -17,15 +18,17 @@ namespace RentalsApp.DBObjects
         public string itemNum;
         public string brand;
         public string type;
-        public string costPerDay;
+        public string description;
+        public double costPerDay;
         public DateTime datePosted;
         public List<ItemImage> itemImages;
 
-        public ItemListing(string ItemNum, string Brand, string Type, string CostPerDay, DateTime DatePosted)
+        public ItemListing(string ItemNum, string Brand, string Type, string Description, double CostPerDay, DateTime DatePosted)
         {
             itemNum = ItemNum;
             brand = Brand;
             type = Type;
+            description = Description;
             costPerDay = CostPerDay;
             datePosted = DatePosted;
         }
