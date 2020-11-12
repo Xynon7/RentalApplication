@@ -11,8 +11,9 @@ namespace RentalApp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+          //  NavigationPage StartPage;
+         MainPage = new NavigationPage(new MainPage());
+          //  StartPage = new NavigationPage(new StartPage());
         }
 
         protected override void OnStart()

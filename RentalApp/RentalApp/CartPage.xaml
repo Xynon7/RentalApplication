@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.CartPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Cart" />
+            <Label Text="*List of cart items* *Add binding here*"  />
+            <RelativeLayout>
+                <Label Text="{Binding TotalCost}" RelativeLayout.XConstraint="250"
+                       RelativeLayout.YConstraint="50"
+                       WidthRequest="100"/>
+                <Button Text="Check Out" RelativeLayout.XConstraint="50"
+                        RelativeLayout.YConstraint="100"
+                        WidthRequest="100"/>
+                <Button Text="Return to results" RelativeLayout.XConstraint="50"
+                        RelativeLayout.YConstraint="200"
+                        WidthRequest="100"/>
+                <Button Text="Return to search" RelativeLayout.XConstraint="200"
+                        RelativeLayout.YConstraint="100"
+                        WidthRequest="100"/>
+                <Button Text="Delete cart" RelativeLayout.XConstraint="200"
+                        RelativeLayout.YConstraint="200"
+                        WidthRequest="100"/>
+                <Button Text="Home" RelativeLayout.XConstraint="215"
+                        RelativeLayout.YConstraint="275"
+                        WidthRequest="100"/>
+            </RelativeLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

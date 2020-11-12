@@ -12,6 +12,11 @@ namespace RentalApp
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new ViewModels.AddUserViewModel();
+        }
+        async void OnWelcomeClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StartPage());
         }
     }
 }

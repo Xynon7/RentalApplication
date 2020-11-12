@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.SignInPage">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Image Source="BACKGROUNDIMAGE.png" Opacity="1"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+            <Grid RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+
+
+
+            </Grid>
+            <Entry  Placeholder="Email" 
+                 
+                 
+                 RelativeLayout.XConstraint="150"
+                 RelativeLayout.YConstraint="400"
+                 />
+            <Entry Placeholder="Password"
+                
+                RelativeLayout.XConstraint="150"
+                RelativeLayout.YConstraint="450"/>
+            <Button Text="Enter"
+                    RelativeLayout.XConstraint="150"
+                    RelativeLayout.YConstraint="475" 
+                    Clicked="OnEnterClicked"/>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

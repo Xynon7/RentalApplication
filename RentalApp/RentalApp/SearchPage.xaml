@@ -3,16 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.SearchPage">
     
-  <StackLayout Margin="5">
+  <StackLayout Margin="5" BackgroundColor="AntiqueWhite">
             
             
             
-        <Label Text="Can you see me?" />
-        <SearchBar x:Name="RentalList"
-            Placeholder="What would you like to rent?"
-                HeightRequest="10"
-                   SearchCommand="{Binding PerformSearch}"
-        SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}" />
+        <Label Text="Search" />
+        <Entry Text="{Binding Brand}" Placeholder="Item Brand" PlaceholderColor="Black"/>
+        <Entry Text="{Binding Type}" Placeholder="Item type" PlaceholderColor="Black"/>
+        <Entry Text="{Binding HighestCost}" Placeholder="Highest cost" PlaceholderColor="Black"/>
+        <Entry Text="{Binding LowestCost}" Placeholder="Lowest Cost" PlaceholderColor="Black"/>
+        <Entry Text="{Binding City}" Placeholder="City" PlaceholderColor="Black"/>
+        <Entry Text="{Binding Zip}" Placeholder="Zip" PlaceholderColor="Black" />
+        <Button Text="View Results" 
+                Clicked="OnViewResultsClicked"/>
+        
+
     </StackLayout>
     
 </ContentPage>

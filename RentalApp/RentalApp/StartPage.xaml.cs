@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace RentalApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class NewPage : ContentPage
+	public partial class StartPage : ContentPage
 	{
-		public NewPage ()
+		public StartPage ()
 		{
 
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace RentalApp
         }
         async void  OnLogInClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SignUpPage());
+            await Navigation.PushAsync(new SignInPage());
         }
     }
 }

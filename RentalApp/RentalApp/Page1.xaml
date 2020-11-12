@@ -9,16 +9,25 @@
                 VerticalOptions="Start"
                 HorizontalOptions="CenterAndExpand"
                    TextColor="Cyan" 
-                  RelativeLayout.XConstraint="100" />
+                  RelativeLayout.XConstraint="100"
+                   />
             <Button Text="+Add picture" TextColor="Yellow" 
-                    RelativeLayout.YConstraint ="50"/>
+                    RelativeLayout.YConstraint ="50"
+                    />
+            <!--/Add OnAddPhotoClicked>-->
             <Label Text="Condition" TextColor="#C0C0C0" 
                    RelativeLayout.YConstraint="120"/>
             <Label Text="Price per night:" TextColor="#C0C0C0"
                    RelativeLayout.YConstraint="200"/>
             <Entry Placeholder="Price" PlaceholderColor="#C0C0C0"
                    RelativeLayout.YConstraint="235"/>
-            
+
+            <Image x:Name="MainImage" 
+                   RelativeLayout.YConstraint="250"/>
+
+            <Label x:Name="PathLabel"
+                   RelativeLayout.YConstraint="300"/>
+
         </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

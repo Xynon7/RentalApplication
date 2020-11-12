@@ -37,7 +37,6 @@ C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp.Android\obj\Debug\81\u
 C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp.Android\obj\Debug\81\res\drawable\background.jpg
 C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp.Android\obj\Debug\81\res\drawable\backgroundimage.png
 C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp\bin\Debug\netstandard2.0\RentalApp.dll
-C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp\bin\Debug\netstandard2.0\RentalApp.dll
 C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp.Android\bin\Debug\FormsViewGroup.pdb
 C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp.Android\bin\Debug\Mono.Android.pdb
 C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp.Android\bin\Debug\mscorlib.pdb
@@ -83,3 +82,6 @@ C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp.Android\obj\Debug\81\l
 C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp.Android\obj\Debug\81\linksrc\Mono.Security.pdb
 C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp.Android\bin\Debug\RentalApp.dll.mdb
 C:\Users\starf\source\repos\RentalApp\RentalApp\RentalApp.Android\obj\Debug\81\linksrc\RentalApp.dll.mdb
+C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp\bin\Debug\netstandard2.0\RentalApp.dll
+C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp.Android\obj\Debug\81\RentalApp.Android.nuget.stamp

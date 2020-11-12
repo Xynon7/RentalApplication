@@ -3,32 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.SignUpPage">
     <ContentPage.Content>
-        <StackLayout Margin="8" BackgroundColor="AntiqueWhite" >
+        <StackLayout Padding="8" BackgroundColor="AntiqueWhite" >
            
-            <Entry Placeholder="First name" PlaceholderColor="Black"/>
-            <Entry Placeholder="Last Name" PlaceholderColor="Black"/>
-            <Entry Placeholder="Date of Birth" PlaceholderColor="Black"/>
-            <Entry Placeholder="Gender" PlaceholderColor="Black"/>
-            <Entry Placeholder="Username" PlaceholderColor="Black"/>
-            <Entry Placeholder="Email" PlaceholderColor="Black"/>
-            <Entry Placeholder="Password" PlaceholderColor="Black"/>
+            <Entry Text="{Binding firstName}" Placeholder="First name" PlaceholderColor="Black" />
+            <Entry Text="{Binding lastName}" Placeholder="Last Name" PlaceholderColor="Black"/>
+            <Entry Text="{Binding MiddleInitial}" Placeholder="Middle Initial" PlaceholderColor="Black"/>
+            <Entry Text="{Binding dateOfBirth}" Placeholder="Date of Birth" PlaceholderColor="Black"/>
+            <Entry Text="{Binding Gender}" Placeholder="Gender" PlaceholderColor="Black"/>
+            <Entry Text="{Binding Username}" Placeholder="Username" PlaceholderColor="Black"/>
+            <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="Black"/>
+            <Entry Text="{Binding Password}" Placeholder="Password" PlaceholderColor="Black"/>
 
             <Entry Placeholder="Confirm Password" PlaceholderColor="Black"/>
             <Label Text="Sign up as" TextColor="Black"/>
             <RelativeLayout>
                 <Label Text="Lessor" TextColor="Black"/>
-                <Switch IsToggled="True"
+                <Switch IsToggled="{Binding isLessor}"
                       RelativeLayout.XConstraint="160"
+                        RelativeLayout.YConstraint="20"
                         OnColor="Blue" />
                 <Label Text="Renter" 
                         RelativeLayout.XConstraint="160" TextColor="Black"/>
-                <Switch IsToggled="True"
+                <Switch IsToggled="{Binding isRenter}"
+                        RelativeLayout.YConstraint="20"
                         OnColor="Blue"/>
             </RelativeLayout>
-            <Entry Placeholder="I agree" TextColor="Black"/>
+            <Entry Placeholder="I agree" PlaceholderColor="Black"/>
+            <Button Text="Continue" 
+                    Clicked="OnSignUpAppClicked"/>
 
-            
-         
+
 
         </StackLayout>
     </ContentPage.Content>

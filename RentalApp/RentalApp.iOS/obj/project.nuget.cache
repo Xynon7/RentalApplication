@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "OgPOAH3eP5oIUFUtM5dgYsbr4tjpKWuvJXxFMpNdxAkoeYCBIiNAFnjqwG86pPv5o+7VCk0lQN1oV3AjlgSL4g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\starf\\source\\repos\\RentalApplication\\RentalApp\\RentalApp.iOS\\RentalApp.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\starf\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\starf\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
+    "C:\\Users\\starf\\.nuget\\packages\\xamarin.forms\\5.0.0.1558-pre3\\xamarin.forms.5.0.0.1558-pre3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -15,6 +15,11 @@ namespace RentalApp
 		public SignUpPage ()
 		{
             InitializeComponent();
+          //  BindingContext = AddUserViewModel();
         }
-	}
+        async void OnSignUpAppClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SignUpPage2());
+        }
+    }
 }

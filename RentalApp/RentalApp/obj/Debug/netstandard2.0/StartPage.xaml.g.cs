@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("RentalApp.StartPage.xaml", "StartPage.xaml", typeof(global::RentalApp.NewPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("RentalApp.StartPage.xaml", "StartPage.xaml", typeof(global::RentalApp.StartPage))]
 
 namespace RentalApp {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("StartPage.xaml")]
-    public partial class NewPage : global::Xamarin.Forms.ContentPage {
+    public partial class StartPage : global::Xamarin.Forms.ContentPage {
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(NewPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(StartPage));
         }
     }
 }

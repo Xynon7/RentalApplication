@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.LocationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Locations" />
+            <Label Text="*List Locations*" />
+            <Entry Text="{Binding Name}" Placeholder="Name"/>
+            <Entry Text="{Binding Address}" Placeholder="Address"/>
+            <Entry Text="{Binding City}" Placeholder="City"/>
+            <Entry Text="{Binding State}" Placeholder="State"/>
+            <Entry Text="{Binding Zip}" Placeholder="Zip code"/>
+            <Button Text="Add location" Command="{Binding AddLocationCommand}"
+                    Clicked="OnAddLocationClicked"/>
+            <Button Text="Return to profile"
+                    Clicked="OnReturnClicked"/>
+            <Button Text="Home"
+                    Clicked="OnHomeClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
