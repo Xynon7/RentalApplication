@@ -115,5 +115,3 @@ C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp.iOS\bin\iPhone
 C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp.iOS\bin\iPhoneSimulator\Debug\Plugin.Media.pdb
 C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.dll
 C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.pdb
-C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp.iOS\bin\iPhoneSimulator\Debug\RentalApp.dll.mdb
-C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp.iOS\obj\iPhoneSimulator\Debug\build-signature\signature

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 namespace RentalApp.ViewModels
@@ -157,7 +155,8 @@ namespace RentalApp.ViewModels
 
        public  void AddUser(string Username, string Gender, string PhoneNumber, string StateId, string SSN, DateTime DOB, string FirstName, string MiddleInitial, string LastName)
         {
-           // DBObject.User.User(Username, Gender, PhoneNumber, StateId, SSN, DOB, FirstName, MiddleInitial, LastName);
+            //DBObject.User.User(Username, Gender, PhoneNumber, StateId, SSN, DOB, FirstName, MiddleInitial, LastName);
+            
         }
 
         public void OnSubmit()

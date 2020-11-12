@@ -52,3 +52,4 @@ C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp\obj\Debug\nets
 C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.dll
 C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.pdb
+C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.csprojAssemblyReference.cache
