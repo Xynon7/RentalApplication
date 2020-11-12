@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using RentalsApp.DBObjects;
-using Java.Sql;
 using MySql;
 using MySql.Data.MySqlClient;
 
