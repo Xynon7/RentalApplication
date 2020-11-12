@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.SearchPage">
+    
+  <StackLayout Margin="5">
+            
+            
+            
+        <Label Text="Can you see me?" />
+        <SearchBar x:Name="RentalList"
+            Placeholder="What would you like to rent?"
+                HeightRequest="10"
+                   SearchCommand="{Binding PerformSearch}"
+        SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}" />
+    </StackLayout>
+    
+</ContentPage>
