@@ -3,3 +3,8 @@
 ################################################################################
 
 /.vs
+/RentalApplicationAndroid/obj/Debug/90
+/RentalApplicationAndroid/obj/Release/90
+/RentalApp/RentalApp.Android/obj
+/RentalApp/RentalApp.iOS/obj/iPhoneSimulator/Debug
+/obj
