@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentalApp.DBObjects;
+using System;
 using System.Collections.Generic;
 
 namespace RentalsApp.DBObjects
@@ -14,14 +15,18 @@ namespace RentalsApp.DBObjects
         public string firstName;
         public string middleInitial;
         public string lastName;
+        public bool agreedToTC;
+        public bool agreedToPP;
+        public bool agreedToSP;
         private List<Location> locations;
         private List<Communication> messagesReceived;
         private List<Communication> messagesSent;
         private List<Invoice> invoices;
         private List<Exchange> exchanges;
+        private List<WishlistItem> wishlistItems;
         private Cart cart;
 
-        public User(string Username, string Gender, string PhoneNumber, string StateId, string SSN, DateTime DOB, string FirstName, string MiddleInitial, string LastName)
+        public User(string Username, string Gender, string PhoneNumber, string StateId, string SSN, DateTime DOB, string FirstName, string MiddleInitial, string LastName, bool AgreedTC, bool AgreedPP, bool AgreedSP)
         {
             username = Username;
             gender = Gender;
@@ -32,7 +37,10 @@ namespace RentalsApp.DBObjects
             firstName = FirstName;
             middleInitial = MiddleInitial;
             lastName = LastName;
-        }
+            agreedToTC = AgreedTC;
+            agreedToPP = AgreedPP;
+            agreedToSP = AgreedSP;
+    }
 
         public List<Location> RetrieveLocations()
         {
@@ -60,14 +68,20 @@ namespace RentalsApp.DBObjects
 
         public List<Invoice> RetrieveInvoices()
         {
-            PopulateMessagesReceived();
+            PopulateInvoices();
             return invoices;
         }
 
         public List<Exchange> RetrieveExchanges()
         {
-            PopulateMessagesSent();
+            PopulateExchanges();
             return exchanges;
+        }
+
+        public List<WishlistItem> RetrieveWishlist()
+        {
+            PopulateWishlist();
+            return wishlistItems;
         }
 
         private void PopulateLocations()
@@ -98,6 +112,11 @@ namespace RentalsApp.DBObjects
         private void PopulateExchanges()
         {
             exchanges = RASQLManager.sqlManagerInstance.GetExchanges(username);
+        }
+
+        private void PopulateWishlist()
+        {
+            wishlistItems = RASQLManager.sqlManagerInstance.GetWishlist(username);
         }
     }
 }
