@@ -124,3 +124,7 @@ androidx.legacy.legacy-support-v4
 androidx.browser.browser
 androidx.palette.palette
 androidx.mediarouter.mediarouter
+Xamarin.AndroidX.Lifecycle.ViewModelSavedState
+Xamarin.AndroidX.ViewPager2
+androidx.lifecycle.lifecycle-viewmodel-savedstate
+androidx.viewpager2.viewpager2
