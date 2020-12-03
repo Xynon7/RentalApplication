@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.RenterHubPage">
+    <ContentPage.Content>
+
+        <RelativeLayout>
+            <Image Source="BACKGROUNDIMAGE.png" Opacity="1"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+            <StackLayout Padding="10"
+                RelativeLayout.XConstraint="50"
+                         RelativeLayout.YConstraint="50" WidthRequest="250">
+            <Label Text="Renter Hub"/>
+            <Button Text="New Invoices"/>
+            <Button Text="Rate a Lessor"/>
+            <Button Text="Messages"/>
+            <Button Text="Exchanges"/>
+            <Button Text="Renter Agreement"/>
+            <Label Text="Average Renter Rating"/>
+            <Button Text="Home"/>
+        </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.HomePage">
+    <ContentPage.Content>
+        
+            <RelativeLayout>
+            <Image Source="BACKGROUNDIMAGE1.png" Opacity="1"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+            <StackLayout Padding="10"  RelativeLayout.XConstraint="50"
+                 RelativeLayout.YConstraint="50">
+                <Label Text="Welcome, what would you like to do today?"
+                 />
+            <Button Text="View my profile"
+                    Clicked="OnViewProfileClicked"/>
+            <Button Text="View my wish list"
+                    Clicked="OnViewWishListClicked"/>
+            <Button Text="Search for an item"
+                    Clicked="OnSearchClicked"/>
+            <Button Text="View My renter hub"
+                    Clicked="OnViewRenterHubClicked"/>
+            <Button Text="View my lessor hub"
+                    Clicked="OnViewLessorHubClicked"/>
+            <Button Text="Report User"
+                    Clicked="OnReportClicked"/>
+                </StackLayout>
+                </RelativeLayout>
+
+    </ContentPage.Content>
+</ContentPage>
