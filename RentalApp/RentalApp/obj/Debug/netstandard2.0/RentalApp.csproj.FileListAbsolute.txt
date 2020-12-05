@@ -201,3 +201,43 @@ C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp
 C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\NewListingPage.xaml.g.cs
 C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RatingsPage.xaml.g.cs
 C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.csprojAssemblyReference.cache
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\bin\Debug\netstandard2.0\RentalApp.deps.json
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\bin\Debug\netstandard2.0\RentalApp.dll
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\bin\Debug\netstandard2.0\RentalApp.pdb
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.csprojAssemblyReference.cache
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\CartPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\ErrorPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\ExchangePage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\InvoicePage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\LessorHubPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\ListingsPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\LocationPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\LoginPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\MessagesPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\NewListingPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\Page1.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\Page2.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\PrivacyPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\ProfilePage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RatingsPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RenterHubPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\ReportUserPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\ResultsPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\SearchPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\SignInPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\SignUpPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\SignUpPage2.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\StandardsPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\StartPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\TermsPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\ViewModels\View1.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\WishListPage.xaml.g.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.AssemblyInfoInputs.cache
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.AssemblyInfo.cs
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.csproj.CoreCompileInputs.cache
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.dll
+C:\Users\starf\source\repos\1204RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.pdb

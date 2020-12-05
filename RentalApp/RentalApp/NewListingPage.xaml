@@ -5,11 +5,12 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="New Item Listings" />
-            <Entry Placeholder=""/>
-            <Entry Placeholder=""/>
-            <Entry Placeholder=""/>
-            <Entry Placeholder=""/>
-            <Entry Placeholder=""/>
+            <Entry Placeholder="Item Description" Completed="DescriptionCompleted"/>
+            <Entry Placeholder="Item Brand" Completed="BrandCompleted"/>
+            <Entry Placeholder="Item type" Completed="TypeCompleted"/>
+            
+            <Entry Placeholder="Cost Per day" Completed="CostCompleted"/>
+            <Button Text="Submit" Clicked="OnSubmitClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

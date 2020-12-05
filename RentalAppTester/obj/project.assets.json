@@ -1218,24 +1218,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Chase Clawson\\.nuget\\packages\\": {},
+    "C:\\Users\\starf\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
+      "projectUniqueName": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
       "projectName": "RentalAppTester",
-      "projectPath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
-      "packagesPath": "C:\\Users\\Chase Clawson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalAppTester\\obj\\",
+      "projectPath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
+      "packagesPath": "C:\\Users\\starf\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalAppTester\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Chase Clawson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\starf\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1249,8 +1249,8 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj": {
-              "projectPath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj"
+            "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj": {
+              "projectPath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj"
             }
           }
         }
