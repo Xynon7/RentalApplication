@@ -4,9 +4,12 @@
              x:Class="RentalApp.NewListingPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="New Item Listings" />
+            <Entry Placeholder=""/>
+            <Entry Placeholder=""/>
+            <Entry Placeholder=""/>
+            <Entry Placeholder=""/>
+            <Entry Placeholder=""/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

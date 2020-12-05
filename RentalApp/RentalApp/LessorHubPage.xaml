@@ -5,14 +5,14 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Lessor Hub"/>
-            <Button Text="New item Listing" />
-            <Button Text="Item Listings"/>
-            <Button Text="Rate A Renter"/>
-            <Button Text="Messages"/>
-            <Button Text="Exchanges"/>
-            <Button Text="Lessor Agreement"/>
+            <Button Text="New item Listing"  Clicked="OnNewItemCliked"/>
+            <Button Text="Item Listings" Clicked="OnListingsClicked"/>
+            <Button Text="Rate A Renter" Clicked="OnRatingsClicked"/>
+            <Button Text="Messages" Clicked="OnMessagesClicked"/>
+            <Button Text="Exchanges" Clicked="OnExchangesClicked"/>
+            <Button Text="Lessor Agreement" Clicked="OnLAgreementsClicked"/>
             <Label Text="Average Lessor Rating " />
-            <Button Text="Home"/>
+            <Button Text="Home" Clicked="OnHomeClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
