@@ -4,9 +4,9 @@
              x:Class="RentalApp.TermsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Welcome to Xamarin.Forms!" />
+            <Button Text="Agree" Clicked="OnAgreeClicked"/>
+            <Button Text="Disagree" Clicked="OnDisagreeClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

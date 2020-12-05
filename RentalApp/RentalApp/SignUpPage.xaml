@@ -3,16 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.SignUpPage">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout Padding="8" BackgroundColor="AntiqueWhite" >
            
-            <Entry Text="{Binding firstName}" Placeholder="First name" PlaceholderColor="Black" />
-            <Entry Text="{Binding lastName}" Placeholder="Last Name" PlaceholderColor="Black"/>
-            <Entry Text="{Binding MiddleInitial}" Placeholder="Middle Initial" PlaceholderColor="Black"/>
-            <Entry Text="{Binding dateOfBirth}" Placeholder="Date of Birth" PlaceholderColor="Black"/>
-            <Entry Text="{Binding Gender}" Placeholder="Gender" PlaceholderColor="Black"/>
-            <Entry Text="{Binding Username}" Placeholder="Username" PlaceholderColor="Black"/>
-            <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="Black"/>
-            <Entry Text="{Binding Password}" Placeholder="Password" PlaceholderColor="Black"/>
+            <Entry Text="{Binding firstName}" Placeholder="First name" PlaceholderColor="Black"  Completed="FirstName_Completed"/>
+            <Entry Text="{Binding lastName}" Placeholder="Last Name" PlaceholderColor="Black" Completed="LastName_Completed"/>
+            <Entry Text="{Binding MiddleInitial}" Placeholder="Middle Initial" PlaceholderColor="Black" Completed="MiddleInitial_Completed"/>
+
+            <Label Text="Date of Birth:" TextColor="Black"/>
+            <DatePicker MinimumDate="01/01/1900" MaximumDate="12/23/2010" DateSelected="OnDateSelected"/>
+            
+            <Entry Text="{Binding Gender}" Placeholder="Gender" PlaceholderColor="Black" Completed="Gender_Completed"/>
+            <Entry Text="{Binding Username}" Placeholder="Username" PlaceholderColor="Black" Completed="Username_Completed"/>
+            <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="Black" Completed="Email_Completed"/>
+            <Entry Text="{Binding Password}" Placeholder="Password" PlaceholderColor="Black" Completed="Password_Completed"/>
+            <Entry Placeholder="SSN" PlaceholderColor="Black" Completed="SSN_Completed"/>
+            <Entry Placeholder="StateID" PlaceholderColor="Black" Completed="StateID_Completed"/>
+            <Entry Placeholder="Phone Number" PlaceholderColor="Black"/>
+
+
 
             <Entry Placeholder="Confirm Password" PlaceholderColor="Black"/>
             <Label Text="Sign up as" TextColor="Black"/>
@@ -35,5 +44,6 @@
 
 
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

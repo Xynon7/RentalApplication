@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using RentalsApp.DBObjects;
 using MySql;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 using RentalApp.DBObjects;
+using MySqlConnector;
+using System.Threading.Tasks;
 
 namespace RentalsApp
 {
@@ -58,15 +60,16 @@ namespace RentalsApp
                         Communication result = new Communication();
                         result.sender = sqlDataReader[0].ToString();
                         result.receiver = sqlDataReader[1].ToString();
-                        result.messageBody = sqlDataReader[3].ToString();
-                        result.messageDateTime = DateTime.Parse(sqlDataReader[4].ToString()).Date;
-                        result.messageDateTime.AddHours(DateTime.Parse(sqlDataReader[5].ToString()).Hour);
-                        result.messageDateTime.AddMinutes(DateTime.Parse(sqlDataReader[5].ToString()).Minute);
-                        result.messageDateTime.AddSeconds(DateTime.Parse(sqlDataReader[5].ToString()).Second);
+                        result.messageDateTime = DateTime.Parse(sqlDataReader[3].ToString()).Date;
+                        result.messageDateTime.AddHours(DateTime.Parse(sqlDataReader[4].ToString()).Hour);
+                        result.messageDateTime.AddMinutes(DateTime.Parse(sqlDataReader[4].ToString()).Minute);
+                        result.messageDateTime.AddSeconds(DateTime.Parse(sqlDataReader[4].ToString()).Second);
+                        result.messageBody = sqlDataReader[5].ToString();
                         messageResults.Add(result);
                     }
                 }
             }
+            mySqlConnection.Close();
 
             return messageResults;
         }
@@ -86,17 +89,17 @@ namespace RentalsApp
                 sqlCommand.Parameters.AddWithValue("@Username", username);
 
                 using (MySqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
-                {
+                { 
                     while (sqlDataReader.Read())
                     {
                         Communication result = new Communication();
                         result.sender = sqlDataReader[0].ToString();
                         result.receiver = sqlDataReader[1].ToString();
-                        result.messageBody = sqlDataReader[3].ToString();
-                        result.messageDateTime = DateTime.Parse(sqlDataReader[4].ToString()).Date;
-                        result.messageDateTime.AddHours(DateTime.Parse(sqlDataReader[5].ToString()).Hour);
-                        result.messageDateTime.AddMinutes(DateTime.Parse(sqlDataReader[5].ToString()).Minute);
-                        result.messageDateTime.AddSeconds(DateTime.Parse(sqlDataReader[5].ToString()).Second);
+                        result.messageDateTime = DateTime.Parse(sqlDataReader[3].ToString()).Date;
+                        result.messageDateTime.AddHours(DateTime.Parse(sqlDataReader[4].ToString()).Hour);
+                        result.messageDateTime.AddMinutes(DateTime.Parse(sqlDataReader[4].ToString()).Minute);
+                        result.messageDateTime.AddSeconds(DateTime.Parse(sqlDataReader[4].ToString()).Second);
+                        result.messageBody = sqlDataReader[5].ToString();
                         messageResults.Add(result);
                     }
                 }
@@ -494,50 +497,58 @@ namespace RentalsApp
 
                 try
                 {
-                    Console.WriteLine("Connecting to MySQL...");
-                    mySqlConnection.Open();
-                    Console.WriteLine("MySQL connection succeeded.");
 
-                    using (MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO rentit_user VALUES(@Username, @Password, @Gender, @PhoneNumber, @StateId, @SSN, @DOB, @FirstName, @MiddleInitial, @LastName, 0, 0, 0, 0)"))
-                    {
-                        mySqlCommand.Parameters.AddWithValue("@Username", username);
-                        mySqlCommand.Parameters.AddWithValue("@Password", password);
-                        mySqlCommand.Parameters.AddWithValue("@Gender", gender);
-                        mySqlCommand.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                        mySqlCommand.Parameters.AddWithValue("@StateId", stateId);
-                        mySqlCommand.Parameters.AddWithValue("@SSN", sSN);
-                        mySqlCommand.Parameters.AddWithValue("@DOB", dOB);
-                        mySqlCommand.Parameters.AddWithValue("@FirstName", firstName);
-                        mySqlCommand.Parameters.AddWithValue("@MiddleInitial", middleInitial);
-                        mySqlCommand.Parameters.AddWithValue("@LastName", lastName);
 
-                        mySqlCommand.ExecuteNonQuery();
-                    }
 
-                    using (MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO receiver VALUES(@Username)"))
-                    {
-                        mySqlCommand.Parameters.AddWithValue("@Username", username);
 
-                        mySqlCommand.ExecuteNonQuery();
-                    }
+                   
+                        Console.WriteLine("Connecting to MySQL...");
+                       mySqlConnection.OpenAsync();
+                        Console.WriteLine("MySQL connection succeeded.");
 
-                    using (MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO sender VALUES(@Username)"))
-                    {
-                        mySqlCommand.Parameters.AddWithValue("@Username", username);
 
-                        mySqlCommand.ExecuteNonQuery();
-                    }
+                        using (MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO rentit_user VALUES(@Username, @Password, @Gender, @PhoneNumber, @StateId, @SSN, @DOB, @FirstName, @MiddleInitial, @LastName, 0, 0, 0, 0)"))
+                        {
+                            mySqlCommand.Parameters.AddWithValue("@Username", username);
+                            mySqlCommand.Parameters.AddWithValue("@Password", password);
+                            mySqlCommand.Parameters.AddWithValue("@Gender", gender);
+                            mySqlCommand.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                            mySqlCommand.Parameters.AddWithValue("@StateId", stateId);
+                            mySqlCommand.Parameters.AddWithValue("@SSN", sSN);
+                            mySqlCommand.Parameters.AddWithValue("@DOB", dOB);
+                            mySqlCommand.Parameters.AddWithValue("@FirstName", firstName);
+                            mySqlCommand.Parameters.AddWithValue("@MiddleInitial", middleInitial);
+                            mySqlCommand.Parameters.AddWithValue("@LastName", lastName);
 
-                    using (MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO seeker VALUES(@Username)"))
-                    {
-                        mySqlCommand.Parameters.AddWithValue("@Username", username);
+                          mySqlCommand.ExecuteNonQueryAsync();
+                        }
 
-                        mySqlCommand.ExecuteNonQuery();
-                    }
+                        using (MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO receiver VALUES(@Username)"))
+                        {
+                            mySqlCommand.Parameters.AddWithValue("@Username", username);
 
-                    mySqlConnection.Close();
-                    currentUser = new User(username, gender, phoneNumber, stateId, sSN, dOB, firstName, middleInitial, lastName, false, false, false);
-                    successful = true;
+                            mySqlCommand.ExecuteNonQueryAsync();
+                        }
+
+                        using (MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO sender VALUES(@Username)"))
+                        {
+                            mySqlCommand.Parameters.AddWithValue("@Username", username);
+
+                            mySqlCommand.ExecuteNonQueryAsync();
+                        }
+
+                        using (MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO seeker VALUES(@Username)"))
+                        {
+                            mySqlCommand.Parameters.AddWithValue("@Username", username);
+
+                            mySqlCommand.ExecuteNonQueryAsync();
+                        }
+
+                         mySqlConnection.CloseAsync();
+                         currentUser = new User(username, gender, phoneNumber, stateId, sSN, dOB, firstName, middleInitial, lastName, false, false, false);
+                        successful = true;
+
+                    
                 }
                 catch (Exception ex)
                 {
@@ -621,27 +632,33 @@ namespace RentalsApp
         public bool CreateLocation(string locationName, string address, string city, string state, string zipCode)
         {
             bool successful = false;
+            string userN = currentUser.username;
 
             try
             {
-                Console.WriteLine("Connecting to MySQL...");
-                mySqlConnection.Open();
-                Console.WriteLine("MySQL connection succeeded.");
+               
 
-                using (MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO location VALUES(@Username, @LocationName, @Address, @City, @State, @ZipCode)"))
-                {
-                    mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
-                    mySqlCommand.Parameters.AddWithValue("@LocationName", locationName);
-                    mySqlCommand.Parameters.AddWithValue("@Address", address);
-                    mySqlCommand.Parameters.AddWithValue("@City", city);
-                    mySqlCommand.Parameters.AddWithValue("@State", state);
-                    mySqlCommand.Parameters.AddWithValue("@ZipCode", zipCode);
+               
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.OpenAsync();
+                    Console.WriteLine("MySQL connection succeeded.");
 
-                    mySqlCommand.ExecuteNonQuery();
-                }
 
-                mySqlConnection.Close();
-                successful = true;
+                    using (MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO location VALUES(@Username, @LocationName, @Address, @City, @State, @ZipCode)", mySqlConnection))
+                    {
+                        mySqlCommand.Parameters.AddWithValue("@Username", userN);
+                        mySqlCommand.Parameters.AddWithValue("@LocationName", locationName);
+                        mySqlCommand.Parameters.AddWithValue("@Address", address);
+                        mySqlCommand.Parameters.AddWithValue("@City", city);
+                        mySqlCommand.Parameters.AddWithValue("@State", state);
+                        mySqlCommand.Parameters.AddWithValue("@ZipCode", zipCode);
+
+                        mySqlCommand.ExecuteNonQueryAsync();
+                    }
+
+                    mySqlConnection.CloseAsync();
+                    successful = true;
+                
             }
             catch (Exception ex)
             {
@@ -892,20 +909,23 @@ namespace RentalsApp
 
             try
             {
-                Console.WriteLine("Connecting to MySQL...");
-                mySqlConnection.Open();
-                Console.WriteLine("MySQL connection succeeded.");
-
-                using (MySqlCommand mySqlCommand = new MySqlCommand("UPDATE rentit_user SET agreed_terms_conditions = @Acceptance WHERE username = @Username"))
+                using (mySqlConnection)
                 {
-                    mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
-                    mySqlCommand.Parameters.AddWithValue("@Acceptance", acceptance);
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.OpenAsync();
+                    Console.WriteLine("MySQL connection succeeded.");
 
-                    mySqlCommand.ExecuteNonQuery();
+                    using (MySqlCommand mySqlCommand = new MySqlCommand("UPDATE rentit_user SET agreed_terms_conditions = @Acceptance WHERE username = @Username"))
+                    {
+                        mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
+                        mySqlCommand.Parameters.AddWithValue("@Acceptance", acceptance);
+
+                        mySqlCommand.ExecuteNonQueryAsync();
+                    }
+
+                    mySqlConnection.Close();
+                    successful = true;
                 }
-
-                mySqlConnection.Close();
-                successful = true;
             }
             catch (Exception ex)
             {
@@ -926,20 +946,24 @@ namespace RentalsApp
 
             try
             {
-                Console.WriteLine("Connecting to MySQL...");
-                mySqlConnection.Open();
-                Console.WriteLine("MySQL connection succeeded.");
-
-                using (MySqlCommand mySqlCommand = new MySqlCommand("UPDATE rentit_user SET agreed_privacy_policy = @Acceptance WHERE username = @Username"))
+                using (mySqlConnection)
                 {
-                    mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
-                    mySqlCommand.Parameters.AddWithValue("@Acceptance", acceptance);
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.OpenAsync();
+                    Console.WriteLine("MySQL connection succeeded.");
 
-                    mySqlCommand.ExecuteNonQuery();
+                    using (MySqlCommand mySqlCommand = new MySqlCommand("UPDATE rentit_user SET agreed_privacy_policy = @Acceptance WHERE username = @Username"))
+                    {
+                        mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
+                        mySqlCommand.Parameters.AddWithValue("@Acceptance", acceptance);
+
+                        mySqlCommand.ExecuteNonQueryAsync();
+                    }
+
+                    mySqlConnection.Close();
+                    successful = true;
+
                 }
-
-                mySqlConnection.Close();
-                successful = true;
             }
             catch (Exception ex)
             {
@@ -960,20 +984,23 @@ namespace RentalsApp
 
             try
             {
-                Console.WriteLine("Connecting to MySQL...");
-                mySqlConnection.Open();
-                Console.WriteLine("MySQL connection succeeded.");
-
-                using (MySqlCommand mySqlCommand = new MySqlCommand("UPDATE rentit_user SET agreed_standards_policy = @Acceptance WHERE username = @Username"))
+                using (mySqlConnection)
                 {
-                    mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
-                    mySqlCommand.Parameters.AddWithValue("@Acceptance", acceptance);
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.OpenAsync();
+                    Console.WriteLine("MySQL connection succeeded.");
 
-                    mySqlCommand.ExecuteNonQuery();
+                    using (MySqlCommand mySqlCommand = new MySqlCommand("UPDATE rentit_user SET agreed_standards_policy = @Acceptance WHERE username = @Username"))
+                    {
+                        mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
+                        mySqlCommand.Parameters.AddWithValue("@Acceptance", acceptance);
+
+                        mySqlCommand.ExecuteNonQueryAsync();
+                    }
+
+                    mySqlConnection.Close();
+                    successful = true;
                 }
-
-                mySqlConnection.Close();
-                successful = true;
             }
             catch (Exception ex)
             {
@@ -994,20 +1021,23 @@ namespace RentalsApp
 
             try
             {
-                Console.WriteLine("Connecting to MySQL...");
-                mySqlConnection.Open();
-                Console.WriteLine("MySQL connection succeeded.");
-
-                using (MySqlCommand mySqlCommand = new MySqlCommand("UPDATE lessor SET agreed_lessor = @Acceptance WHERE lessor_username = @Username"))
+                using (mySqlConnection)
                 {
-                    mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
-                    mySqlCommand.Parameters.AddWithValue("@Acceptance", acceptance);
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.OpenAsync();
+                    Console.WriteLine("MySQL connection succeeded.");
 
-                    mySqlCommand.ExecuteNonQuery();
+                    using (MySqlCommand mySqlCommand = new MySqlCommand("UPDATE lessor SET agreed_lessor = @Acceptance WHERE lessor_username = @Username"))
+                    {
+                        mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
+                        mySqlCommand.Parameters.AddWithValue("@Acceptance", acceptance);
+
+                        mySqlCommand.ExecuteNonQueryAsync();
+                    }
+
+                    mySqlConnection.Close();
+                    successful = true;
                 }
-
-                mySqlConnection.Close();
-                successful = true;
             }
             catch (Exception ex)
             {

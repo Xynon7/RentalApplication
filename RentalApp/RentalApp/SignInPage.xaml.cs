@@ -1,4 +1,8 @@
-﻿using System;
+﻿using RentalsApp;
+using System;
+using RentalApp;
+using System.Linq;
+using System.IO;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -8,13 +12,36 @@ namespace RentalApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SignInPage : ContentPage
 	{
+        public string user, pass;
+
 		public SignInPage ()
 		{
 			InitializeComponent ();
 		}
-        async void OnEnterClicked(object sender, EventArgs e)
+
+        void EmailCompleted(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new HomePage());
+            user = ((Entry)sender).Text;
+        }
+
+        void PasswordCompleted(object sender, EventArgs e)
+        {
+            pass = ((Entry)sender).Text;
+        }
+        async void OnEnterClicked(object sender, EventArgs e)
+            
+        {
+
+            bool validate = RASQLManager.sqlManagerInstance.ValidateLogin(user, pass);
+            if (validate)
+            {
+                await Navigation.PushAsync(new HomePage());
+            }
+            else
+            {
+                await Navigation.PushAsync(new SignInPage());
+            }
+            
         }
     }
 }

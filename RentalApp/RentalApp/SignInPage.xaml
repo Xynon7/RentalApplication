@@ -22,11 +22,14 @@
                  
                  RelativeLayout.XConstraint="150"
                  RelativeLayout.YConstraint="400"
+                    Completed="EmailCompleted"
                  />
             <Entry Placeholder="Password"
                 
                 RelativeLayout.XConstraint="150"
-                RelativeLayout.YConstraint="450"/>
+                RelativeLayout.YConstraint="450"
+                   Completed="PasswordCompleted"/>
+            
             <Button Text="Enter"
                     RelativeLayout.XConstraint="150"
                     RelativeLayout.YConstraint="475" 

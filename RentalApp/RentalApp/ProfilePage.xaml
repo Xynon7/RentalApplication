@@ -5,7 +5,10 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Profile Information"/>
-            <Label Text="*Profile info here*"/>
+            
+            
+            <Label x:Name="InfoDisplay"/>
+            
             <Button Text="View Locations"
                     Clicked="OnLocationsClicked"/>
             <Button Text="View Results"

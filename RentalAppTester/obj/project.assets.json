@@ -94,6 +94,23 @@
           "lib/net452/Zstandard.Net.dll": {}
         }
       },
+      "MySqlConnector/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Memory": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System.Transactions"
+        ],
+        "compile": {
+          "lib/net461/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/net461/MySqlConnector.dll": {}
+        }
+      },
       "NUnit/3.12.0": {
         "type": "package",
         "compile": {
@@ -169,6 +186,15 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Xam.Plugin.Media/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -227,6 +253,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "MySql.Data": "8.0.22",
+          "MySqlConnector": "1.2.0",
           "Xam.Plugin.Media": "5.0.1",
           "Xamarin.Forms": "5.0.0.1558-pre3"
         },
@@ -331,6 +358,23 @@
           "lib/net452/Zstandard.Net.dll": {}
         }
       },
+      "MySqlConnector/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Memory": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System.Transactions"
+        ],
+        "compile": {
+          "lib/net461/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/net461/MySqlConnector.dll": {}
+        }
+      },
       "NUnit/3.12.0": {
         "type": "package",
         "compile": {
@@ -406,6 +450,15 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Xam.Plugin.Media/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -464,6 +517,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "MySql.Data": "8.0.22",
+          "MySqlConnector": "1.2.0",
           "Xam.Plugin.Media": "5.0.1",
           "Xamarin.Forms": "5.0.0.1558-pre3"
         },
@@ -568,6 +622,23 @@
           "lib/net452/Zstandard.Net.dll": {}
         }
       },
+      "MySqlConnector/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Memory": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System.Transactions"
+        ],
+        "compile": {
+          "lib/net461/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/net461/MySqlConnector.dll": {}
+        }
+      },
       "NUnit/3.12.0": {
         "type": "package",
         "compile": {
@@ -643,6 +714,15 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Xam.Plugin.Media/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -701,6 +781,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "MySql.Data": "8.0.22",
+          "MySqlConnector": "1.2.0",
           "Xam.Plugin.Media": "5.0.1",
           "Xamarin.Forms": "5.0.0.1558-pre3"
         },
@@ -805,6 +886,23 @@
           "lib/net452/Zstandard.Net.dll": {}
         }
       },
+      "MySqlConnector/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Memory": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System.Transactions"
+        ],
+        "compile": {
+          "lib/net461/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/net461/MySqlConnector.dll": {}
+        }
+      },
       "NUnit/3.12.0": {
         "type": "package",
         "compile": {
@@ -880,6 +978,15 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Xam.Plugin.Media/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -938,6 +1045,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "MySql.Data": "8.0.22",
+          "MySqlConnector": "1.2.0",
           "Xam.Plugin.Media": "5.0.1",
           "Xamarin.Forms": "5.0.0.1558-pre3"
         },
@@ -1070,6 +1178,36 @@
         "lib/netstandard2.1/Zstandard.Net.dll",
         "mysql.data.8.0.22.nupkg.sha512",
         "mysql.data.nuspec"
+      ]
+    },
+    "MySqlConnector/1.2.0": {
+      "sha512": "16DWy96uNr0ZCt3Qo0ZQwWcEQv6lwgcaolosNTdH+7hDTq45RfUEg09f9aI8bc6qDXXjQ1EacooJQ8AShg8ibg==",
+      "type": "package",
+      "path": "mysqlconnector/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MySqlConnector.dll",
+        "lib/net45/MySqlConnector.xml",
+        "lib/net461/MySqlConnector.dll",
+        "lib/net461/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net5.0/MySqlConnector.dll",
+        "lib/net5.0/MySqlConnector.xml",
+        "lib/netcoreapp2.1/MySqlConnector.dll",
+        "lib/netcoreapp2.1/MySqlConnector.xml",
+        "lib/netcoreapp3.1/MySqlConnector.dll",
+        "lib/netcoreapp3.1/MySqlConnector.xml",
+        "lib/netstandard1.3/MySqlConnector.dll",
+        "lib/netstandard1.3/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.1.2.0.nupkg.sha512",
+        "mysqlconnector.nuspec"
       ]
     },
     "NUnit/3.12.0": {
@@ -1275,6 +1413,23 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Threading.Tasks.Extensions/4.3.0": {
+      "sha512": "npvJkVKl5rKXrtl1Kkm6OhOUaYGEiF9wFbppFRWSMoApKzt2PiPHT2Bb8a5sAWxprvdOAtvaARS9QYMznEUtug==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "system.threading.tasks.extensions.4.3.0.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec"
       ]
     },
     "Xam.Plugin.Media/5.0.1": {
@@ -1609,6 +1764,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.1": [
+      "MySqlConnector >= 1.2.0",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.17.0",
       "RentalApp >= 1.0.0",
@@ -1616,24 +1772,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Chase Clawson\\.nuget\\packages\\": {},
+    "C:\\Users\\starf\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
+      "projectUniqueName": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
       "projectName": "RentalAppTester",
-      "projectPath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
-      "packagesPath": "C:\\Users\\Chase Clawson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalAppTester\\obj\\",
+      "projectPath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
+      "packagesPath": "C:\\Users\\starf\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalAppTester\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Chase Clawson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\starf\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1647,8 +1803,8 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj": {
-              "projectPath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj"
+            "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj": {
+              "projectPath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj"
             }
           }
         }
@@ -1657,6 +1813,10 @@
     "frameworks": {
       "net461": {
         "dependencies": {
+          "MySqlConnector": {
+            "target": "Package",
+            "version": "[1.2.0, )"
+          },
           "NUnit": {
             "target": "Package",
             "version": "[3.12.0, )"
