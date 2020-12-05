@@ -42,7 +42,7 @@ namespace RentalApp
 
         async void OnSubmitClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new NewListingPage());
+            await Navigation.PushAsync(new NewListingPage()); //need to add Listing creation here
         }
 
     }

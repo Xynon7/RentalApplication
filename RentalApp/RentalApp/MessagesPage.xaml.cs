@@ -87,7 +87,7 @@ namespace RentalApp
 			}
 			else
 			{
-				await Navigation.PushAsync(new ErrorPage());
+				await Navigation.PushAsync(new ErrorPage(1));
 			}
 
 		}

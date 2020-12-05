@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.LimitedLocationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Please add a location"/>
+            <Entry Text="{Binding Name}" Placeholder="Name" Completed="NameCompleted"/>
+            <Entry Text="{Binding Address}" Placeholder="Address" Completed="AddressCompleted"/>
+            <Entry Text="{Binding City}" Placeholder="City" Completed="CityCompleted"/>
+            <Entry  Placeholder="State" Completed="StateCompleted"/>
+            <Entry Text="{Binding Zip}" Placeholder="Zip code" Completed="ZipCompleted"/>
+            <Button Text="Add location" Command="{Binding AddLocationCommand}"
+                    Clicked="OnAddLocationClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

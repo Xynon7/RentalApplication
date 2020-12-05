@@ -29,7 +29,7 @@ namespace RentalApp
 		{
 			bool decision = false;
 			RASQLManager.sqlManagerInstance.ChangeAcceptedTC(decision);
-			await Navigation.PopAsync();//need to display error message 
+			await Navigation.PushAsync(new ErrorPage(2));//need to display error message 
 		}
 	}
 }

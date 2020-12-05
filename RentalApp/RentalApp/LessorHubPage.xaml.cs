@@ -38,7 +38,7 @@ namespace RentalApp
 
 		async void OnLAgreementsClicked(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new LessorHubPage()); //need a L Agreement page
+			await Navigation.PushAsync(new LessorAgreementPage()); //need a L Agreement page
 		}
 		async void OnHomeClicked(object sender, EventArgs e)
 		{

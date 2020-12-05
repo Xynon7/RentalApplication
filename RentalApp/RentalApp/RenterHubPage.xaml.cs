@@ -18,8 +18,8 @@ namespace RentalApp
 		}
 		async void OnRateClicked(object sender, EventArgs e)
 		{
-			//await Navigation.PushAsync(new RatingsPage());
-			await Navigation.PushAsync(new RenterHubPage());
+			await Navigation.PushAsync(new RatingsPage());
+			
 		}
 		async void OnMessagesClicked(object sender, EventArgs e)
 		{
@@ -31,8 +31,8 @@ namespace RentalApp
 		}
 		async void OnRAggrementClicked(object sender, EventArgs e)
 		{
-			//await Navigation.PushAsync(new RenterAgreementPage());
-			await Navigation.PushAsync(new RenterHubPage());
+			await Navigation.PushAsync(new RenterAgreementPage());
+			
 		}
 		async void OnHomeClicked(object sender, EventArgs e)
 		{

@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Cart" />
-            <Label Text="*List of cart items* *Add binding here*"  />
+            <Label x:Name="CartDisplay"/>
             <RelativeLayout>
                 <Label Text="{Binding TotalCost}" RelativeLayout.XConstraint="250"
                        RelativeLayout.YConstraint="50"

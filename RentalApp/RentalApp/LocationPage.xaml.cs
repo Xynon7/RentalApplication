@@ -69,7 +69,7 @@ namespace RentalApp
 				await Navigation.PushAsync(new LocationPage());
 			}
 			else
-				await Navigation.PushAsync(new ErrorPage());
+				await Navigation.PushAsync(new ErrorPage(3));
 		}
 		async void OnReturnClicked(object sender, EventArgs e)
 		{

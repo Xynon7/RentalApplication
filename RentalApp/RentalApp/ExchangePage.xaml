@@ -5,9 +5,9 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Exchanges"/>
-            <Label Text="*List of exchanges*"/>
-            <Button Text="New Exchange"/>
-            <Button Text="Home"/>
+            <Label x:Name="ExchangeDisplay"/>
+            <Button Text="New Exchange" Clicked="OnNewExchangeClicked"/>
+            <Button Text="Home" Clicked="OnHomeClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

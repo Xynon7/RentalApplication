@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.NewExchangePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Renter Username" Completed="RuserCompleted"/>
+            <Entry Placeholder="Lessor Username" Completed="LuserCompleted"/>
+            <Entry Placeholder="Item Number" Completed="NumCompleted"/>
+            <Entry Placeholder="Exchange Place" Completed="exchangeLocCompleted"/>
+            <Entry Placeholder="Exchange Date and Time" Completed="exchangeTimeCompleted"/>
+            <Entry Placeholder="Pick Up or Drop off" Completed="PickOrDropCompleted"/>
+            <Entry Placeholder="Renter Agrees" Completed="RAgreeCompleted"/>
+            <Entry Placeholder="Lessor Agrees" Completed="LAgreeCompleted"/>
+            <Button Text="Submit" Clicked="OnSubmitClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

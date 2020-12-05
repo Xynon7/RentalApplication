@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RentalApp.ErrorPage">
+             x:Class="RentalApp.InvoiceListPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Error page - something went wrong"         />
-            <Label x:Name="ErrorDisplay"/>
+            <Label Text="All Invoices" />
+            <Label x:Name="InvoiceListDisplay"/>
+            <Button Text="Return to renter hub"/>
+            <Button Text="Home"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
