@@ -53,7 +53,6 @@ C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp\obj\Debug\nets
 C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.dll
 C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.pdb
 C:\Users\starf\source\repos\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.csprojAssemblyReference.cache
-C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.csprojAssemblyReference.cache
 C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\CartPage.xaml.g.cs
 C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\ExchangePage.xaml.g.cs
@@ -197,3 +196,8 @@ C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalApp\Rental
 C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.pdb
 C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.csprojAssemblyReference.cache
 C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalApp\RentalApp\obj\Debug\netstandard2.0\ErrorPage.xaml.g.cs
+C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\ErrorPage.xaml.g.cs
+C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\ListingsPage.xaml.g.cs
+C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\NewListingPage.xaml.g.cs
+C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RatingsPage.xaml.g.cs
+C:\Users\Chase Clawson\Source\Repos\Xynon7\RentalApplication\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.csprojAssemblyReference.cache
