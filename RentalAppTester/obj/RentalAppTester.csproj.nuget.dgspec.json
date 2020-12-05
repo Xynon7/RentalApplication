@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalAppTester\\RentalAppTester.csproj": {}
+    "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalAppTester\\RentalAppTester.csproj": {}
   },
   "projects": {
-    "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalAppTester\\RentalAppTester.csproj": {
+    "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalAppTester\\RentalAppTester.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
+        "projectUniqueName": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
         "projectName": "RentalAppTester",
-        "projectPath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
-        "packagesPath": "C:\\Users\\starf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalAppTester\\obj\\",
+        "projectPath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalAppTester\\RentalAppTester.csproj",
+        "packagesPath": "C:\\Users\\Chase Clawson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalAppTester\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\starf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chase Clawson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "net461": {
             "projectReferences": {
-              "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj": {
-                "projectPath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj"
+              "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj": {
+                "projectPath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj"
               }
             }
           }
@@ -73,21 +73,21 @@
         }
       }
     },
-    "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj": {
+    "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj",
+        "projectUniqueName": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj",
         "projectName": "RentalApp",
-        "projectPath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj",
-        "packagesPath": "C:\\Users\\starf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalApp\\RentalApp\\obj\\",
+        "projectPath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalApp\\RentalApp\\RentalApp.csproj",
+        "packagesPath": "C:\\Users\\Chase Clawson\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalApp\\RentalApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\starf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chase Clawson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -100,7 +100,6 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -112,7 +111,6 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "dependencies": {
             "MySqlConnector": {
               "target": "Package",
@@ -143,7 +141,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

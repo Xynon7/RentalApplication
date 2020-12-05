@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Lessor Hub"/>
-            <Button Text="New item Listing"  Clicked="OnNewItemCliked"/>
+            <Button Text="New item Listing"  Clicked="OnNewItemClicked"/>
             <Button Text="Item Listings" Clicked="OnListingsClicked"/>
             <Button Text="Rate A Renter" Clicked="OnRatingsClicked"/>
             <Button Text="Messages" Clicked="OnMessagesClicked"/>

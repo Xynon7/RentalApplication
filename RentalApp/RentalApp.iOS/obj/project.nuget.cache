@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "1q2Lg0WQ+DsqJ+EKZXKz6yq0DuTCYnv9CCTz9fcYun5qUJQe6fZbl+zjozZXnrBRwBVBwBU5OTtu24hmtfgZDA==",
+  "dgSpecHash": "uZP7z+MBrE4pzWpTeXv9AWm6KdAXUeJIwmHdW1/CDAA6VcTEc6DqIXvlhyRtuu6qFYOfeweccWYDtovE6CEypQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\starf\\source\\repos\\1204RentalApplication\\RentalApp\\RentalApp.iOS\\RentalApp.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Chase Clawson\\Source\\Repos\\Xynon7\\RentalApplication\\RentalApp\\RentalApp.iOS\\RentalApp.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\starf\\.nuget\\packages\\mysqlconnector\\1.2.0\\mysqlconnector.1.2.0.nupkg.sha512",
-    "C:\\Users\\starf\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
-    "C:\\Users\\starf\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
-    "C:\\Users\\starf\\.nuget\\packages\\xamarin.forms\\5.0.0.1558-pre3\\xamarin.forms.5.0.0.1558-pre3.nupkg.sha512"
+    "C:\\Users\\Chase Clawson\\.nuget\\packages\\mysqlconnector\\1.2.0\\mysqlconnector.1.2.0.nupkg.sha512",
+    "C:\\Users\\Chase Clawson\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\Chase Clawson\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
+    "C:\\Users\\Chase Clawson\\.nuget\\packages\\xamarin.forms\\5.0.0.1558-pre3\\xamarin.forms.5.0.0.1558-pre3.nupkg.sha512"
   ],
   "logs": []
 }
