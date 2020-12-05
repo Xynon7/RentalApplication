@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.ResultsPage">
+    <ContentPage.Content >
+        <StackLayout BackgroundColor="DarkCyan" >
+            <ScrollView VerticalOptions="FillAndExpand">
+            <Label Text="Search Results" />
+            </ScrollView>
+            <Label Text="*List of results*"/>
+            <Label Text="Avaliable Items can be added to a cart and unavaliable items can be added to the wish list"/>
+            
+            <RelativeLayout >
+
+                <Button Text="Add to cart" RelativeLayout.XConstraint="50" 
+                        RelativeLayout.YConstraint="50"
+                        WidthRequest="100" Command="{Binding AddToCartCommand}"/>
+                <Button Text="Return to Search"  RelativeLayout.XConstraint="50"
+                        RelativeLayout.YConstraint="100"
+                        WidthRequest="100"/>
+                <Button Text="View Wish List"  RelativeLayout.XConstraint="50"
+                        RelativeLayout.YConstraint="150"
+                        WidthRequest="100"/>
+                <Button Text="Add to Wish List"  RelativeLayout.XConstraint="200"
+                        RelativeLayout.YConstraint="50"
+                        WidthRequest="100"/>
+                <Button Text="View Cart"  RelativeLayout.XConstraint="200"
+                        RelativeLayout.YConstraint="100"
+                        WidthRequest="100"/>
+                <Button Text="Home"  RelativeLayout.XConstraint="200"
+                        RelativeLayout.YConstraint="150"
+                        WidthRequest="100"/>
+            </RelativeLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

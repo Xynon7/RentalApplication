@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.MessagesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="All messages" />
+            <Label Text="List of messages sent" />
+            <Label Text="List of messages received" />
+            <Entry Text="{Binding Receiver}" Placeholder="Receiver"/>
+            <Entry Text="{Binding Body}" Placeholder="Body"/>
+            <Button Text="Send"/>
+            <Button Text="Cancel"/>
+            <Button Text="Home"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

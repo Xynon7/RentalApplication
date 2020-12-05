@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.SignUpPage2">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="AntiqueWhite" Padding="10" >
+            <Label Text="State ID"  TextColor="Black"/>
+            <Label Text="Upload Image of above *figure out how to do this*" TextColor="Black"/>
+            <Entry Text="{Binding SSN}" Placeholder="SSN" PlaceholderColor="Black"/>
+            <Button Text="Add a location"
+                    Clicked="OnAddLoactionClicked" TranslationY="20"/>
+            <Button Text="Terms and Conditions"
+                    Clicked="OnTermsClicked"    TranslationY="20" />
+            <Button Text="Privacy Policy"
+                    Clicked="OnPrivacyClicked" TranslationY="20"/>
+            <Button Text="Standards Policy"
+                    Clicked="OnStandardsClicked" TranslationY="20"/>
+            <Button Text="Submit"
+                    Clicked="OnSubmitClicked" TranslationY="20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
