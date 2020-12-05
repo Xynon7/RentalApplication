@@ -50,5 +50,30 @@ namespace RentalAppTester
             List<Communication> messages = RASQLManager.sqlManagerInstance.GetMessagesReceived("Den1S80");
             Assert.IsFalse(messages.Count == 0, "Message list should not be empty");
         }
+
+        [Test]
+        public void CheckAccountCreationAndDeletion()
+        {
+            string testUsername = "TestingPerson";
+            string testPassword = "TestingPerson";
+            if (RASQLManager.sqlManagerInstance.ValidateLogin(testUsername, testPassword))
+            {
+                RASQLManager.sqlManagerInstance.Logout();
+                Assert.IsTrue(RASQLManager.sqlManagerInstance.DeleteAccount(testUsername), "Failed Account Deletion");
+            }
+            Assert.IsTrue(RASQLManager.sqlManagerInstance.CreateNewAccount(testUsername, testPassword, "Ma", "(111) 111-1111", "OK", "1111111111", DateTime.Now, "Name", "M", "NotName"), "Failed Account Creation");
+            Assert.IsTrue(RASQLManager.sqlManagerInstance.ValidateLogin(testUsername, testPassword), "Failed Account Login");
+            RASQLManager.sqlManagerInstance.Logout();
+            Assert.IsTrue(RASQLManager.sqlManagerInstance.DeleteAccount(testUsername), "Failed Account Deletion");
+        }
+
+        [Test]
+        public void CheckItemCreationAndDeletion()
+        {
+            RASQLManager.sqlManagerInstance.ValidateLogin("Den1S80", "Belloto9021");
+            Assert.IsTrue(RASQLManager.sqlManagerInstance.CreateItemListing("Description", "Brand", "Type", 0.0, 0.0, 0.0, new Dictionary<string, string>(), new List<string>()), "Failed Item Creation");
+            Assert.IsTrue(RASQLManager.sqlManagerInstance.DeleteAllItemsFromUser("Den1S80"), "Failed Item Deletion");
+            RASQLManager.sqlManagerInstance.Logout();
+        }
     }
 }

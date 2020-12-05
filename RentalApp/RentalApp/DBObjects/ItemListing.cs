@@ -11,7 +11,11 @@ namespace RentalsApp.DBObjects
         public string description;
         public double costPerDay;
         public DateTime datePosted;
+        public double replacementCost;
+        public double deposit;
         public List<ItemImage> itemImages;
+        public Dictionary<string, string> leasingCityStatePairs;
+        public List<string> leasingZipCodes;
 
         public ItemListing(string ItemNum, string Brand, string Type, string Description, double CostPerDay, DateTime DatePosted)
         {
