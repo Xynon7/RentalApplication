@@ -3,15 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.MessagesPage">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
-            <Label Text="All messages" />
-            <Label Text="List of messages sent" />
-            <Label Text="List of messages received" />
-            <Entry Text="{Binding Receiver}" Placeholder="Receiver"/>
-            <Entry Text="{Binding Body}" Placeholder="Body"/>
-            <Button Text="Send"/>
-            <Button Text="Cancel"/>
-            <Button Text="Home"/>
+            
+            <Label Text="All messages sent" />
+            <Label x:Name="sentDisplay" />
+                <Label Text="All messages recieved" />
+                <Label x:Name="recDisplay" />
+                <Label Text="Create new message"/>
+                <Entry  Placeholder="Receiver" Completed="OnRecCompleted"/>
+            <Entry  Placeholder="Body" Completed="OnBodyCompleted"/>
+            <Button Text="Send" Clicked="OnSendClicked"/>
+            <Button Text="Cancel" Clicked="OnCancelClicked"/>
+            <Button Text="Home" Clicked="OnHomeClicked"/>
+            
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

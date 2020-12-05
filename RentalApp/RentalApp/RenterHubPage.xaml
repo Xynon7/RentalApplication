@@ -14,13 +14,13 @@
                 RelativeLayout.XConstraint="50"
                          RelativeLayout.YConstraint="50" WidthRequest="250">
             <Label Text="Renter Hub"/>
-            <Button Text="New Invoices"/>
-            <Button Text="Rate a Lessor"/>
-            <Button Text="Messages"/>
-            <Button Text="Exchanges"/>
-            <Button Text="Renter Agreement"/>
-            <Label Text="Average Renter Rating"/>
-            <Button Text="Home"/>
+            <Button Text="New Invoices" Clicked="OnInvoicesClicked"/>
+            <Button Text="Rate a Lessor" Clicked="OnRateClicked"/>
+            <Button Text="Messages" Clicked="OnMessagesClicked"/>
+            <Button Text="Exchanges" Clicked="OnExchangesClicked"/>
+            <Button Text="Renter Agreement" Clicked="OnRAggrementClicked"/>
+            <Label Text="Average Renter Rating" />
+                <Button Text="Home" Clicked="OnHomeClicked"/>
         </StackLayout>
         </RelativeLayout>
     </ContentPage.Content>

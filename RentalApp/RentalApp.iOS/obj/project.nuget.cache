@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6793zMnIMAWjPQg6b9gsjBxcoYcGQCmvDj9szJbkMKBDqMip0jU/s4pPvdo93C0oFMxw9VivHndwmbUcCSzKUQ==",
+  "dgSpecHash": "PP8J0URUDUsWS1QXMJJDRh2Heq9Ljt7Nl2CM9FVx8ITLMtiN4pzaZIVFN/7qspJIA4I/d2bf/aTy077AHycxbA==",
   "success": true,
   "projectFilePath": "C:\\Users\\starf\\OneDrive\\Desktop\\RentalApplication-UserInterface\\RentalApp\\RentalApp.iOS\\RentalApp.iOS.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\starf\\.nuget\\packages\\k4os.hash.xxhash\\1.0.6\\k4os.hash.xxhash.1.0.6.nupkg.sha512",
     "C:\\Users\\starf\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\starf\\.nuget\\packages\\mysql.data\\8.0.22\\mysql.data.8.0.22.nupkg.sha512",
+    "C:\\Users\\starf\\.nuget\\packages\\mysqlconnector\\1.2.0\\mysqlconnector.1.2.0.nupkg.sha512",
     "C:\\Users\\starf\\.nuget\\packages\\ssh.net\\2016.1.0\\ssh.net.2016.1.0.nupkg.sha512",
     "C:\\Users\\starf\\.nuget\\packages\\sshnet.security.cryptography\\1.2.0\\sshnet.security.cryptography.1.2.0.nupkg.sha512",
     "C:\\Users\\starf\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",

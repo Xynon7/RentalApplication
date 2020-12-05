@@ -196,3 +196,4 @@ C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalApp\Rental
 C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.dll
 C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.pdb
 C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalApp\RentalApp\obj\Debug\netstandard2.0\RentalApp.csprojAssemblyReference.cache
+C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalApp\RentalApp\obj\Debug\netstandard2.0\ErrorPage.xaml.g.cs

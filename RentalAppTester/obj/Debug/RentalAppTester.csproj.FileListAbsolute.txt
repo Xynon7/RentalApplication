@@ -409,3 +409,5 @@ C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalAppTester\
 C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalAppTester\obj\Debug\RentalAppTester.csproj.CopyComplete
 C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalAppTester\obj\Debug\RentalAppTester.dll
 C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalAppTester\obj\Debug\RentalAppTester.pdb
+C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalAppTester\bin\Debug\MySqlConnector.dll
+C:\Users\starf\OneDrive\Desktop\RentalApplication-UserInterface\RentalAppTester\bin\Debug\System.Threading.Tasks.Extensions.dll
