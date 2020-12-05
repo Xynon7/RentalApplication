@@ -58,11 +58,11 @@ namespace RentalsApp
                         Communication result = new Communication();
                         result.sender = sqlDataReader[0].ToString();
                         result.receiver = sqlDataReader[1].ToString();
-                        result.messageDateTime = DateTime.Parse(sqlDataReader[3].ToString()).Date;
-                        result.messageDateTime.AddHours(DateTime.Parse(sqlDataReader[4].ToString()).Hour);
-                        result.messageDateTime.AddMinutes(DateTime.Parse(sqlDataReader[4].ToString()).Minute);
-                        result.messageDateTime.AddSeconds(DateTime.Parse(sqlDataReader[4].ToString()).Second);
-                        result.messageBody = sqlDataReader[5].ToString();
+                        result.messageBody = sqlDataReader[3].ToString();
+                        result.messageDateTime = DateTime.Parse(sqlDataReader[4].ToString()).Date;
+                        result.messageDateTime.AddHours(DateTime.Parse(sqlDataReader[5].ToString()).Hour);
+                        result.messageDateTime.AddMinutes(DateTime.Parse(sqlDataReader[5].ToString()).Minute);
+                        result.messageDateTime.AddSeconds(DateTime.Parse(sqlDataReader[5].ToString()).Second);
                         messageResults.Add(result);
                     }
                 }
@@ -92,11 +92,11 @@ namespace RentalsApp
                         Communication result = new Communication();
                         result.sender = sqlDataReader[0].ToString();
                         result.receiver = sqlDataReader[1].ToString();
-                        result.messageDateTime = DateTime.Parse(sqlDataReader[3].ToString()).Date;
-                        result.messageDateTime.AddHours(DateTime.Parse(sqlDataReader[4].ToString()).Hour);
-                        result.messageDateTime.AddMinutes(DateTime.Parse(sqlDataReader[4].ToString()).Minute);
-                        result.messageDateTime.AddSeconds(DateTime.Parse(sqlDataReader[4].ToString()).Second);
-                        result.messageBody = sqlDataReader[5].ToString();
+                        result.messageBody = sqlDataReader[3].ToString();
+                        result.messageDateTime = DateTime.Parse(sqlDataReader[4].ToString()).Date;
+                        result.messageDateTime.AddHours(DateTime.Parse(sqlDataReader[5].ToString()).Hour);
+                        result.messageDateTime.AddMinutes(DateTime.Parse(sqlDataReader[5].ToString()).Minute);
+                        result.messageDateTime.AddSeconds(DateTime.Parse(sqlDataReader[5].ToString()).Second);
                         messageResults.Add(result);
                     }
                 }
