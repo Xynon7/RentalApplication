@@ -4,22 +4,28 @@
              x:Class="RentalApp.ProfilePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Profile Information"/>
-            
-            
-            <Label x:Name="InfoDisplay"/>
+            <Label Text="Profile Information" TextColor="#228E7F"/>
+
+
+            <Label x:Name="InfoDisplay" TextColor="#707070"/>
             
             <Button Text="View Locations"
-                    Clicked="OnLocationsClicked"/>
+                    Clicked="OnLocationsClicked" 
+                    BackgroundColor="#E29F10" TextColor="White"/>
             <Button Text="View Results"
-                    Clicked="OnResultsClicked"/>
+                    Clicked="OnResultsClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
             <Button Text="View Carts"
-                    Clicked="OnCartsClicked"/>
+                    Clicked="OnCartsClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
             <Button Text="View Payments"
-                    Clicked="OnPaymentsClicked"/>
-            <Label Text="Average User Rating"/>
+                    Clicked="OnPaymentsClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Label Text="Average User Rating"
+                    TextColor="#E29F10"/>
             <Button Text="Home"
-                    Clicked="OnHomeClicked"/>
+                    Clicked="OnHomeClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

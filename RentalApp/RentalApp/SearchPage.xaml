@@ -2,20 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.SearchPage">
-    
-  <StackLayout Margin="5" BackgroundColor="AntiqueWhite">
-            
-            
-            
-        <Label Text="Search" />
-        <Entry Text="{Binding Brand}" Placeholder="Item Brand" PlaceholderColor="Black"/>
-        <Entry Text="{Binding Type}" Placeholder="Item type" PlaceholderColor="Black"/>
-        <Entry Text="{Binding HighestCost}" Placeholder="Highest cost" PlaceholderColor="Black"/>
-        <Entry Text="{Binding LowestCost}" Placeholder="Lowest Cost" PlaceholderColor="Black"/>
-        <Entry Text="{Binding City}" Placeholder="City" PlaceholderColor="Black"/>
-        <Entry Text="{Binding Zip}" Placeholder="Zip" PlaceholderColor="Black" />
+
+    <StackLayout Margin="5"  BackgroundColor="#FAF0EB">
+
+
+
+        <Label Text="Search" TextColor= "#E29F10"/>
+        <Entry Text="{Binding Brand}" Placeholder="Item Brand" PlaceholderColor="#228E7F"/>
+        <Entry Text="{Binding Type}" Placeholder="Item type" PlaceholderColor="#228E7F" Completed="OnTypeCompleted"/>
+        <Entry Text="{Binding HighestCost}" Placeholder="Highest cost" PlaceholderColor="#228E7F"/>
+        <Entry Text="{Binding LowestCost}" Placeholder="Lowest Cost" PlaceholderColor="#228E7F"/>
+        <Entry Text="{Binding City}" Placeholder="City" PlaceholderColor="#228E7F"/>
+        <Entry Text="{Binding Zip}" Placeholder="Zip" PlaceholderColor="#228E7F" />
         <Button Text="View Results" 
-                Clicked="OnViewResultsClicked"/>
+                Clicked="OnViewResultsClicked" BackgroundColor="#E29F10" TextColor="White"/>
         
 
     </StackLayout>

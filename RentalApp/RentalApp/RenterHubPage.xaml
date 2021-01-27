@@ -5,7 +5,7 @@
     <ContentPage.Content>
 
         <RelativeLayout>
-            <Image Source="BACKGROUNDIMAGE.png" Opacity="1"
+            <Image Source="BACKGROUNDIMAGE1.png" Opacity="1"
                 RelativeLayout.WidthConstraint=
                   "{ConstraintExpression Type=RelativeToParent, Property=Width}"
                 RelativeLayout.HeightConstraint=
@@ -13,14 +13,20 @@
             <StackLayout Padding="10"
                 RelativeLayout.XConstraint="50"
                          RelativeLayout.YConstraint="50" WidthRequest="250">
-            <Label Text="Renter Hub"/>
-            <Button Text="New Invoices" Clicked="OnInvoicesClicked"/>
-            <Button Text="Rate a Lessor" Clicked="OnRateClicked"/>
-            <Button Text="Messages" Clicked="OnMessagesClicked"/>
-            <Button Text="Exchanges" Clicked="OnExchangesClicked"/>
-            <Button Text="Renter Agreement" Clicked="OnRAggrementClicked"/>
-            <Label Text="Average Renter Rating" />
-                <Button Text="Home" Clicked="OnHomeClicked"/>
+                <Label Text="Renter Hub" TextColor="White"/>
+            <Button Text="New Invoices" Clicked="OnInvoicesClicked"
+                    BackgroundColor="#E29F10" TextColor="#707070"/>
+            <Button Text="Rate a Lessor" Clicked="OnRateClicked"
+                    BackgroundColor="#E29F10" TextColor="#707070"/>
+            <Button Text="Messages" Clicked="OnMessagesClicked"
+                    BackgroundColor="#E29F10" TextColor="#707070"/>
+            <Button Text="Exchanges" Clicked="OnExchangesClicked"
+                    BackgroundColor="#E29F10" TextColor="#707070"/>
+            <Button Text="Renter Agreement" Clicked="OnRAggrementClicked"
+                    BackgroundColor="#E29F10" TextColor="#707070"/>
+                <Label Text="Average Renter Rating" TextColor="White" />
+                <Button Text="Home" Clicked="OnHomeClicked"
+                        BackgroundColor="#E29F10" TextColor="#707070"/>
         </StackLayout>
         </RelativeLayout>
     </ContentPage.Content>

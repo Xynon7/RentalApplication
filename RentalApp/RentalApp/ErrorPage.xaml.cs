@@ -26,7 +26,9 @@ namespace RentalApp
                     return "There was an error with creating this message";
 
                 case 2:
-                    return "If you do not agree to these terms then you will be unable to sign up for this app";
+                    return "If you do not agree to the Terms, Standards, and Privacy Policies then you will be unable to sign up for this app";
+                case 4:
+                    return "There was a problem with this item listing";
 
             }
 

@@ -14,6 +14,7 @@ namespace RentalApp
 		public ExchangePage ()
 		{
 			InitializeComponent ();
+			ExchangeDisplay.Text = getExchanges();
 		}
 
 		string getExchanges()
@@ -25,7 +26,7 @@ namespace RentalApp
 			string toReturn = "";
 			foreach(RentalsApp.DBObjects.Exchange exch in listy)
             {
-				toReturn = toReturn + " Lessor: " + exch.lessor + " Renter:" + exch.renter + "\n";
+				toReturn = toReturn + " Lessor: " + exch.lessor + " Renter:" + exch.renter  +   "\n";
             }
 			return toReturn;
 		}

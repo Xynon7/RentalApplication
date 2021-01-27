@@ -17,23 +17,26 @@
 
 
             </Grid>
-            <Entry  Placeholder="Email" 
+            <Entry  Placeholder="Username" 
+                 PlaceholderColor="White"
                  
-                 
-                 RelativeLayout.XConstraint="150"
-                 RelativeLayout.YConstraint="400"
+                 RelativeLayout.XConstraint="100"
+                 RelativeLayout.YConstraint="300"
+                    WidthRequest="200"
                     Completed="EmailCompleted"
                  />
             <Entry Placeholder="Password"
-                
-                RelativeLayout.XConstraint="150"
-                RelativeLayout.YConstraint="450"
+                PlaceholderColor="White"
+                RelativeLayout.XConstraint="100"
+                RelativeLayout.YConstraint="375"
+                   WidthRequest="200"
                    Completed="PasswordCompleted"/>
             
             <Button Text="Enter"
                     RelativeLayout.XConstraint="150"
-                    RelativeLayout.YConstraint="475" 
-                    Clicked="OnEnterClicked"/>
+                    RelativeLayout.YConstraint="450" 
+                    Clicked="OnEnterClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
         </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

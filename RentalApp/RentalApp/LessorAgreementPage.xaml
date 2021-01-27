@@ -3,10 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.LessorAgreementPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="*Lessor Agrement goes here*" />
+        <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="Before renting out items on this application, you must read and agree to the following:
+As a lessor, you agree to:
+	Clean the item(s) rented out after pickup and before renting it again.
+Keep only what is fair of the deposit, if there is damage or item loss.
+Provide the item(s) on the date and at the time and location agreed upon.
+Charge a fair rate for the item(s) being rented out.
+Use the deposit rates provided by this application.
+Use accurate descriptions of the item and its condition, as well as provide up-to-date pictures of the item.
+" 
+                   TextColor="Black"/>
             <Button Text="Agree" Clicked="OnAgreeClicked"/>
             <Button Text="Disagre" Clicked="OnDisagreeClicked"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

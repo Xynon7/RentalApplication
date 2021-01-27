@@ -25,9 +25,23 @@ namespace RentalApp
         {
             string user = RASQLManager.currentUser.username;
             List<RentalsApp.DBObjects.ItemListing> listy;
-            //need a function to get listings
+            listy = RASQLManager.sqlManagerInstance.GetItemListings(user);
             string toReturn = "";
+            foreach (RentalsApp.DBObjects.ItemListing listing in listy)
+            {
+                toReturn= toReturn + " " + listing.itemNum + " " + listing.brand +" " + listing.type + "\n";
+            }
+            
             return toReturn;
+        }
+
+        async void OnReturnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+        async void OnHomeClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HomePage());
         }
     }
 }

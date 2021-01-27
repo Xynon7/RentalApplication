@@ -1,4 +1,4 @@
-﻿using RentalApp.DBObjects;
+﻿using RentalsApp.DBObjects;
 using System;
 using System.Collections.Generic;
 

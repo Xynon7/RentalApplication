@@ -19,7 +19,7 @@ namespace RentalApp
 			bool sucess=  RASQLManager.sqlManagerInstance.ChangeAcceptedPP(decision);
 			if (sucess)
 			{
-				await Navigation.PopAsync(); //???profit?
+				await Navigation.PushAsync(new SignUpPage2()); //???profit?
 			}
 			else
 				await Navigation.PushAsync(new StartPage());

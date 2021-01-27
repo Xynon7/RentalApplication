@@ -3,10 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.RenterAgreementPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="*Renter Agrement goes here*" />
+        <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="Before renting from this application, you must read and agree to the following:
+As a renter, you agree to:
+Pay the lessor the agreed price for the rental of the item(s) before the item(s) is delivered.
+Pay the deposit fee so that any damage or item loss is covered.
+Keep the item(s) as close as possible to its condition as originally arrived.
+Return the item(s) on the date and at the time and location agreed upon.
+"
+                   TextColor="Black"/>
             <Button Text="Agree" Clicked="OnAgreeClicked"/>
             <Button Text="Disagre" Clicked="OnDisagreeClicked"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

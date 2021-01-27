@@ -8,6 +8,7 @@ namespace RentalApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SearchPage : ContentPage
 	{
+        public string type;
 		public SearchPage ()
 		{
             InitializeComponent();
@@ -26,9 +27,14 @@ namespace RentalApp
             await Navigation.PushAsync(new Page2());
         }
 
+        void OnTypeCompleted(object sender, EventArgs e)
+        {
+            type = ((Entry)sender).Text;
+        }
+
         async void OnViewResultsClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ResultsPage());
+            await Navigation.PushAsync(new ResultsPage(type));
         }
     }
 }

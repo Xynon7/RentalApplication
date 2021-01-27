@@ -3,10 +3,76 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.TermsPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!" />
-            <Button Text="Agree" Clicked="OnAgreeClicked"/>
-            <Button Text="Disagree" Clicked="OnDisagreeClicked"/>
+        <ScrollView>
+        <StackLayout Padding="20">
+                <Label Text="Agreement to Terms
+ 
+The Terms of Use presented in this paper constitutes legally binding agreements between our customers who may be representing an entity and our organization. Additionally, the Terms of Use concerns our customer's access to our website, media forms, mobile websites, and channels connected to the 'Site.' RentIt is provided to our customers to establish an online marketplace where goods and services are offered. However, users are encouraged to comply and accept these Terms of Use to ensure that RentIt is a secure environment for selling marketplace offerings and purchases. Our clients can agree to our Terms of Use by accessing RentIt,, reading the Terms of Use, and clicking accept. However, if our clients do not agree with all our Terms of Use, they are prohibited from using RentIt, and must discontinue immediately.
+ 
+Any documents or supplemental terms and conditions posted on RentIt are incorporated through a reference. Only an organizational member has the right to make modifications and changes of the Terms of Use for any reason or at any time. RentIt's data is not to be distributed to other people or organizations contrary to our laws and regulations.
+Intellectual Property Rights
+ 
+All databases, source codes, website designs, software, texts, audio, video, and graphics are controlled and owned by us. Thus, the marketplace offerings and RentIt are our proprietary property unless stated otherwise. Therefore, we license all activities on RentIt, and the contents are protected by trademark and copyright laws.
+User Representation
+ 
+By using the marketplace offerings or RentIt, you warrant and represent that: &#10;
+ 
+1. 	You agree and have the legal capacity to comply with our Terms of Use. &#10;
+2. 	In the jurisdiction you reside, you are not a minor. &#10;
+3. 	You will not use non-human or automated means to access the Market Offering or RentIt. &#10;
+4. 	You will not use RentIt for unauthorized or illegal reasons. &#10;
+5. 	Your use of the marketplace offerings and RentIt will not violate applicable regulations and laws. &#10;
+  
+Marketplace Offerings &#10;
+ 
+In our marketplace offerings, we put effort to display specifications, features, colors, and market details as accurately as possible. RentIt does not guarantee or promise that these Marketplace displays will be complete, current, reliable, free from other errors, or accurate in displaying the actual details of the products.
+
+Purchases and Payment &#10;
+ In the organization, we only agree to payment forms when our clients agree to provide complete, accurate, and current account information for the purchases done via RentIt in the Market Offerings. For that reason, clients are encouraged to update payment data and accounts, including the payment methods, email addresses, and payment card expiry date.
+ 
+Prohibited Activities &#10;
+ 
+Our clients are prohibited from using or accessing RentIt to violate our terms of use. RentIt should not be used with other commercial endeavors even though they are connected or compatible, except those that are approved by us.
+  
+User Generated Contributions &#10;
+ 
+RentIt does not allow our users to post or submit content, although we may post, submit, transmit, perform, publish, or create materials and content for Rentit.
+Contribution License &#10;
+ 
+Through the contribution license, our clients agree with RentIt that we may access, use, process, and store any personal information you provide to us while complying with the set privacy policies and your consent.
+  
+
+Submissions &#10;
+ 
+Our clients agree that any comments, ideas, suggestions, questions, and feedback regarding the marketplace offerings or RentIt becomes our property. As a result, they waive all moral rights and thus are entitled to instructed publication and use of information.
+
+ Site Management &#10;
+ 
+We reserve the right to (1) monitor Terms of Use violations on RentIt; (2) take legal actions of clients who violate the Terms of Use; (3) limiting accessibility and disabling or refusing any of our client's contributions.
+  
+Indemnification &#10;
+ 
+All our clients through Terms of Use agrees to indemnify, defend and hold us harmless as well as our affiliates, subsidiaries, officers, employees, and agents against or from any loss, liability, claim, damage, or demand occurred due to:
+1. 	Use of RentIt and marketplace offerings.
+2. 	Breaching the Terms of Use.
+3. 	Breaching set warranties and your representations in these Terms of Use.
+4. 	Clients violation of the third party's rights.
+  
+
+Corrections &#10;
+ 
+Some of the information on RentIt may have inaccuracies, typographical errors, or omissions in areas such as product descriptions, availability, and pricing.
+User Data &#10;
+ 
+Our organization uses certain user information sent to RentIt to manage the marketplace offering performance.
+" 
+                       TextColor="Black"/>
+            <Button Text="Agree" Clicked="OnAgreeClicked"
+                    BackgroundColor="#E29F10" TextColor="White"  />
+            
+            <Button Text="Disagree" Clicked="OnDisagreeClicked"
+                    BackgroundColor="#E29F10" TextColor="White"  />
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -13,19 +13,25 @@
             <StackLayout Padding="10"  RelativeLayout.XConstraint="50"
                  RelativeLayout.YConstraint="50">
                 <Label Text="Welcome, what would you like to do today?"
-                 />
+                 TextColor="#228E7F"/>
             <Button Text="View my profile"
-                    Clicked="OnViewProfileClicked"/>
+                    Clicked="OnViewProfileClicked"
+                    BackgroundColor= "#E29F10" TextColor="White"/>
             <Button Text="View my wish list"
-                    Clicked="OnViewWishListClicked"/>
+                    Clicked="OnViewWishListClicked"
+                    BackgroundColor= "#E29F10" TextColor="White"/>
             <Button Text="Search for an item"
-                    Clicked="OnSearchClicked"/>
+                    Clicked="OnSearchClicked"
+                    BackgroundColor= "#E29F10" TextColor="White"/>
             <Button Text="View My renter hub"
-                    Clicked="OnViewRenterHubClicked"/>
+                    Clicked="OnViewRenterHubClicked"
+                    BackgroundColor= "#E29F10" TextColor="White"/>
             <Button Text="View my lessor hub"
-                    Clicked="OnViewLessorHubClicked"/>
+                    Clicked="OnViewLessorHubClicked"
+                    BackgroundColor= "#E29F10" TextColor="White"/>
             <Button Text="Report User"
-                    Clicked="OnReportClicked"/>
+                    Clicked="OnReportClicked"
+                    BackgroundColor= "#E29F10" TextColor="White"/>
                 </StackLayout>
                 </RelativeLayout>
 

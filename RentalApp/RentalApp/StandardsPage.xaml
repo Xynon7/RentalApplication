@@ -3,10 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.StandardsPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!" />
-            <Button Text="Agree" Clicked="OnAgreeClicked"/>
-            <Button Text="Disagree" Clicked="OnDisagreeClicked"/> 
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Label Text="Before using this application, you must read and agree to the following: &#10;
+Inappropriate behavior can and will lead to a temporary or permanent ban from this application. &#10;
+This behavior includes: &#10;
+Lewd behavior and images  &#10;
+Stalking behavior &#10;
+Harassment &#10;
+Threats of violence &#10;
+Acts of violence &#10;
+False reporting &#10;
+Deliberate sabotage of rented items &#10;
+Not adhering to the terms and conditions of this site or the Renter/Lessor Agreements can and will lead to a warning issued to offender(s), with a temporary or permanent ban issued from this application on repeated and persistent offenses.
+This behavior includes: &#10;
+Not describing an item accurately &#10;
+Not cleaning an item before it is rented out &#10;
+General lack of care for a rented item that results in degradation of its condition. &#10;
+Renting out an item that is not in good condition or that is hazardous to use. &#10;
+When a violation has been committed the user will be notified by a message of the violating behavior. For a mild offense that has not caused any harm, the user will be banned for two weeks and given an opportunity to correct their behavior.
+For a moderate offense that has caused some harm but no bodily injury, the user will be banned for four weeks and given an opportunity to correct their behavior, the user must also pay any damages incurred for this offense. For a severe offense that has caused harm or bodily injury, the user will be banned permanently, the user must also pay any damages incurred for this offense. Once a user has been temporarily banned three times for the same or similar offenses, the user will be banned permanently.
+" 
+                       TextColor="Black"/>
+            <Button Text="Agree" Clicked="OnAgreeClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Disagree" Clicked="OnDisagreeClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/> 
         </StackLayout>
+            </ScrollView>
     </ContentPage.Content>
 </ContentPage>

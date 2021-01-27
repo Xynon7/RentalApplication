@@ -4,12 +4,17 @@
              x:Class="RentalApp.NewListingPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="New Item Listings" />
+            <Label Text="New Item Listing" />
             <Entry Placeholder="Item Description" Completed="DescriptionCompleted"/>
             <Entry Placeholder="Item Brand" Completed="BrandCompleted"/>
             <Entry Placeholder="Item type" Completed="TypeCompleted"/>
             
             <Entry Placeholder="Cost Per day" Completed="CostCompleted"/>
+            <Entry Placeholder="Replacement Cost" Completed="ReplacementCompleted"/>
+            <Entry Placeholder="Deposit" Completed="DepositCompleted"/>
+            <Entry Placeholder="City" Completed="CityCompleted"/>
+            <Entry Placeholder="State" Completed="StateCompleted"/>
+            <Entry Placeholder="Zip" Completed="ZipCompleted"/>
             <Button Text="Submit" Clicked="OnSubmitClicked"/>
         </StackLayout>
     </ContentPage.Content>
