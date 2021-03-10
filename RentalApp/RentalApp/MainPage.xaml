@@ -4,12 +4,13 @@
              xmlns:local="clr-namespace:RentalApp"
              x:Class="RentalApp.MainPage">
 
-    <StackLayout>
+    <StackLayout BackgroundColor= "White">
         <!-- Place new controls here -->
 
 
         <Button Text="Welcome to the app" 
-                Clicked="OnWelcomeClicked"/>
+                Clicked="OnWelcomeClicked"
+                 BackgroundColor="#E29F10" TextColor="White" />
     </StackLayout>
 
 </ContentPage>

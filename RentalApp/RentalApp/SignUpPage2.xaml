@@ -3,20 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.SignUpPage2">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="AntiqueWhite" Padding="10" >
-            <Label Text="State ID"  TextColor="Black"/>
-            <Label Text="Upload Image of above *figure out how to do this*" TextColor="Black"/>
-            <Entry Text="{Binding SSN}" Placeholder="SSN" PlaceholderColor="Black"/>
+        <StackLayout BackgroundColor="#FAF0EB" Padding="10" >
+            <Label Text="State ID"  TextColor="#228E7F"/>
+            <Label Text="Upload Image of above *figure out how to do this*" TextColor="#228E7F"/>
+            <Entry Text="{Binding SSN}" Placeholder="SSN" PlaceholderColor="#228E7F"/>
             <Button Text="Add a location"
-                    Clicked="OnAddLoactionClicked" TranslationY="20"/>
+                    Clicked="OnAddLoactionClicked" TranslationY="20" BackgroundColor="White" TextColor="#707070"/>
             <Button Text="Terms and Conditions"
-                    Clicked="OnTermsClicked"    TranslationY="20" />
+                    Clicked="OnTermsClicked"    TranslationY="20" 
+                    BackgroundColor="White" TextColor="#707070"/>
             <Button Text="Privacy Policy"
-                    Clicked="OnPrivacyClicked" TranslationY="20"/>
+                    Clicked="OnPrivacyClicked" TranslationY="20"
+                    BackgroundColor="White" TextColor="#707070"/>
             <Button Text="Standards Policy"
-                    Clicked="OnStandardsClicked" TranslationY="20"/>
+                    Clicked="OnStandardsClicked" TranslationY="20"
+                    BackgroundColor="White" TextColor="#707070"/>
             <Button Text="Submit"
-                    Clicked="OnSubmitClicked" TranslationY="20"/>
+                    Clicked="OnSubmitClicked" TranslationY="20"
+                    BackgroundColor="White" TextColor="#707070"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

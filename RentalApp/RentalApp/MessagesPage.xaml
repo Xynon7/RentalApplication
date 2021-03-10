@@ -5,17 +5,22 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout>
-            
-            <Label Text="All messages sent" />
-            <Label x:Name="sentDisplay" />
-                <Label Text="All messages recieved" />
-                <Label x:Name="recDisplay" />
-                <Label Text="Create new message"/>
-                <Entry  Placeholder="Receiver" Completed="OnRecCompleted"/>
-            <Entry  Placeholder="Body" Completed="OnBodyCompleted"/>
-            <Button Text="Send" Clicked="OnSendClicked"/>
-            <Button Text="Cancel" Clicked="OnCancelClicked"/>
-            <Button Text="Home" Clicked="OnHomeClicked"/>
+
+                <Label Text="All messages sent" TextColor="#228E7F"/>
+                <Label x:Name="sentDisplay" TextColor="#228E7F"/>
+                <Label Text="All messages recieved" TextColor="#228E7F"/>
+                <Label x:Name="recDisplay" TextColor="#228E7F"/>
+                <Label Text="Create new message" TextColor="#228E7F"/>
+                <Entry  Placeholder="Receiver" Completed="OnRecCompleted"
+                        PlaceholderColor="#228E7F"/>
+            <Entry  Placeholder="Body" Completed="OnBodyCompleted"
+                    PlaceholderColor="#228E7F"/>
+            <Button Text="Send" Clicked="OnSendClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Cancel" Clicked="OnCancelClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Home" Clicked="OnHomeClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
             
         </StackLayout>
         </ScrollView>

@@ -4,12 +4,12 @@
              x:Class="RentalApp.InvoicePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Invoice" />
-            <Label Text="*List of added items*"/>
-            <Label Text="*Paid or not*"/>
-            <Label Text="*Total Cost*"/>
-            <Button Text="Pay invoice"/>
-            <Button Text="Home"/>
+            <Label Text="Invoice" TextColor="#228E7F"/>
+            <Label Text="*List of added items*" TextColor="#707070"/>
+            <Label Text="*Paid or not*" TextColor="#707070"/>
+            <Label Text="*Total Cost*" TextColor="#707070"/>
+            <Button Text="Pay invoice"  BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Home"  BackgroundColor="#E29F10" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

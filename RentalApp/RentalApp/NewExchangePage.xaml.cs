@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentalsApp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,8 @@ namespace RentalApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewExchangePage : ContentPage
     {
-        public string Ruser, Luser, itemnum, exchangeLoc, exchangeTime, pickOrDrop, Ragree, Lagree;
+        public string Ruser, Luser, itemnum, exchangeLoc, pickOrDrop, Ragree, Lagree, invoiceNum;
+        public DateTime exchangeTime;
         public NewExchangePage()
         {
             InitializeComponent();
@@ -38,9 +40,9 @@ namespace RentalApp
             exchangeLoc = ((Entry)sender).Text;
         }
 
-        void exchangeTimeCompleted(object sender, EventArgs e)
+        void OnDateSelected(object sender, EventArgs e)
         {
-            exchangeTime = ((Entry)sender).Text;
+            exchangeTime = ((DatePicker)sender).Date;
         }
 
         void PickOrDropCompleted(object sender, EventArgs e)
@@ -57,10 +59,21 @@ namespace RentalApp
             Lagree= ((Entry)sender).Text;
         }
 
+        void InvoiceNumCompleted(object sender, EventArgs e)
+        {
+            invoiceNum= ((Entry)sender).Text;
+        }
+
        async void OnSubmitClicked(object sender, EventArgs e)
         {
             //need to create a new exchange
-            await Navigation.PushAsync(new NewExchangePage());
+            bool success =  RASQLManager.sqlManagerInstance.CreateExchange(Ruser, Luser, invoiceNum, itemnum, exchangeLoc, pickOrDrop, exchangeTime);
+            if (success)
+            {
+                await Navigation.PushAsync(new ExchangePage());
+            }
+            else
+                await Navigation.PushAsync(new ErrorPage(1));
         }
     }
 }

@@ -41,7 +41,7 @@ namespace RentalApp
 
 		async void OnResultsClicked(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new ResultsPage());
+			//await Navigation.PushAsync(new ResultsPage());
 		}
 
 		async void OnCartsClicked(object sender, EventArgs e)

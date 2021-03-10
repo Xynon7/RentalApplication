@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using RentalsApp.DBObjects;
-using RentalApp.DBObjects;
+
 using MySqlConnector;
 using System.Threading.Tasks;
 
@@ -17,7 +17,7 @@ namespace RentalsApp
 
         string mySQLFormatDate = "yyyy-MM-dd HH:mm:ss";
 
-        private RASQLManager ()
+        private RASQLManager()
         {
             connectionString = "server=70.177.89.61;user=application;database=rentit;port=3306;password=easyPassword";
 
@@ -73,6 +73,7 @@ namespace RentalsApp
                             }
                         }
                     }
+                    mySqlConnection.Close();
                 }
                 catch (Exception ex)
                 {
@@ -295,6 +296,99 @@ namespace RentalsApp
             return items;
         }
 
+
+        public List<Item> GetItemsByType(string type)
+        {
+            List<Item> items = new List<Item>();
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.Open();
+                    Console.WriteLine("MySQL connection succeeded.");
+
+                    string sqlQueryText = "SELECT * FROM all_items WHERE item_type = @Type";
+
+                    using (MySqlCommand sqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Type", type);
+
+                        using (MySqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            while (sqlDataReader.Read())
+                            {
+                                Item item = new Item();
+                              item.listingInfo = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[2].ToString(), sqlDataReader[3].ToString(), sqlDataReader[5].ToString(), Double.Parse(sqlDataReader[4].ToString()), DateTime.MinValue);
+                                item.isAvailable = (bool)sqlDataReader[10];
+                                item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
+                                items.Add(item);
+                            }
+                        }
+                    }
+                    mySqlConnection.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("MySQL connection failed.");
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+
+            return items;
+        }
+
+
+        public List<ItemListing> GetAllItems()
+        {
+            List<ItemListing> items = new List<ItemListing>();
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.Open();
+                    Console.WriteLine("MySQL connection succeeded.");
+
+                    string sqlQueryText = "SELECT * FROM item_listing";
+
+                    using (MySqlCommand sqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
+                    {
+                      //  sqlCommand.Parameters.AddWithValue("@Type", type);
+
+                        using (MySqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            while (sqlDataReader.Read())
+                            {
+                                // Item item = new Item();
+                                //  item.listingInfo = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[2].ToString(), sqlDataReader[3].ToString(), sqlDataReader[5].ToString(), Double.Parse(sqlDataReader[4].ToString()), DateTime.MinValue);
+                                //  item.isAvailable = (bool)sqlDataReader[10];
+                                //   item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
+                                //   items.Add(item);
+                                ItemListing item = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[2].ToString(), Convert.ToDouble(sqlDataReader[5]), DateTime.MinValue);
+                                items.Add(item);
+                            }
+                        }
+                    }
+                    mySqlConnection.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("MySQL connection failed.");
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+
+            return items;
+        }
+
+
+
+
+
+
         public Cart GetCart(string username)
         {
             Cart cartResult = null;
@@ -383,6 +477,51 @@ namespace RentalsApp
             }
 
             return invoiceResults.Values.ToList();
+        }
+
+
+        public bool CreateExchange(string renterUser, string lessorUser, string invoiceNum, string itemNum, string place, string PUorDO, DateTime exchangeDate)
+        {
+            //need to find exchange number, invoice number, parse dateTime, and set bool paymentmade to false
+            bool successful = false;
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.Open();
+                    Console.WriteLine("MySQL connection succeeded.");
+
+                    string sqlQueryText = "INSERT INTO exchanges VALUES(@Renter_Username, @Lessor_Username, @Invoice_number, @Item_number, @Exchange_Place, @Pickup_Dropoff, @Exchange_date, @Exchange_time, @Payment_Made, @Exchange_Number)";
+
+                    using (MySqlCommand mySqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
+                    {
+                        mySqlCommand.Parameters.AddWithValue("@Renter_Username", renterUser);
+                        mySqlCommand.Parameters.AddWithValue("@Lessor_Username", lessorUser);
+                        mySqlCommand.Parameters.AddWithValue("@Invoice_number", invoiceNum);
+                        mySqlCommand.Parameters.AddWithValue("@Item_number", itemNum);
+                        mySqlCommand.Parameters.AddWithValue("@Exchange_Place", place);
+                        mySqlCommand.Parameters.AddWithValue("@Pickup_Dropoff", PUorDO);
+                        mySqlCommand.Parameters.AddWithValue("@Exchange_date", exchangeDate.Date);
+                        mySqlCommand.Parameters.AddWithValue("@Exchange_time", DateTime.Now.TimeOfDay); //need to do for hours and seconds
+                        mySqlCommand.Parameters.AddWithValue("@Payment_Made", false);
+                        mySqlCommand.Parameters.AddWithValue("@Exchange_Number", GetNextExchangeNum());
+                       // mySqlCommand.Parameters.AddWithValue("@Renter_Username", renterUser);
+
+                        mySqlCommand.ExecuteNonQuery();
+                    }
+                    mySqlConnection.Close();
+                    successful = true;
+                }
+                
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Data insertion failed");
+                    Console.WriteLine(ex.ToString());
+                }
+            }   
+            return successful;
         }
 
         public Invoice GetSpecificInvoice(string invoiceNum)
@@ -788,12 +927,13 @@ namespace RentalsApp
                     mySqlConnection.Open();
                     Console.WriteLine("MySQL connection succeeded.");
 
-                    string sqlQueryText = "INSERT INTO communication VALUES(@Sender, @Receiver, DEFAULT, @Body, @Date, @Time)";
+                    string sqlQueryText = "INSERT INTO communication VALUES(@Sender, @Receiver, @CommunicationNum, @Body, @Date, @Time)";
 
                     using (MySqlCommand mySqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
                     {
                         mySqlCommand.Parameters.AddWithValue("@Sender", currentUser.username);
                         mySqlCommand.Parameters.AddWithValue("@Receiver", receiverUsername);
+                        mySqlCommand.Parameters.AddWithValue("@CommunicationNum", GetNextCommunicationNum());
                         mySqlCommand.Parameters.AddWithValue("@Body", body);
                         mySqlCommand.Parameters.AddWithValue("@Date", DateTime.Today.Date);
                         mySqlCommand.Parameters.AddWithValue("@Time", DateTime.Now.TimeOfDay);
@@ -1048,6 +1188,47 @@ namespace RentalsApp
             return successful;
         }
 
+        public List<ItemListing> GetItemListings(string username)
+        {
+            List<ItemListing> listingResults = new List<ItemListing>();
+            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.Open();
+                    Console.WriteLine("MySQL connection succeeded.");
+
+                    string sqlQueryText = "SELECT * FROM item_listing WHERE lessor_username =@Username";
+
+                    using (MySqlCommand sqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Username", username);
+
+                        using (MySqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            while (sqlDataReader.Read())
+                            {
+                                ItemListing result = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[2].ToString(), Convert.ToDouble(sqlDataReader[5]), Convert.ToDateTime(sqlDataReader[6]) );
+
+                                listingResults.Add(result);
+
+                            }
+                        }
+
+
+                    }
+                    mySqlConnection.Close();
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine("MySQL connection failed.");
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+            return listingResults;
+        }
+
         private int GetNextItemNum()
         {
 
@@ -1085,6 +1266,100 @@ namespace RentalsApp
 
             return itemNum + 1;
         }
+
+
+
+
+        private int GetNextExchangeNum()
+        {
+
+            int ExchangeNum = 0;
+
+            try
+            {
+                using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+                {
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.Open();
+                    Console.WriteLine("MySQL connection succeeded.");
+
+                    string sqlQueryText = "SELECT MAX(exchange_number) FROM exchanges";
+
+                    using (MySqlCommand sqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
+                    {
+                        using (MySqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            while (sqlDataReader.Read())
+                            {
+                                ExchangeNum = int.Parse(sqlDataReader[0].ToString());
+                            }
+                        }
+                    }
+
+                    mySqlConnection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Data retrieval failed.");
+                Console.WriteLine(ex.ToString());
+            }
+
+            return ExchangeNum + 1;
+        }
+
+
+
+
+
+
+
+
+        private int GetNextCommunicationNum()
+        {
+
+            int communicationNum = 0;
+
+            try
+            {
+                using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+                {
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.Open();
+                    Console.WriteLine("MySQL connection succeeded.");
+
+                    string sqlQueryText = "SELECT MAX(communication_number) FROM communication";
+
+                    using (MySqlCommand sqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
+                    {
+                        using (MySqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            while (sqlDataReader.Read())
+                            {
+                                communicationNum = int.Parse(sqlDataReader[0].ToString());
+                            }
+                        }
+                    }
+
+                    mySqlConnection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Data retrieval failed.");
+                Console.WriteLine(ex.ToString());
+            }
+
+            return communicationNum + 2;
+        }
+
+
+
+
+
+
+
+
 
         /*
          * Changes the current user's Terms and Conditons acceptance status.

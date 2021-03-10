@@ -5,8 +5,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Report User"/>
-            <Entry Placeholder="Reporting Username"/>
-            <Entry Placeholder="Violating User"/>
+            <Entry Placeholder="Reporting Username" PlaceholderColor="#228E7F"/>
+            <Entry Placeholder="Violating User" PlaceholderColor="#228E7F"/>
             <Label Text="*Need to add drop down boxes etc*"/>
         </StackLayout>
     </ContentPage.Content>

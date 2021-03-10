@@ -13,6 +13,8 @@ namespace RentalApp
 		public CartPage ()
 		{
 			InitializeComponent ();
+            cartList = getCart();
+            CartDisplay.Text = cartList;
 		}
 
         string getCart()
@@ -25,7 +27,9 @@ namespace RentalApp
             listy = myCart.itemList;
             foreach(KeyValuePair<RentalsApp.DBObjects.Item, int> kvp in listy)
             {
-                toReturn = toReturn + " " + kvp.Value.ToString() + '\n';
+                toReturn = toReturn + "Item num: " + kvp.Key.listingInfo.itemNum + " Brand: " + kvp.Key.listingInfo.brand + " Type: " + kvp.Key.listingInfo.type + " Cost: " 
+                    + kvp.Key.listingInfo.costPerDay + " Avaliable?: " + kvp.Key.isAvailable.ToString() + " Deposit: " + kvp.Key.listingInfo.deposit.ToString() + " Description: "
+                  + kvp.Key.listingInfo.description + " " + kvp.Value.ToString() + '\n';
             }
             toReturn = toReturn + "Total cost is: " + myCart.totalCost;
 

@@ -3,18 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.WishListPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Wish List"/>
-            <Label Text="*List of unavaliable items*"/>
-            <Label Text="*List of items added to the wish list*"/>
-            <Entry Placeholder="Cost Range - High end"/>
-            <Entry Placeholder="Cost Range - Low end"/>
-            <Entry Placeholder="Brand"/>
-            <Entry Placeholder="Type"/>
-            <Entry Placeholder="Description Phrase"/>
-            <Button Text="Add to Wish List"/>
-            <Button Text="Return to Result"/>
-            <Button Text="Home"/>
+        <StackLayout BackgroundColor = "#FAF0EB">
+            <Label Text="Wish List" TextColor= "#228E7F"/>
+            <Label x:Name="WishListDisplay" TextColor="#707070"/>
+            
+            <Entry Placeholder="Cost Range - High end"
+                   PlaceholderColor="#707070"/>
+            <Entry Placeholder="Cost Range - Low end"
+                   PlaceholderColor="#707070"/>
+            <Entry Placeholder="Brand"
+                   PlaceholderColor="#707070"/>
+            <Entry Placeholder="Type"
+                   PlaceholderColor="#707070"/>
+            <Entry Placeholder="Description Phrase"
+                   PlaceholderColor="#707070"/>
+            <Button Text="Add to Wish List"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Return to Result"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Home"
+                    BackgroundColor="#E29F10" TextColor="White"/>
 
         </StackLayout>
     </ContentPage.Content>

@@ -3,23 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.LocationPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Locations" />
-            <Label Text="*List Locations*" />
+        <StackLayout BackgroundColor="White">
+            <Label Text="Locations" TextColor="#228EF7" />
             
-            <ListView x:Name="LocList"/>
-            <Label x:Name="LocationDisplay"/>
-            <Entry Text="{Binding Name}" Placeholder="Name" Completed="NameCompleted"/>
-            <Entry Text="{Binding Address}" Placeholder="Address" Completed="AddressCompleted"/>
-            <Entry Text="{Binding City}" Placeholder="City" Completed="CityCompleted"/>
-            <Entry  Placeholder="State" Completed="StateCompleted"/>
-            <Entry Text="{Binding Zip}" Placeholder="Zip code" Completed="ZipCompleted"/>
+            
+            
+            <Label x:Name="LocationDisplay" TextColor="#707070"/>
+            <Entry Text="{Binding Name}" Placeholder="Name" Completed="NameCompleted"
+                   PlaceholderColor="#228E7F"/>
+            <Entry Text="{Binding Address}" Placeholder="Address" Completed="AddressCompleted"
+                   PlaceholderColor="#228E7F"/>
+            <Entry Text="{Binding City}" Placeholder="City" Completed="CityCompleted"
+                   PlaceholderColor="#228E7F"/>
+            <Entry  Placeholder="State" Completed="StateCompleted"
+                    PlaceholderColor="#228E7F"/>
+            <Entry Text="{Binding Zip}" Placeholder="Zip code" Completed="ZipCompleted"
+                   PlaceholderColor="#228E7F"/>
             <Button Text="Add location" Command="{Binding AddLocationCommand}"
-                    Clicked="OnAddLocationClicked"/>
+                    Clicked="OnAddLocationClicked"
+                     BackgroundColor="#E29F10" TextColor="White"/>
             <Button Text="Return to profile"
-                    Clicked="OnReturnClicked"/>
+                    Clicked="OnReturnClicked"
+                     BackgroundColor="#E29F10" TextColor="White"/>
             <Button Text="Home"
-                    Clicked="OnHomeClicked"/>
+                    Clicked="OnHomeClicked"
+                     BackgroundColor="#E29F10" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

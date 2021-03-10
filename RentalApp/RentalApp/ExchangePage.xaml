@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.ExchangePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Exchanges"/>
-            <Label x:Name="ExchangeDisplay"/>
-            <Button Text="New Exchange" Clicked="OnNewExchangeClicked"/>
-            <Button Text="Home" Clicked="OnHomeClicked"/>
+        <StackLayout BackgroundColor="White">
+            <Label Text="Exchanges" TextColor="#228E7F"/>
+            <Label x:Name="ExchangeDisplay" TextColor="#707070"/>
+            <Button Text="New Exchange" Clicked="OnNewExchangeClicked"
+                    BackgroundColor= "#E29F10" TextColor="White"/>
+            <Button Text="Home" Clicked="OnHomeClicked"
+                    BackgroundColor= "#E29F10" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

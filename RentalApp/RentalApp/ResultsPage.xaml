@@ -3,36 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.ResultsPage">
     <ContentPage.Content >
-        <StackLayout BackgroundColor="DarkCyan" >
-            <ScrollView VerticalOptions="FillAndExpand">
-            <Label Text="Search Results" />
-            </ScrollView>
-            <Label Text="*List of results*"/>
-            <Label Text="Avaliable Items can be added to a cart and unavaliable items can be added to the wish list"/>
+        <ScrollView>
+            <StackLayout BackgroundColor="#FAF0EB"  >
+            
+                <Label Text="Search Results" TextColor="#228E7F"/>
+            
+            <Label x:Name="ResultsDisplay" TextColor="#707070"/>
+            <Label Text="Avaliable Items can be added to a cart and unavaliable items can be added to the wish list"
+                   TextColor="#707070"/>
             
             <RelativeLayout >
 
                 <Button Text="Add to cart" RelativeLayout.XConstraint="50" 
                         RelativeLayout.YConstraint="50"
-                        WidthRequest="100" Command="{Binding AddToCartCommand}"/>
+                        WidthRequest="100" Command="{Binding AddToCartCommand}"
+                        BackgroundColor="#E29F10" TextColor="White"/>
                 <Button Text="Return to Search"  RelativeLayout.XConstraint="50"
-                        RelativeLayout.YConstraint="100"
-                        WidthRequest="100"/>
-                <Button Text="View Wish List"  RelativeLayout.XConstraint="50"
                         RelativeLayout.YConstraint="150"
-                        WidthRequest="100"/>
+                        WidthRequest="100" BackgroundColor="#E29F10" TextColor="White"/>
+                <Button Text="View Wish List"  RelativeLayout.XConstraint="50"
+                        RelativeLayout.YConstraint="250"
+                        WidthRequest="100"
+                        BackgroundColor="#E29F10" TextColor="White"/>
                 <Button Text="Add to Wish List"  RelativeLayout.XConstraint="200"
                         RelativeLayout.YConstraint="50"
-                        WidthRequest="100"/>
+                        WidthRequest="100"
+                        BackgroundColor="#E29F10" TextColor="White"/>
                 <Button Text="View Cart"  RelativeLayout.XConstraint="200"
-                        RelativeLayout.YConstraint="100"
-                        WidthRequest="100"/>
-                <Button Text="Home"  RelativeLayout.XConstraint="200"
                         RelativeLayout.YConstraint="150"
-                        WidthRequest="100"/>
+                        WidthRequest="100"
+                        BackgroundColor="#E29F10" TextColor="White"/>
+                <Button Text="Home"  RelativeLayout.XConstraint="200"
+                        RelativeLayout.YConstraint="250"
+                        WidthRequest="100" 
+                        BackgroundColor="#E29F10" TextColor="White"/>
             </RelativeLayout>
             
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
     

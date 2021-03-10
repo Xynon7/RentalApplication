@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentalsApp;
+using System;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,7 +15,7 @@ namespace RentalApp
 		}
         async void OnAddLoactionClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new LocationPage());
+            await Navigation.PushAsync(new LimitedLocationPage());
         }
         async void OnTermsClicked(object sender, EventArgs e)
         {
@@ -28,9 +29,13 @@ namespace RentalApp
         {
             await Navigation.PushAsync(new StandardsPage());
         }
-        async void OnSubmitClicked(object sender, EventArgs e)
+        async void OnSubmitClicked(object sender, EventArgs e)   
         {
-            await Navigation.PushAsync(new HomePage());
+            bool acceptance = RASQLManager.currentUser.agreedToPP;
+            
+                await Navigation.PushAsync(new HomePage());
+            
+             //   await Navigation.PushAsync(new ErrorPage(2));
         }
     }
 }

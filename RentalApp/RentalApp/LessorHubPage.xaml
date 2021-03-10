@@ -3,16 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.LessorHubPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Lessor Hub"/>
-            <Button Text="New item Listing"  Clicked="OnNewItemClicked"/>
-            <Button Text="Item Listings" Clicked="OnListingsClicked"/>
-            <Button Text="Rate A Renter" Clicked="OnRatingsClicked"/>
-            <Button Text="Messages" Clicked="OnMessagesClicked"/>
-            <Button Text="Exchanges" Clicked="OnExchangesClicked"/>
-            <Button Text="Lessor Agreement" Clicked="OnLAgreementsClicked"/>
-            <Label Text="Average Lessor Rating " />
-            <Button Text="Home" Clicked="OnHomeClicked"/>
+        <StackLayout BackgroundColor="White">
+            <Label Text="Lessor Hub" TextColor="#228EF7"/>
+            <Button Text="New item Listing"  Clicked="OnNewItemClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Item Listings" Clicked="OnListingsClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Rate A Renter" Clicked="OnRatingsClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Messages" Clicked="OnMessagesClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Exchanges" Clicked="OnExchangesClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Lessor Agreement" Clicked="OnLAgreementsClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Label Text="Average Lessor Rating: " TextColor="#228EF7"/>
+            <Button Text="Home" Clicked="OnHomeClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

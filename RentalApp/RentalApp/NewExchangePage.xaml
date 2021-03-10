@@ -8,7 +8,10 @@
             <Entry Placeholder="Lessor Username" Completed="LuserCompleted"/>
             <Entry Placeholder="Item Number" Completed="NumCompleted"/>
             <Entry Placeholder="Exchange Place" Completed="exchangeLocCompleted"/>
-            <Entry Placeholder="Exchange Date and Time" Completed="exchangeTimeCompleted"/>
+            <Label Text="Date for exchange :"/>
+            <DatePicker MinimumDate="12/6/2020" MaximumDate="01/30/2021" DateSelected="OnDateSelected"/>
+            <Entry Placeholder="Invoice Number" Completed="InvoiceNumCompleted"/>
+            
             <Entry Placeholder="Pick Up or Drop off" Completed="PickOrDropCompleted"/>
             <Entry Placeholder="Renter Agrees" Completed="RAgreeCompleted"/>
             <Entry Placeholder="Lessor Agrees" Completed="LAgreeCompleted"/>

@@ -4,33 +4,33 @@
              x:Class="RentalApp.SignUpPage">
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout Padding="8" BackgroundColor="AntiqueWhite" >
-           
-            <Entry Text="{Binding firstName}" Placeholder="First name" PlaceholderColor="Black"  Completed="FirstName_Completed"/>
-            <Entry Text="{Binding lastName}" Placeholder="Last Name" PlaceholderColor="Black" Completed="LastName_Completed"/>
-            <Entry Text="{Binding MiddleInitial}" Placeholder="Middle Initial" PlaceholderColor="Black" Completed="MiddleInitial_Completed"/>
+            <StackLayout Padding="8"  BackgroundColor="#FAF0EB" >
 
-            <Label Text="Date of Birth:" TextColor="Black"/>
+                <Entry Text="{Binding firstName}" Placeholder="First name" PlaceholderColor="#228E7F"  Completed="FirstName_Completed"/>
+                <Entry Text="{Binding lastName}" Placeholder="Last Name" PlaceholderColor="#228E7F" Completed="LastName_Completed"/>
+                <Entry Text="{Binding MiddleInitial}" Placeholder="Middle Initial" PlaceholderColor="#228E7F" Completed="MiddleInitial_Completed"/>
+
+            <Label Text="Date of Birth:" TextColor="#228E7F"/>
             <DatePicker MinimumDate="01/01/1900" MaximumDate="12/23/2010" DateSelected="OnDateSelected"/>
-            
-            <Entry Text="{Binding Gender}" Placeholder="Gender" PlaceholderColor="Black" Completed="Gender_Completed"/>
-            <Entry Text="{Binding Username}" Placeholder="Username" PlaceholderColor="Black" Completed="Username_Completed"/>
-            <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="Black" Completed="Email_Completed"/>
-            <Entry Text="{Binding Password}" Placeholder="Password" PlaceholderColor="Black" Completed="Password_Completed"/>
-            <Entry Placeholder="SSN" PlaceholderColor="Black" Completed="SSN_Completed"/>
-            <Entry Placeholder="StateID" PlaceholderColor="Black" Completed="StateID_Completed"/>
-            <Entry Placeholder="Phone Number" PlaceholderColor="Black"/>
+
+                <Entry Text="{Binding Gender}" Placeholder="Gender" PlaceholderColor="#228E7F" Completed="Gender_Completed"/>
+                <Entry Text="{Binding Username}" Placeholder="Username" PlaceholderColor="#228E7F" Completed="Username_Completed"/>
+                <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="#228E7F" Completed="Email_Completed"/>
+                <Entry Text="{Binding Password}" Placeholder="Password" PlaceholderColor="#228E7F" Completed="Password_Completed"/>
+                <Entry Placeholder="SSN" PlaceholderColor="#228E7F" Completed="SSN_Completed"/>
+                <Entry Placeholder="StateID" PlaceholderColor="#228E7F" Completed="StateID_Completed"/>
+                <Entry Placeholder="Phone Number" PlaceholderColor="#228E7F"/>
 
 
 
-            <Entry Placeholder="Confirm Password" PlaceholderColor="Black"/>
+                <Entry Placeholder="Confirm Password" PlaceholderColor="#228E7F"/>
             <Label Text="Sign up as" TextColor="Black"/>
             <RelativeLayout>
                 <Label Text="Lessor" TextColor="Black"/>
                 <Switch IsToggled="{Binding isLessor}"
                       RelativeLayout.XConstraint="160"
                         RelativeLayout.YConstraint="20"
-                        OnColor="Blue" />
+                        OnColor="Blue"  />
                 <Label Text="Renter" 
                         RelativeLayout.XConstraint="160" TextColor="Black"/>
                 <Switch IsToggled="{Binding isRenter}"

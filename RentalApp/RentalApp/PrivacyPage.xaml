@@ -3,10 +3,66 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.PrivacyPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="*Privacy policy here*" />
-            <Button Text="Agree" Clicked="OnAgreeClicked"/>
-            <Button Text="Disagree" Clicked="OnDisagreeClicked"/>
+        <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="We appreciate you for being part of the RentIt community, and we are committed to ensuring that your personal information is protected as well as your privacy rights. For more questions about our practices towards your privacy information and this privacy notice, you can contact
+us at - - - - - - - &#10;
+ 
+Our app is compatible with other mobile applications and offers the best services without interfering with other processes. RentIt appreciates your continuous trust, especially with your personal data, and we take privacy issues very seriously to avoid leaks or breaches. We are using this privacy notice to explain to all our customers the information we collect, including its use and the data's rights. For that reason, we hope you will go through the provided information carefully and notify us of the areas you find unclear. Additionally, you can discontinue using our services immediately if you find them unfavorable and unable to satisfy your needs. &#10;
+ 
+Our privacy notice applies to all data collected using our services, which includes our app, events, and marketing activities.  &#10;
+ 
+
+1. The information that we collect &#10;
+ 
+We collect personal data that our clients disclose to us voluntarily when registering on the app or participating in the app's activities, such as entering competitions, giveaways, and contests. We collect email addresses, phone numbers, usernames, passwords, mailing addresses, and credit card numbers. Furthermore, we collect information on the date of birth, gender, and billing addresses. We collect geo-location information, mobile device data, and push notification data using our app. &#10;
+2. How we use our customer's information &#10;
+ 
+ 
+We have a team responsible for processing our customer's information with business interests while complying with your consent and our legal obligations. Our organization's information is used for logon processes and account creation, requesting feedback, managing user accounts, and posting testimonials. Moreover, the data is used to protect our services, prevent harm, respond to legal rights, and send administration information to our clients. &#10;
+ 
+
+3. Sharing your information with other people &#10; 
+
+The RentIt Company only shares information with your consent for business obligation fulfillment while complying with our set terms. Therefore, we share the client's data based on consent, legitimate interests, contract's performance, vital interests, and legal obligations. &#10;
+4. How RentIt Company uses tracking technologies such as cookies &#10;
+ 
+ We use tracking technologies such as cookies, pixels, and web beacons to store or access user's information. You can access more specific information on how we use tracking technologies from our Cookie Notice. &#10;
+ 
+5. Use of Google maps in RentIt Company &#10;
+ 
+ We use google maps to provide our clients with better services, and our app complies with
+Google's terms of service. &#10;
+ 
+6. The duration that RentIt Company keeps the client's information &#10;
+ We keep our client's information secure to fulfill outlined purposes in the privacy notice for as long as necessary unless the law requires otherwise. When the organization does not have any ongoing business needs for processing customer's personal data, we either anonymize or delete the information. If deleting is not possible, we secure your information in the backups until deletion is made possible. &#10;
+
+
+7. How RentIt Company keeps your information safe &#10;
+ 
+RentIt Company aims at protecting your personal data through technical and organizational security systems. Although our organization has implemented organizational and technical security measures for protecting personal data during processing, we do not guarantee or promise a system that is free from cybercriminals and hackers. However, we aim at ensuring that your data is protected from the unauthorized transmission to and from our app. &#10;
+ 
+8. Customer's privacy rights &#10;
+ 
+Our clients are encouraged to go through our privacy policies and thus can terminate their accounts in case they do not satisfy their needs. Clients residing around the European Economic Area at their local data protection authority in case they feel that there are unlawful activities taking place in our organizations. You can use our application with cookie-free activities. We retain some of our customer's information if they terminate their application for troubleshooting problems, preventing fraud, and assisting with investigations. &#10;
+  
+ 9. Do-not-track (DNT) features control &#10;
+ 
+ Our clients are provided with the option in their mobile applications and operating systems for 'do-not-track' to activate and deactivate the privacy preference of not being collected or monitored. Additionally, we do not automatically respond to signals communicating your choice, especially those for disabling online tracking. &#10;
+ 
+
+10. About making an update to this privacy notice &#10;
+ 
+ We will update this privacy notice continuously while complying with relevant laws. The updated version is indicated as 'Revised' with the date of updating, and it is effective as soon as it is released to our clients. Customers are encouraged to contact or email us at -- - - - - - - in case they have any comments or questions about the organization's privacy rights. &#10;
+ 
+11. How our clients can update, delete, or review the information we collect from them &#10;
+ Our customers are provided with the right to access their personal information and delete them in some circumstances by submitting their request to our organization's supervisory authority." 
+                   TextColor="Black"/>
+            <Button Text="Agree" Clicked="OnAgreeClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Button Text="Disagree" Clicked="OnDisagreeClicked"
+                    BackgroundColor="#E29F10" TextColor="White"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
