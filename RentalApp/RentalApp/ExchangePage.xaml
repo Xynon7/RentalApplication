@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
             <Label Text="Exchanges" TextColor="#228E7F"/>
-            <Label x:Name="ExchangeDisplay" TextColor="#707070"/>
+            <Label x:Name="ExchangeDisplay" TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15"/>
             <Button Text="New Exchange" Clicked="OnNewExchangeClicked"
                     BackgroundColor= "#E29F10" TextColor="White"/>
             <Button Text="Home" Clicked="OnHomeClicked"

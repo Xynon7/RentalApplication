@@ -3,29 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.ProfilePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Profile Information" TextColor="#228E7F"/>
+        <StackLayout BackgroundColor="White">
+            <Label Text="Profile Information" TextColor="#E29F10" FontSize = "23" FontAttributes="Bold"/>
 
 
-            <Label x:Name="InfoDisplay" TextColor="#707070"/>
+            <Label x:Name="InfoDisplay" TextColor="gray" FontSize = "20" FontAttributes="Bold"/>
             
             <Button Text="View Locations"
                     Clicked="OnLocationsClicked" 
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E29F10" TextColor="White" FontSize = "20" FontAttributes="Bold"/>
             <Button Text="View Results"
                     Clicked="OnResultsClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E29F10" TextColor="White" FontSize = "20" FontAttributes="Bold"/>
             <Button Text="View Carts"
                     Clicked="OnCartsClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E29F10" TextColor="White" FontSize = "20" FontAttributes="Bold"/>
             <Button Text="View Payments"
                     Clicked="OnPaymentsClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E29F10" TextColor="White" FontSize = "20" FontAttributes="Bold"/>
             <Label Text="Average User Rating"
-                    TextColor="#E29F10"/>
+                    TextColor="#E29F10" FontSize = "20" FontAttributes="Bold"/>
             <Button Text="Home"
                     Clicked="OnHomeClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E29F10" TextColor="White" FontSize = "20" FontAttributes="Bold"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

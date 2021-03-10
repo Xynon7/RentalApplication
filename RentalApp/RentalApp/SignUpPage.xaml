@@ -17,8 +17,7 @@
                 <Entry Text="{Binding Username}" Placeholder="Username" PlaceholderColor="#228E7F" Completed="Username_Completed"/>
                 <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="#228E7F" Completed="Email_Completed"/>
                 <Entry Text="{Binding Password}" Placeholder="Password" PlaceholderColor="#228E7F" Completed="Password_Completed"/>
-                <Entry Placeholder="SSN" PlaceholderColor="#228E7F" Completed="SSN_Completed"/>
-                <Entry Placeholder="StateID" PlaceholderColor="#228E7F" Completed="StateID_Completed"/>
+
                 <Entry Placeholder="Phone Number" PlaceholderColor="#228E7F"/>
 
 

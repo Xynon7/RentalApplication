@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.HomeHelp">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+                <Label Text="The Home Page allows access to several key features of this application. &#x0a; &#x0a;
+
+
+
+Search allows you to search for an item by its brand, type, cost window, and the city or zip code it is located in. &#x0a; &#x0a;
+
+
+
+Wish List allows you to save items that are currently not available to rent or save items that are not for rent on the application yet by letting you specify a brand, a type, a cost window, and a descriptive phrase (like blue, queen size or seats eight) for the item you want to rent. &#x0a; &#x0a;
+
+
+
+Profile gives you access to your username, locations - which allows you to add a new location and view your saved locations, results - which lets you see the results of searches you have made in the past, carts - which lets you see which items you have ready for checkout and your average user rating - this is calculated from your average renter and or lessor rating. &#x0a; &#x0a;
+
+
+
+Report allows you to report another user who has not followed the policies &#x0a; &#x0a;
+
+
+
+Any time you are on another page in this application and you see the home button it will bring you back to this page and these options." />
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

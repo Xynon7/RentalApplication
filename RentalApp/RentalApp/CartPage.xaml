@@ -9,27 +9,27 @@
             <RelativeLayout>
                 <Label Text="{Binding TotalCost}" RelativeLayout.XConstraint="250"
                        RelativeLayout.YConstraint="50"
-                       WidthRequest="100" TextColor= "#707070"/>
+                       WidthRequest="100" TextColor= "#E29F10"/>
                 <Button Text="Check Out" RelativeLayout.XConstraint="50"
                         RelativeLayout.YConstraint="100"
                         WidthRequest="100"
-                         BackgroundColor= "#E29F10" TextColor="White" />
+                         BackgroundColor= "#E4E4E4" TextColor="#E29F10" />
                 <Button Text="Return to results" RelativeLayout.XConstraint="50"
                         RelativeLayout.YConstraint="200"
                         WidthRequest="100"
-                         BackgroundColor= "#E29F10" TextColor="White" />
+                         BackgroundColor= "#E4E4E4" TextColor="#E29F10" />
                 <Button Text="Return to search" RelativeLayout.XConstraint="200"
                         RelativeLayout.YConstraint="100"
                         WidthRequest="100"
-                         BackgroundColor= "#E29F10" TextColor="White" />
+                         BackgroundColor= "#E4E4E4" TextColor="#E29F10" />
                 <Button Text="Delete cart" RelativeLayout.XConstraint="200"
                         RelativeLayout.YConstraint="200"
                         WidthRequest="100"
-                         BackgroundColor= "#E29F10" TextColor="White" />
+                         BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
                 <Button Text="Home" RelativeLayout.XConstraint="215"
                         RelativeLayout.YConstraint="275"
                         WidthRequest="100"
-                         BackgroundColor= "#E29F10" TextColor="White" />
+                         BackgroundColor= "#E4E4E4" TextColor="#E29F10" />
             </RelativeLayout>
         </StackLayout>
     </ContentPage.Content>

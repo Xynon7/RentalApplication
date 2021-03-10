@@ -3,21 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.SearchPage">
 
-    <StackLayout Margin="5"  BackgroundColor="#FAF0EB">
+    <ScrollView>
+    <StackLayout Margin="5"  BackgroundColor="White" x:Name="layout">
 
 
 
-        <Label Text="Search" TextColor= "#E29F10"/>
-        <Entry Text="{Binding Brand}" Placeholder="Item Brand" PlaceholderColor="#228E7F"/>
-        <Entry Text="{Binding Type}" Placeholder="Item type" PlaceholderColor="#228E7F" Completed="OnTypeCompleted"/>
-        <Entry Text="{Binding HighestCost}" Placeholder="Highest cost" PlaceholderColor="#228E7F"/>
-        <Entry Text="{Binding LowestCost}" Placeholder="Lowest Cost" PlaceholderColor="#228E7F"/>
-        <Entry Text="{Binding City}" Placeholder="City" PlaceholderColor="#228E7F"/>
-        <Entry Text="{Binding Zip}" Placeholder="Zip" PlaceholderColor="#228E7F" />
-        <Button Text="View Results" 
-                Clicked="OnViewResultsClicked" BackgroundColor="#E29F10" TextColor="White"/>
+        <Label Text="Search" TextColor= "#E29F10" FontSize="23" FontAttributes="Bold"/>
+        <Entry Text="{Binding UserName}" Placeholder="Username" PlaceholderColor="#1D9E91" FontSize="18" FontAttributes="Bold" Completed="OnUserNameCompleted"/>
+        <Entry Text="{Binding ItemName}" Placeholder="Item name" PlaceholderColor="#1D9E91" FontSize="18" FontAttributes="Bold" Completed="OnItemNameCompleted"/>
+        <Entry Text="{Binding Brand}" Placeholder="Item Brand" PlaceholderColor="#1D9E91" FontSize="18" FontAttributes="Bold" Completed="OnBrandCompleted"/>
+        <Entry Text="{Binding Type}" Placeholder="Item type" PlaceholderColor="#1D9E91" FontSize="18" FontAttributes="Bold" Completed="OnTypeCompleted"/>
+
+            <Button Text="Search" Clicked="OnSearchClicked"/>
+
+            
         
 
     </StackLayout>
-    
+    </ScrollView>
+
 </ContentPage>

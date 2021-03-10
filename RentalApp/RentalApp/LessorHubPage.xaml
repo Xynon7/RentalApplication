@@ -4,22 +4,23 @@
              x:Class="RentalApp.LessorHubPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
-            <Label Text="Lessor Hub" TextColor="#228EF7"/>
-            <Button Text="New item Listing"  Clicked="OnNewItemClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+            <Label Text="Lessor Hub" TextColor="#1D9E91" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15" HorizontalOptions="Center"/>
+            <Button Text="New item Listing"  Clicked="OnNewItemClicked" 
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" Margin="0,5" FontAttributes="Bold"/>
             <Button Text="Item Listings" Clicked="OnListingsClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" Margin="0,5" FontAttributes="Bold"/>
             <Button Text="Rate A Renter" Clicked="OnRatingsClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" Margin="0,5" FontAttributes="Bold"/>
             <Button Text="Messages" Clicked="OnMessagesClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" Margin="0,5" FontAttributes="Bold"/>
             <Button Text="Exchanges" Clicked="OnExchangesClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" Margin="0,5" FontAttributes="Bold"/>
             <Button Text="Lessor Agreement" Clicked="OnLAgreementsClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
-            <Label Text="Average Lessor Rating: " TextColor="#228EF7"/>
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" Margin="0,5" FontAttributes="Bold"/>
+            <Label Text="Average Lessor Rating: " TextColor="#1D9E91" FontAttributes="Bold" FontSize="Subtitle" Margin="0,10"/>
             <Button Text="Home" Clicked="OnHomeClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" Margin="0,5" FontAttributes="Bold"/>
+            <Button Text="Help" Clicked="OnHelpClicked" TextColor="#E29F10" Margin="0,5" FontAttributes="Bold"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

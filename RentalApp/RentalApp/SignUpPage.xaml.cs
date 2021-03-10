@@ -62,28 +62,21 @@ namespace RentalApp
             phoneNumber = ((Entry)sender).Text;
         }
 
-        void StateID_Completed(object sender, EventArgs e)
-        {
-            stateId = ((Entry)sender).Text;
-        }
-
+   
         void OnDateSelected(object sender, EventArgs e)
         {
             DOB = ((DatePicker)sender).Date; //this aint rite
         }
 
 
-        void SSN_Completed(object sender, EventArgs e)
-        {
-            sSN = ((Entry)sender).Text;
-        }
+      
         async void OnSignUpAppClicked(object sender, EventArgs e)
         {
 
 
 
 
-            bool success = RASQLManager.sqlManagerInstance.CreateNewAccount(username, password, gender, phoneNumber, stateId, sSN, DOB, FirstName, middleInitial, LastName);
+            bool success = RASQLManager.sqlManagerInstance.CreateNewAccount(username, password, gender, phoneNumber, null, null, DOB, FirstName, middleInitial, LastName);
             
             if (success)
             {
@@ -91,6 +84,7 @@ namespace RentalApp
             }
             else
             {
+
                 await Navigation.PushAsync(new SignUpPage());
             }
             //should prob do error stuff too 

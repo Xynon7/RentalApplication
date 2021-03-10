@@ -19,24 +19,27 @@
             </Grid>
             <Entry  Placeholder="Username" 
                  PlaceholderColor="White"
-                 
+                 IsPassword= "True"
                  RelativeLayout.XConstraint="100"
                  RelativeLayout.YConstraint="300"
                     WidthRequest="200"
                     Completed="EmailCompleted"
+                    FontAttributes="Bold"
                  />
             <Entry Placeholder="Password"
                 PlaceholderColor="White"
                 RelativeLayout.XConstraint="100"
                 RelativeLayout.YConstraint="375"
                    WidthRequest="200"
-                   Completed="PasswordCompleted"/>
+                   Completed="PasswordCompleted"
+                   FontAttributes="Bold"/>
             
             <Button Text="Enter"
                     RelativeLayout.XConstraint="150"
                     RelativeLayout.YConstraint="450" 
                     Clicked="OnEnterClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="white" FontAttributes="Bold" 
+                    FontSize = "17" TextColor="#E29F10"/>
         </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.RenterHubHelp">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="The Renter Hub Page allows access to several key features of this application. &#x0a; &#x0a;
+
+ 
+Messages allows you to see and send messages to other users on this application. &#x0a; &#x0a;
+
+
+
+Exchanges allows you to see past and current exchanges and agree to the exchange details that the lessor has submitted. &#x0a; &#x0a;
+
+
+
+Invoices allows you to see the rental purchases you have made in the past along with the lessors you have rented from. &#x0a; &#x0a;
+
+
+ 
+Rate a Lessor allows you to rate a lessor you have rented from based on how good or bad the exchange and communication went with them - this is used to calculate a lessor's average rating and is used to calculate a user's overall average rating. &#x0a; &#x0a;
+ 
+
+
+Renter Agreement lets you agree to or view the renter agreement required to rent on this application. &#x0a; &#x0a;
+
+
+
+Average renter rating is your average rating as a renter and is calculated from how lessor's have rated you when they either exchanged and item with you or communicated with you." />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

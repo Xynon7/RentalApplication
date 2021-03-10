@@ -22,5 +22,10 @@ namespace RentalApp
         {
             await Navigation.PushAsync(new SignInPage());
         }
+
+        async void OnDevClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DeveloperPage());
+        }
     }
 }

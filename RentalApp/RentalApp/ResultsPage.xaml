@@ -4,11 +4,11 @@
              x:Class="RentalApp.ResultsPage">
     <ContentPage.Content >
         <ScrollView>
-            <StackLayout BackgroundColor="#FAF0EB"  >
+            <StackLayout x:Name="layout" BackgroundColor="#FAF0EB"  >
             
                 <Label Text="Search Results" TextColor="#228E7F"/>
             
-            <Label x:Name="ResultsDisplay" TextColor="#707070"/>
+            <Label x:Name="ResultsDisplay" TextColor="#707070"  />
             <Label Text="Avaliable Items can be added to a cart and unavaliable items can be added to the wish list"
                    TextColor="#707070"/>
             

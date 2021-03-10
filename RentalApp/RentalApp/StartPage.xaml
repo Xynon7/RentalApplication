@@ -21,14 +21,21 @@
                  
                  RelativeLayout.XConstraint="150"
                  RelativeLayout.YConstraint="350"
-                 BackgroundColor="White" TextColor="#228E7F"
+                 BackgroundColor="White" FontSize = "17" 
+                 FontAttributes= "Bold" TextColor="#1D9E91"
 
                  />
         <Button Text="LOGIN"
                 Clicked="OnLogInClicked"
                 RelativeLayout.XConstraint="150"
                 RelativeLayout.YConstraint="425"
-                BackgroundColor="White" TextColor="#228E7F"
+                BackgroundColor="White"  FontSize = "17" 
+                FontAttributes= "Bold" TextColor="#1D9E91"
 />
+        <Button Text="Dev Tools"
+                Clicked="OnDevClicked"
+                RelativeLayout.XConstraint="150"
+                RelativeLayout.YConstraint="500"
+                />
     </RelativeLayout>
 </ContentPage>

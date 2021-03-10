@@ -13,25 +13,28 @@
             <StackLayout Padding="10"  RelativeLayout.XConstraint="50"
                  RelativeLayout.YConstraint="50">
                 <Label Text="Welcome, what would you like to do today?"
-                 TextColor="#228E7F"/>
+                  TextColor="#1D9E91" FontAttributes="Bold"/>
             <Button Text="View my profile"
                     Clicked="OnViewProfileClicked"
-                    BackgroundColor= "#E29F10" TextColor="White"/>
+                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
             <Button Text="View my wish list"
                     Clicked="OnViewWishListClicked"
-                    BackgroundColor= "#E29F10" TextColor="White"/>
+                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
             <Button Text="Search for an item"
                     Clicked="OnSearchClicked"
-                    BackgroundColor= "#E29F10" TextColor="White"/>
+                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
             <Button Text="View My renter hub"
                     Clicked="OnViewRenterHubClicked"
-                    BackgroundColor= "#E29F10" TextColor="White"/>
+                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
             <Button Text="View my lessor hub"
                     Clicked="OnViewLessorHubClicked"
-                    BackgroundColor= "#E29F10" TextColor="White"/>
+                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
             <Button Text="Report User"
                     Clicked="OnReportClicked"
-                    BackgroundColor= "#E29F10" TextColor="White"/>
+                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
+            <Button Text="Help"
+                    Clicked="OnHelpClicked"
+                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
                 </StackLayout>
                 </RelativeLayout>
 

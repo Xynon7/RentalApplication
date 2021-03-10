@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.LessorHubHelp">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="The Lessor Hub Page allows access to several key features of this application. &#x0a; &#x0a;
+
+
+
+Messages allows you to see and send messages to other users on this application. &#x0a; &#x0a;
+ 
+
+
+Exchanges allows you to see past and current exchanges and allows you to create and submit a new exchange. &#x0a; &#x0a;
+
+
+
+New item listing allows you to offer a new item for exchange - you can enter its brand, type, condition, replacement cost and images. &#x0a; &#x0a;
+
+
+
+Items listed allows you to see the items you have listed for exchange on this application. &#x0a; &#x0a;
+
+
+
+Rate a Renter allows you to rate a renter you have leased to based on how good or bad the exchange and communication went with them - this is used to calculate a renter's average rating and is used to calculate a user's overall average rating. &#x0a; &#x0a;
+
+
+
+Lessor Agreement lets you agree to or view the lessor agreement required to lease on this application. &#x0a; &#x0a;
+
+
+
+Average lessor rating is your average rating as a lessor and is calculated from how renters have rated you when they either exchanged an item with you or communicated with you."
+                 />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

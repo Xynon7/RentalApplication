@@ -4,23 +4,23 @@
              x:Class="RentalApp.MessagesPage">
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout>
+            <StackLayout BackgroundColor= "White">
 
-                <Label Text="All messages sent" TextColor="#228E7F"/>
-                <Label x:Name="sentDisplay" TextColor="#228E7F"/>
-                <Label Text="All messages recieved" TextColor="#228E7F"/>
-                <Label x:Name="recDisplay" TextColor="#228E7F"/>
+                <Label Text="All messages sent" TextColor="#1D9E91" FontAttributes="Bold" FontSize="Title"/>
+                <Label x:Name="sentDisplay" TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15"/>
+                <Label Text="All messages recieved" TextColor="#1D9E91" FontAttributes="Bold" FontSize="Title"/>
+                <Label x:Name="recDisplay" TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15"/>
                 <Label Text="Create new message" TextColor="#228E7F"/>
                 <Entry  Placeholder="Receiver" Completed="OnRecCompleted"
-                        PlaceholderColor="#228E7F"/>
+                        PlaceholderColor="#1D9E91" FontAttributes="Bold" Margin="0,15"/>
             <Entry  Placeholder="Body" Completed="OnBodyCompleted"
-                    PlaceholderColor="#228E7F"/>
+                    PlaceholderColor="#1D9E91" FontAttributes="Bold" Margin="0,15"/>
             <Button Text="Send" Clicked="OnSendClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold"/>
             <Button Text="Cancel" Clicked="OnCancelClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold"/>
             <Button Text="Home" Clicked="OnHomeClicked"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold"/>
             
         </StackLayout>
         </ScrollView>

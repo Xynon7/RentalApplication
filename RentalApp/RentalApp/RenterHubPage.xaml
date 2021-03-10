@@ -13,21 +13,23 @@
             <StackLayout Padding="10"
                 RelativeLayout.XConstraint="50"
                          RelativeLayout.YConstraint="50" WidthRequest="250">
-                <Label Text="Renter Hub" TextColor="White"/>
+                <Label Text="Renter Hub" TextColor ="White" FontAttributes="Bold" FontSize="23"/>
             <Button Text="New Invoices" Clicked="OnInvoicesClicked"
-                    BackgroundColor="#E29F10" TextColor="#707070"/>
+                    TextColor = "#1D9E91" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
             <Button Text="Rate a Lessor" Clicked="OnRateClicked"
-                    BackgroundColor="#E29F10" TextColor="#707070"/>
+                    TextColor = "#1D9E91" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
             <Button Text="Messages" Clicked="OnMessagesClicked"
-                    BackgroundColor="#E29F10" TextColor="#707070"/>
+                    TextColor = "#1D9E91" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
             <Button Text="Exchanges" Clicked="OnExchangesClicked"
-                    BackgroundColor="#E29F10" TextColor="#707070"/>
+                    TextColor = "#1D9E91" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
             <Button Text="Renter Agreement" Clicked="OnRAggrementClicked"
-                    BackgroundColor="#E29F10" TextColor="#707070"/>
-                <Label Text="Average Renter Rating" TextColor="White" />
+                    TextColor = "#1D9E91" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
+                <Label Text="Average Renter Rating" TextColor = "#1D9E91"  FontAttributes="Bold" FontSize="15"/>
                 <Button Text="Home" Clicked="OnHomeClicked"
-                        BackgroundColor="#E29F10" TextColor="#707070"/>
-        </StackLayout>
+                        TextColor = "#E29F10" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
+                <Button Text="Help" Clicked="OnHelpClicked"
+                        TextColor = "#E29F10" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
+            </StackLayout>
         </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -9,6 +9,7 @@ namespace RentalsApp.DBObjects
         public string brand;
         public string type;
         public string description;
+       // public string leasor;
         public double costPerDay;
         public DateTime datePosted;
         public double replacementCost;
@@ -17,14 +18,16 @@ namespace RentalsApp.DBObjects
         public Dictionary<string, string> leasingCityStatePairs;
         public List<string> leasingZipCodes;
 
-        public ItemListing(string ItemNum, string Brand, string Type, string Description, double CostPerDay, DateTime DatePosted)
+        public ItemListing(string ItemNum, string Brand, string Type, string Description, double CostPerDay, DateTime DatePosted) //removed DateTime DatePosted
         {
             itemNum = ItemNum;
+           
             brand = Brand;
             type = Type;
             description = Description;
+          //  leasor = Leasor;
             costPerDay = CostPerDay;
-            datePosted = DatePosted;
+          datePosted = DatePosted;
         }
     }
 }

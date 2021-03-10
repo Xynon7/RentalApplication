@@ -367,7 +367,7 @@ namespace RentalsApp
                                 //  item.isAvailable = (bool)sqlDataReader[10];
                                 //   item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
                                 //   items.Add(item);
-                                ItemListing item = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[2].ToString(), Convert.ToDouble(sqlDataReader[5]), DateTime.MinValue);
+                                ItemListing item = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[2].ToString(),  Convert.ToDouble(sqlDataReader[5]), DateTime.MinValue); //removed , DateTime.MinValue
                                 items.Add(item);
                             }
                         }

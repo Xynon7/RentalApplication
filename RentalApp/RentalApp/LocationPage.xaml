@@ -3,31 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.LocationPage">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout BackgroundColor="White">
-            <Label Text="Locations" TextColor="#228EF7" />
-            
-            
-            
-            <Label x:Name="LocationDisplay" TextColor="#707070"/>
+            <Label Text="Locations" TextColor="#1D9E91" FontAttributes="Bold" FontSize="Title"/>
+        
+
+
+            <Label x:Name="LocationDisplay" TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15"/>
             <Entry Text="{Binding Name}" Placeholder="Name" Completed="NameCompleted"
-                   PlaceholderColor="#228E7F"/>
+                   TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15"/>
             <Entry Text="{Binding Address}" Placeholder="Address" Completed="AddressCompleted"
-                   PlaceholderColor="#228E7F"/>
+                   TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15"/>
             <Entry Text="{Binding City}" Placeholder="City" Completed="CityCompleted"
-                   PlaceholderColor="#228E7F"/>
+                   TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15"/>
             <Entry  Placeholder="State" Completed="StateCompleted"
-                    PlaceholderColor="#228E7F"/>
+                    TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15"/>
             <Entry Text="{Binding Zip}" Placeholder="Zip code" Completed="ZipCompleted"
-                   PlaceholderColor="#228E7F"/>
+                   TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15"/>
             <Button Text="Add location" Command="{Binding AddLocationCommand}"
                     Clicked="OnAddLocationClicked"
-                     BackgroundColor="#E29F10" TextColor="White"/>
+                     BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold" Margin="0,15"/>
             <Button Text="Return to profile"
                     Clicked="OnReturnClicked"
-                     BackgroundColor="#E29F10" TextColor="White"/>
+                     BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold" Margin="0,15"/>
             <Button Text="Home"
                     Clicked="OnHomeClicked"
-                     BackgroundColor="#E29F10" TextColor="White"/>
+                     BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold" Margin="0,15"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
