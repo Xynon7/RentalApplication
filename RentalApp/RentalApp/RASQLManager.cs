@@ -1454,18 +1454,37 @@ namespace RentalsApp
             return successful;
         }
 
-        public SearchResult SearchForItems(string username, string itemNum, string brand, string type, string costPerDay, bool isAvailable, DateTime availabilityDate)
+        public SearchResult SearchForItems(string username = "%", string name = "%", string brand = "%", string type = "%", string costPerDay = "%")
         {
+            SearchResult searchResult = new SearchResult();
+            searchResult.resultIdentifier = username + "+" + name + "+" + brand + "+" + type + "+" + costPerDay;
             using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
             {
                 Console.WriteLine("Connecting to MySQL...");
                 mySqlConnection.Open();
                 Console.WriteLine("MySQL connection succeeded.");
 
-                string sqlQueryText = "DELETE FROM item_listing WHERE username = @Username;";
+                string sqlQueryText = "SELECT FROM item_listing WHERE lessor_username LIKE %@Username% AND item_name LIKE %@Name% AND item_brand LIKE %@Brand% AND item_type LIKE %@Type% AND cost_per_day = @CostPerDay;";
 
-                using (MySqlCommand cmd = new MySqlCommand(sqlQueryText, mySqlConnection))
+                using (MySqlCommand mySqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
                 {
+                    mySqlCommand.Parameters.AddWithValue("@Username", username);
+                    mySqlCommand.Parameters.AddWithValue("@Name", name);
+                    mySqlCommand.Parameters.AddWithValue("@Brand", brand);
+                    mySqlCommand.Parameters.AddWithValue("@Type", type);
+                    mySqlCommand.Parameters.AddWithValue("@CostPerDay", costPerDay);
+
+                    using (MySqlDataReader sqlDataReader = mySqlCommand.ExecuteReader())
+                    {
+                        while (sqlDataReader.Read())
+                        {
+                            Item item = new Item();
+                            item.listingInfo = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[2].ToString(), sqlDataReader[3].ToString(), sqlDataReader[5].ToString(), Double.Parse(sqlDataReader[4].ToString()), DateTime.MinValue);
+                            item.isAvailable = (bool)sqlDataReader[10];
+                            item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
+                            searchResult.items.Add(item);
+                        }
+                    }
                 }
             }
 
