@@ -4,7 +4,9 @@ namespace RentalsApp.DBObjects
 {
     public class ItemImage
     {
-        public string imageIdentifier;
+        public int imageIdentifier;
+        public int itemNumber;
         public Image image;
+        public bool coverImage;
     }
 }
