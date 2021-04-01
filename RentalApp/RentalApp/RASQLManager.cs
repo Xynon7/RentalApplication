@@ -416,12 +416,10 @@ namespace RentalsApp
                                 result.itemNumber = (int)sqlDataReader[1];
                                 
                                 byte[] imageBinaryData = (byte[])sqlDataReader[2];
-                                using (MemoryStream ms = new MemoryStream())
-                                {
-                                    ms.Write(imageBinaryData, 0, imageBinaryData.Length);
-                                    result.image = new Image();
-                                    result.image.Source = ImageSource.FromStream(() => ms);
-                                }
+                                MemoryStream ms = new MemoryStream();
+                                ms.Write(imageBinaryData, 0, imageBinaryData.Length);
+                                result.image = new Image();
+                                result.image.Source = ImageSource.FromStream(() => ms);
 
                                 result.coverImage = (bool)sqlDataReader[3];
 
