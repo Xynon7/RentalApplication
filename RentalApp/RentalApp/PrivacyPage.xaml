@@ -5,7 +5,8 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout Padding="20">
-            <Label Text="We appreciate you for being part of the RentIt community, and we are committed to ensuring that your personal information is protected as well as your privacy rights. For more questions about our practices towards your privacy information and this privacy notice, you can contact
+            <Label 
+                Text="We appreciate you for being part of the RentIt community, and we are committed to ensuring that your personal information is protected as well as your privacy rights. For more questions about our practices towards your privacy information and this privacy notice, you can contact
 us at - - - - - - - &#10;
  
 Our app is compatible with other mobile applications and offers the best services without interfering with other processes. RentIt appreciates your continuous trust, especially with your personal data, and we take privacy issues very seriously to avoid leaks or breaches. We are using this privacy notice to explain to all our customers the information we collect, including its use and the data's rights. For that reason, we hope you will go through the provided information carefully and notify us of the areas you find unclear. Additionally, you can discontinue using our services immediately if you find them unfavorable and unable to satisfy your needs. &#10;
@@ -57,7 +58,10 @@ Our clients are encouraged to go through our privacy policies and thus can termi
  
 11. How our clients can update, delete, or review the information we collect from them &#10;
  Our customers are provided with the right to access their personal information and delete them in some circumstances by submitting their request to our organization's supervisory authority." 
-                   TextColor="#1D9E91" FontAttributes="Bold" FontSize="Large" />
+                   TextColor="#FBAE33" FontAttributes="Bold" FontSize="25" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+ />
             <Button Text="Agree" Clicked="OnAgreeClicked"
                     BackgroundColor="#E29F10" TextColor="White"/>
             <Button Text="Disagree" Clicked="OnDisagreeClicked"

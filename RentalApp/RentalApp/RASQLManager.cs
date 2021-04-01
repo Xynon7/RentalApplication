@@ -19,7 +19,8 @@ namespace RentalsApp
 
         private RASQLManager()
         {
-            connectionString = "server=70.177.89.61;user=application;database=rentit;port=3306;password=easyPassword";
+            connectionString = "server=70.177.89.61;user=application;database=rentitnew;port=3306;password=easyPassword"; //change database to rentitnew for new db 
+            //to change to old db database=rentit
 
             using(MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
             {
@@ -236,7 +237,7 @@ namespace RentalsApp
                         {
                             while (sqlDataReader.Read())
                             {
-                                item.listingInfo = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[2].ToString(), sqlDataReader[3].ToString(), sqlDataReader[5].ToString(), Double.Parse(sqlDataReader[4].ToString()), DateTime.MinValue);
+                                item.listingInfo = new ItemListing(sqlDataReader[2].ToString(), sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[6].ToString(), Double.Parse(sqlDataReader[5].ToString()), DateTime.MinValue);
                                 item.isAvailable = (bool)sqlDataReader[10];
                                 item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
                             }
@@ -277,7 +278,7 @@ namespace RentalsApp
                             while (sqlDataReader.Read())
                             {
                                 Item item = new Item();
-                                item.listingInfo = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[2].ToString(), sqlDataReader[3].ToString(), sqlDataReader[5].ToString(), Double.Parse(sqlDataReader[4].ToString()), DateTime.MinValue);
+                                item.listingInfo = new ItemListing(sqlDataReader[2].ToString(), sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[6].ToString(), Double.Parse(sqlDataReader[5].ToString()), DateTime.MinValue);
                                 item.isAvailable = (bool)sqlDataReader[10];
                                 item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
                                 items.Add(item);
@@ -320,7 +321,7 @@ namespace RentalsApp
                             while (sqlDataReader.Read())
                             {
                                 Item item = new Item();
-                              item.listingInfo = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[2].ToString(), sqlDataReader[3].ToString(), sqlDataReader[5].ToString(), Double.Parse(sqlDataReader[4].ToString()), DateTime.MinValue);
+                                item.listingInfo = new ItemListing(sqlDataReader[2].ToString(), sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[6].ToString(), Double.Parse(sqlDataReader[5].ToString()), DateTime.MinValue);
                                 item.isAvailable = (bool)sqlDataReader[10];
                                 item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
                                 items.Add(item);
@@ -367,7 +368,7 @@ namespace RentalsApp
                                 //  item.isAvailable = (bool)sqlDataReader[10];
                                 //   item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
                                 //   items.Add(item);
-                                ItemListing item = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[2].ToString(),  Convert.ToDouble(sqlDataReader[5]), DateTime.MinValue); //removed , DateTime.MinValue
+                                ItemListing item = new ItemListing(sqlDataReader[2].ToString(), sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[6].ToString(), Double.Parse(sqlDataReader[5].ToString()), DateTime.MinValue); //removed , DateTime.MinValue
                                 items.Add(item);
                             }
                         }
@@ -421,7 +422,7 @@ namespace RentalsApp
                                 cartResult.itemList = new Dictionary<Item, int>();
                             }
                             Item itemBeingAdded = new Item();
-                            itemBeingAdded.listingInfo = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[2].ToString(), sqlDataReader[3].ToString(), GetItemDescription(sqlDataReader[1].ToString()), Convert.ToDouble(sqlDataReader[5].ToString()), new DateTime());
+                            itemBeingAdded.listingInfo = new ItemListing("", sqlDataReader[1].ToString(), sqlDataReader[2].ToString(), sqlDataReader[3].ToString(), GetItemDescription(sqlDataReader[1].ToString()), Convert.ToDouble(sqlDataReader[5].ToString()), new DateTime());
                             cartResult.itemList.Add(itemBeingAdded, Convert.ToInt32(sqlDataReader[4].ToString()));
                             cartResult.totalCost += itemBeingAdded.listingInfo.costPerDay * cartResult.itemList[itemBeingAdded];
                         }
@@ -468,7 +469,7 @@ namespace RentalsApp
                                 invoiceResults.Add(sqlDataReader[5].ToString(), newInvoice);
                             }
                             Item itemBeingAdded = new Item();
-                            itemBeingAdded.listingInfo = new ItemListing(sqlDataReader[1].ToString(), "", "", GetItemDescription(sqlDataReader[5].ToString()), Convert.ToDouble(sqlDataReader[5].ToString()), new DateTime());
+                            itemBeingAdded.listingInfo = new ItemListing("", sqlDataReader[1].ToString(), "", "", GetItemDescription(sqlDataReader[5].ToString()), Convert.ToDouble(sqlDataReader[6].ToString()), new DateTime());
                             invoiceResults[sqlDataReader[5].ToString()].cart.itemList.Add(itemBeingAdded, Convert.ToInt32(sqlDataReader[4].ToString()));
                             invoiceResults[sqlDataReader[5].ToString()].cart.totalCost += itemBeingAdded.listingInfo.costPerDay * invoiceResults[sqlDataReader[5].ToString()].cart.itemList[itemBeingAdded];
                         }
@@ -559,7 +560,7 @@ namespace RentalsApp
                                 invoiceResult.cart.itemList = new Dictionary<Item, int>();
                             }
                             Item itemBeingAdded = new Item();
-                            itemBeingAdded.listingInfo = new ItemListing(sqlDataReader[1].ToString(), "", "", GetItemDescription(sqlDataReader[5].ToString()), Convert.ToDouble(sqlDataReader[5].ToString()), new DateTime());
+                            itemBeingAdded.listingInfo = new ItemListing("",sqlDataReader[1].ToString(), "", "", GetItemDescription(sqlDataReader[5].ToString()), Convert.ToDouble(sqlDataReader[5].ToString()), new DateTime());
                             invoiceResult.cart.itemList.Add(itemBeingAdded, Convert.ToInt32(sqlDataReader[4].ToString()));
                             invoiceResult.cart.totalCost += itemBeingAdded.listingInfo.costPerDay * invoiceResult.cart.itemList[itemBeingAdded];
                         }
@@ -664,7 +665,9 @@ namespace RentalsApp
                         while (sqlDataReader.Read())
                         {
                             isValidLogin = true;
-                            currentUser = new User(sqlDataReader[0].ToString(), sqlDataReader[2].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[5].ToString(), DateTime.Parse(sqlDataReader[6].ToString()), sqlDataReader[7].ToString(), sqlDataReader[8].ToString(), sqlDataReader[9].ToString(), (bool)sqlDataReader[10], (bool)sqlDataReader[11], (bool)sqlDataReader[12]);
+                            currentUser = new User(sqlDataReader[0].ToString(), sqlDataReader[2].ToString(), true, true, true); //should change trues to sqlDataReader results
+                            
+                            
                         }
                     }
                 }
@@ -687,44 +690,18 @@ namespace RentalsApp
          * Creates a new account in the database.
          * Anything besides Username and Password (the first 2 args) is nullable. A default value will be inserted.
          */
-        public bool CreateNewAccount(string username, string password, string gender, string phoneNumber, string stateId, string sSN, DateTime dOB, string firstName, string middleInitial, string lastName)
+        public bool CreateNewAccount(string username, string password, string phoneNumber)
         {
             bool successful = false;
 
             if (username != null && password != null)
             {
-                if (gender == null)
-                {
-                    gender = "Ot";
-                }
+              
                 if (phoneNumber == null)
                 {
                     phoneNumber = "000-000-0000";
                 }
-                if (stateId == null)
-                {
-                    stateId = "0";
-                }
-                if (sSN == null)
-                {
-                    sSN = "000000000000";
-                }
-                if (dOB == null)
-                {
-                    dOB = DateTime.MinValue;
-                }
-                if (firstName == null)
-                {
-                    firstName = "Default";
-                }
-                if (middleInitial == null)
-                {
-                    middleInitial = "Default";
-                }
-                if (lastName == null)
-                {
-                    lastName = "Default";
-                }
+                
 
                 using(MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
                 {
@@ -734,20 +711,15 @@ namespace RentalsApp
                         mySqlConnection.Open();
                         Console.WriteLine("MySQL connection succeeded.");
 
-                        string mySqlQueryText = "INSERT INTO rentit_user VALUES(@Username, @Password, @Gender, @PhoneNumber, @StateId, @SSN, @DOB, @FirstName, @MiddleInitial, @LastName, 0, 0, 0, 0)";
+                        string mySqlQueryText = "INSERT INTO rentit_user VALUES(@Username, @Password,  @PhoneNumber, 0, 0, 0, 0)";
 
                         using (MySqlCommand mySqlCommand = new MySqlCommand(mySqlQueryText, mySqlConnection))
                         {
                             mySqlCommand.Parameters.AddWithValue("@Username", username);
                             mySqlCommand.Parameters.AddWithValue("@Password", password);
-                            mySqlCommand.Parameters.AddWithValue("@Gender", gender);
+                           
                             mySqlCommand.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                            mySqlCommand.Parameters.AddWithValue("@StateId", stateId);
-                            mySqlCommand.Parameters.AddWithValue("@SSN", sSN);
-                            mySqlCommand.Parameters.AddWithValue("@DOB", dOB);
-                            mySqlCommand.Parameters.AddWithValue("@FirstName", firstName);
-                            mySqlCommand.Parameters.AddWithValue("@MiddleInitial", middleInitial);
-                            mySqlCommand.Parameters.AddWithValue("@LastName", lastName);
+
 
                             mySqlCommand.ExecuteNonQuery();
                         }
@@ -780,7 +752,7 @@ namespace RentalsApp
                         }
 
                         mySqlConnection.Close();
-                        currentUser = new User(username, gender, phoneNumber, stateId, sSN, dOB, firstName, middleInitial, lastName, false, false, false);
+                        currentUser = new User(username, phoneNumber,  false, false, false);
                         successful = true;
                     }
                     catch (Exception ex)
@@ -794,6 +766,8 @@ namespace RentalsApp
 
             return successful;
         }
+
+
 
         /*
          * Register as a renter in the database.
@@ -814,7 +788,7 @@ namespace RentalsApp
 
                     using (MySqlCommand mySqlCommand = new MySqlCommand(mySqlQueryText, mySqlConnection))
                     {
-                        mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
+                        mySqlCommand.Parameters.AddWithValue("@Username", username);
 
                         mySqlCommand.ExecuteNonQuery();
                     }
@@ -837,7 +811,7 @@ namespace RentalsApp
          * Register as a lessor in the database.
          * Anything besides Username and Password (the first 2 args) is nullable. A default value will be inserted.
          */
-        public bool RegisterLessor(string username, string password, string gender, string phoneNumber, string stateId, string sSN, DateTime dOB, string firstName, string middleInitial, string lastName)
+        public bool RegisterLessor(string username)
         {
             bool successful = false;
 
@@ -853,7 +827,7 @@ namespace RentalsApp
 
                     using (MySqlCommand mySqlCommand = new MySqlCommand(mySqlQueryText, mySqlConnection))
                     {
-                        mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
+                        mySqlCommand.Parameters.AddWithValue("@Username", username);
 
                         mySqlCommand.ExecuteNonQuery();
                     }
@@ -1127,7 +1101,7 @@ namespace RentalsApp
             return successful;
         }
 
-        public bool CreateItemListing(string description, string brand, string type, double costPerDay, double replacementCost, double deposit, Dictionary<string, string> leasingCityStatePairs, List<string> leasingZipcodes)
+        public bool CreateItemListing(string itemName, string description, string brand, string type, double costPerDay, double replacementCost, double deposit)
         {
 
             bool successful = false;
@@ -1140,12 +1114,13 @@ namespace RentalsApp
                     mySqlConnection.Open();
                     Console.WriteLine("MySQL connection succeeded.");
 
-                    string sqlQueryText = "INSERT INTO item_listing VALUES(@LessorUsername, @ItemNumber, @Description, @Brand, @Type, @CostPerDay, @DatePosted, @ReplacementCost, @Deposit, @CityStatePairs, @ZipCodes)";
+                    string sqlQueryText = "INSERT INTO item_listing VALUES(@LessorUsername, @ItemNumber, @ItemName, @Description, @Brand, @Type, @CostPerDay, @DatePosted, @ReplacementCost, @Deposit)";
 
                     using (MySqlCommand mySqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
                     {
                         mySqlCommand.Parameters.AddWithValue("@LessorUsername", currentUser.username);
                         mySqlCommand.Parameters.AddWithValue("@ItemNumber", GetNextItemNum());
+                        mySqlCommand.Parameters.AddWithValue("@ItemName", itemName);
                         mySqlCommand.Parameters.AddWithValue("@Description", description);
                         mySqlCommand.Parameters.AddWithValue("@Brand", brand);
                         mySqlCommand.Parameters.AddWithValue("@Type", type);
@@ -1154,23 +1129,9 @@ namespace RentalsApp
                         mySqlCommand.Parameters.AddWithValue("@ReplacementCost", replacementCost);
                         mySqlCommand.Parameters.AddWithValue("@Deposit", deposit);
 
-                        string zipCodes = "";
-                        foreach (string zipCode in leasingZipcodes)
-                        {
-                            zipCodes += zipCode;
-                            zipCodes += "|";
-                        }
-                        string cityStatePairs = "";
-                        foreach (string city in leasingCityStatePairs.Keys)
-                        {
-                            cityStatePairs += city;
-                            cityStatePairs += ", ";
-                            cityStatePairs += leasingCityStatePairs[city];
-                            cityStatePairs += "|";
-                        }
+                        
 
-                        mySqlCommand.Parameters.AddWithValue("@CityStatePairs", cityStatePairs);
-                        mySqlCommand.Parameters.AddWithValue("@ZipCodes", zipCodes);
+        
 
                         mySqlCommand.ExecuteNonQuery();
                     }
@@ -1209,7 +1170,7 @@ namespace RentalsApp
                         {
                             while (sqlDataReader.Read())
                             {
-                                ItemListing result = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[2].ToString(), Convert.ToDouble(sqlDataReader[5]), Convert.ToDateTime(sqlDataReader[6]) );
+                                ItemListing result = new ItemListing(sqlDataReader[2].ToString(), sqlDataReader[1].ToString(), sqlDataReader[4].ToString(), sqlDataReader[5].ToString(), sqlDataReader[3].ToString(), Convert.ToDouble(sqlDataReader[6]), Convert.ToDateTime(sqlDataReader[7]) );
 
                                 listingResults.Add(result);
 
@@ -1250,7 +1211,15 @@ namespace RentalsApp
                         {
                             while (sqlDataReader.Read())
                             {
-                                itemNum = int.Parse(sqlDataReader[0].ToString()); 
+                                if (sqlDataReader[0].ToString() == "")
+                                {
+                                    itemNum = 1;
+                                }
+                                else
+                                {
+                                    itemNum= int.Parse(sqlDataReader[0].ToString());
+                                }
+                    
                             }
                         }
                     }
@@ -1336,6 +1305,7 @@ namespace RentalsApp
                         {
                             while (sqlDataReader.Read())
                             {
+                           
                                 communicationNum = int.Parse(sqlDataReader[0].ToString());
                             }
                         }
@@ -1733,36 +1703,41 @@ namespace RentalsApp
         {
             SearchResult searchResult = new SearchResult();
             searchResult.resultIdentifier = username + "+" + name + "+" + brand + "+" + type + "+" + costPerDay;
+            List<Item> lists = new List<Item>();
+            searchResult.items = lists;
             using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
             {
                 Console.WriteLine("Connecting to MySQL...");
                 mySqlConnection.Open();
                 Console.WriteLine("MySQL connection succeeded.");
 
-                string sqlQueryText = "SELECT FROM item_listing WHERE lessor_username LIKE %@Username% AND item_name LIKE %@Name% AND item_brand LIKE %@Brand% AND item_type LIKE %@Type% AND cost_per_day = @CostPerDay;";
+                string sqlQueryText = "SELECT * FROM item_listing WHERE lessor_username LIKE @Username AND item_name LIKE @Name AND item_brand LIKE @Brand AND item_type LIKE @Type"; //AND cost_per_day = @CostPerDay;";
 
                 using (MySqlCommand mySqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
                 {
-                    mySqlCommand.Parameters.AddWithValue("@Username", username);
-                    mySqlCommand.Parameters.AddWithValue("@Name", name);
-                    mySqlCommand.Parameters.AddWithValue("@Brand", brand);
-                    mySqlCommand.Parameters.AddWithValue("@Type", type);
-                    mySqlCommand.Parameters.AddWithValue("@CostPerDay", costPerDay);
+                    mySqlCommand.Parameters.AddWithValue("@Username", "%" + username + "%");
+                    mySqlCommand.Parameters.AddWithValue("@Name", "%" + name + "%");
+                    mySqlCommand.Parameters.AddWithValue("@Brand", "%" + brand + "%");
+                    mySqlCommand.Parameters.AddWithValue("@Type", "%" + type + "%");
+                   // mySqlCommand.Parameters.AddWithValue("@CostPerDay", "%" + costPerDay + "%");
 
                     using (MySqlDataReader sqlDataReader = mySqlCommand.ExecuteReader())
                     {
                         while (sqlDataReader.Read())
                         {
                             Item item = new Item();
-                            item.listingInfo = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[2].ToString(), sqlDataReader[3].ToString(), sqlDataReader[5].ToString(), Double.Parse(sqlDataReader[4].ToString()), DateTime.MinValue);
-                            item.isAvailable = (bool)sqlDataReader[10];
-                            item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
+                            ItemListing listing = new ItemListing(sqlDataReader[2].ToString(), sqlDataReader[1].ToString(), sqlDataReader[4].ToString(), sqlDataReader[5].ToString(), sqlDataReader[3].ToString(), Convert.ToDouble(sqlDataReader[6]), Convert.ToDateTime(sqlDataReader[7]));
+                            // ItemListing iteeeem = new ItemListing(sqlDataReader[2].ToString(), sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[6].ToString(), Double.Parse(sqlDataReader[5].ToString()), DateTime.MinValue); //removed , DateTime.MinValue
+                            item.listingInfo = listing;
+                            //item.isAvailable = (bool)sqlDataReader[10];
+                            item.isAvailable = true;
+                            //item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
                             searchResult.items.Add(item);
                         }
                     }
                 }
             }
-
+            return searchResult;
             return null;
         } 
 

@@ -10,31 +10,34 @@
                   "{ConstraintExpression Type=RelativeToParent, Property=Width}"
                 RelativeLayout.HeightConstraint=
                   "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
-            <StackLayout Padding="10"  RelativeLayout.XConstraint="50"
+            <StackLayout Padding="10"  RelativeLayout.XConstraint="20"
                  RelativeLayout.YConstraint="50">
-                <Label Text="Welcome, what would you like to do today?"
-                  TextColor="#1D9E91" FontAttributes="Bold"/>
-            <Button Text="View my profile"
+                <Label Text="Welcome, what would you like to do today?" TextColor= "#707070" 
+                       Margin="25,20" FontSize="Subtitle" FontAttributes="Bold"
+                 />
+
+                <Button Text="View my profile"
                     Clicked="OnViewProfileClicked"
-                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
+                    BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
+                
             <Button Text="View my wish list"
                     Clicked="OnViewWishListClicked"
-                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
+                    BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             <Button Text="Search for an item"
                     Clicked="OnSearchClicked"
-                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
+                    BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             <Button Text="View My renter hub"
                     Clicked="OnViewRenterHubClicked"
-                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
+                    BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             <Button Text="View my lessor hub"
                     Clicked="OnViewLessorHubClicked"
-                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
+                    BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             <Button Text="Report User"
                     Clicked="OnReportClicked"
-                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
+                    BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             <Button Text="Help"
                     Clicked="OnHelpClicked"
-                    BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
+                    BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
                 </StackLayout>
                 </RelativeLayout>
 

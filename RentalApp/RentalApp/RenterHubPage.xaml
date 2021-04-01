@@ -13,22 +13,22 @@
             <StackLayout Padding="10"
                 RelativeLayout.XConstraint="50"
                          RelativeLayout.YConstraint="50" WidthRequest="250">
-                <Label Text="Renter Hub" TextColor ="White" FontAttributes="Bold" FontSize="23"/>
+                <Label Text="Renter Hub" TextColor= "#FBAE33" HorizontalTextAlignment="Center" Margin="0,25" FontSize="30" FontAttributes="Bold"/>
             <Button Text="New Invoices" Clicked="OnInvoicesClicked"
-                    TextColor = "#1D9E91" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
+                    Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold" />
             <Button Text="Rate a Lessor" Clicked="OnRateClicked"
-                    TextColor = "#1D9E91" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
+                    Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             <Button Text="Messages" Clicked="OnMessagesClicked"
-                    TextColor = "#1D9E91" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
+                    Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             <Button Text="Exchanges" Clicked="OnExchangesClicked"
-                    TextColor = "#1D9E91" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
+                    Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             <Button Text="Renter Agreement" Clicked="OnRAggrementClicked"
-                    TextColor = "#1D9E91" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
+                    Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
                 <Label Text="Average Renter Rating" TextColor = "#1D9E91"  FontAttributes="Bold" FontSize="15"/>
                 <Button Text="Home" Clicked="OnHomeClicked"
-                        TextColor = "#E29F10" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
-                <Button Text="Help" Clicked="OnHelpClicked"
-                        TextColor = "#E29F10" BackgroundColor="White" FontAttributes="Bold" FontSize="20"/>
+                        Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
+                <Button Text="Help" Clicked="OnHelpClicked" 
+                        Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             </StackLayout>
         </RelativeLayout>
     </ContentPage.Content>

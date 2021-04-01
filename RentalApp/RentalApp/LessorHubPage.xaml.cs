@@ -44,5 +44,11 @@ namespace RentalApp
 		{
 			await Navigation.PushAsync(new HomePage());
 		}
+		async void OnHelpClicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new LessorHubHelp());
+		}
+
+
 	}
 }

@@ -19,7 +19,7 @@
             </Grid>
             <Entry  Placeholder="Username" 
                  PlaceholderColor="White"
-                 IsPassword= "True"
+                 
                  RelativeLayout.XConstraint="100"
                  RelativeLayout.YConstraint="300"
                     WidthRequest="200"
@@ -28,6 +28,7 @@
                  />
             <Entry Placeholder="Password"
                 PlaceholderColor="White"
+                   IsPassword="True"
                 RelativeLayout.XConstraint="100"
                 RelativeLayout.YConstraint="375"
                    WidthRequest="200"
@@ -38,8 +39,9 @@
                     RelativeLayout.XConstraint="150"
                     RelativeLayout.YConstraint="450" 
                     Clicked="OnEnterClicked"
-                    BackgroundColor="white" FontAttributes="Bold" 
-                    FontSize = "17" TextColor="#E29F10"/>
+                    BackgroundColor= "#FIEAE5" CornerRadius="20" BorderWidth="1.5" BorderColor="#FIEAE5" TextColor="#25B6D3" FontAttributes="Bold"
+                    
+/>
         </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

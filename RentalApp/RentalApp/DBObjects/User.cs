@@ -7,14 +7,14 @@ namespace RentalsApp.DBObjects
     public class User
     {
         public string username;
-        public string gender;
+       // public string gender;
         public string phoneNumber;
-        public string stateId;
-        public string ssn;
-        public DateTime dateOfBirth;
-        public string firstName;
-        public string middleInitial;
-        public string lastName;
+       // public string stateId;
+       // public string ssn;
+       // public DateTime dateOfBirth;
+       // public string firstName;
+       // public string middleInitial;
+       // public string lastName;
         public bool agreedToTC;
         public bool agreedToPP;
         public bool agreedToSP;
@@ -26,17 +26,17 @@ namespace RentalsApp.DBObjects
         private List<WishlistItem> wishlistItems;
         private Cart cart;
 
-        public User(string Username, string Gender, string PhoneNumber, string StateId, string SSN, DateTime DOB, string FirstName, string MiddleInitial, string LastName, bool AgreedTC, bool AgreedPP, bool AgreedSP)
+        public User(string Username, string PhoneNumber, bool AgreedTC, bool AgreedPP, bool AgreedSP)
         {
             username = Username;
-            gender = Gender;
+            //gender = Gender;
             phoneNumber = PhoneNumber;
-            stateId = StateId;
-            ssn = SSN;
-            dateOfBirth = DOB;
-            firstName = FirstName;
-            middleInitial = MiddleInitial;
-            lastName = LastName;
+            //stateId = StateId;
+            //ssn = SSN;
+            //dateOfBirth = DOB;
+            //firstName = FirstName;
+            //middleInitial = MiddleInitial;
+            //lastName = LastName;
             agreedToTC = AgreedTC;
             agreedToPP = AgreedPP;
             agreedToSP = AgreedSP;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 using RentalsApp;
 
 
@@ -19,11 +20,21 @@ namespace RentalApp
             InitializeComponent();
 			string result = locationList();
 			//   LocList.ItemsSource = lis;
-			LocationDisplay.Text = result;
-			ItemDisplay.Text = GetItems();
+			//LocationDisplay.Text = result;
+			//ItemDisplay.Text = GetItems();
 		}
 
+		async void OnClick(Object sender, EventArgs e)
+        {
+			var result = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
+			{
+				Title = "Please pick a photo"
+			});
+			var stream = await result.OpenReadAsync();
 
+			resultImage.Source = ImageSource.FromStream(() => stream);
+
+        }
 
 		string locationList()
 		{

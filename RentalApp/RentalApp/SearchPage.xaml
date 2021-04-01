@@ -8,13 +8,14 @@
 
 
 
-        <Label Text="Search" TextColor= "#E29F10" FontSize="23" FontAttributes="Bold"/>
-        <Entry Text="{Binding UserName}" Placeholder="Username" PlaceholderColor="#1D9E91" FontSize="18" FontAttributes="Bold" Completed="OnUserNameCompleted"/>
-        <Entry Text="{Binding ItemName}" Placeholder="Item name" PlaceholderColor="#1D9E91" FontSize="18" FontAttributes="Bold" Completed="OnItemNameCompleted"/>
-        <Entry Text="{Binding Brand}" Placeholder="Item Brand" PlaceholderColor="#1D9E91" FontSize="18" FontAttributes="Bold" Completed="OnBrandCompleted"/>
-        <Entry Text="{Binding Type}" Placeholder="Item type" PlaceholderColor="#1D9E91" FontSize="18" FontAttributes="Bold" Completed="OnTypeCompleted"/>
+            <Label Text="Search" TextColor= "#FBAE33" HorizontalTextAlignment="Center" Margin="0,25" FontSize="30" FontAttributes="Bold"/>
+            <Entry Text="{Binding UserName}" Placeholder="Username"  PlaceholderColor="Gray" FontSize="18" FontAttributes="Bold" Completed="OnUserNameCompleted"/>
+            <Entry Text="{Binding ItemName}" Placeholder="Item name" PlaceholderColor="Gray" FontSize="18" FontAttributes="Bold" Completed="OnItemNameCompleted"/>
+            <Entry Text="{Binding Brand}" Placeholder="Item Brand" PlaceholderColor="Gray" FontSize="18" FontAttributes="Bold" Completed="OnBrandCompleted"/>
+            <Entry Text="{Binding Type}" Placeholder="Item type" PlaceholderColor="Gray" FontSize="18" FontAttributes="Bold" Completed="OnTypeCompleted"/>
 
-            <Button Text="Search" Clicked="OnSearchClicked"/>
+            <Button Text="Search" Clicked="OnSearchClicked"
+                    BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold" Margin="50,50"/>
 
             
         

@@ -76,10 +76,12 @@ namespace RentalApp
 
 
 
-            bool success = RASQLManager.sqlManagerInstance.CreateNewAccount(username, password, gender, phoneNumber, null, null, DOB, FirstName, middleInitial, LastName);
+            bool success = RASQLManager.sqlManagerInstance.CreateNewAccount(username, password,phoneNumber);
             
             if (success)
             {
+                RASQLManager.sqlManagerInstance.RegisterLessor(username);
+                RASQLManager.sqlManagerInstance.RegisterRenter(username);
                 await Navigation.PushAsync(new SignUpPage2());
             }
             else

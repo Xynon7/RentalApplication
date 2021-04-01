@@ -4,33 +4,20 @@
              x:Class="RentalApp.CartPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor = "White">
-            <Label Text="Cart "  TextColor= "#228E7F"/>
-            <Label x:Name="CartDisplay" TextColor= "#707070"/>
-            <RelativeLayout>
+            <Label Text="Cart "  TextColor= "#FBAE33"  HorizontalTextAlignment="Center" Margin="0,25" FontSize="30" FontAttributes="Bold"/>
+            <Label x:Name="CartDisplay" 
+                   TextColor= "#FBAE33"  HorizontalTextAlignment="Center" Margin="0,25" FontSize="30" FontAttributes="Bold"/>
+           
                 <Label Text="{Binding TotalCost}" RelativeLayout.XConstraint="250"
                        RelativeLayout.YConstraint="50"
                        WidthRequest="100" TextColor= "#E29F10"/>
-                <Button Text="Check Out" RelativeLayout.XConstraint="50"
-                        RelativeLayout.YConstraint="100"
-                        WidthRequest="100"
-                         BackgroundColor= "#E4E4E4" TextColor="#E29F10" />
-                <Button Text="Return to results" RelativeLayout.XConstraint="50"
-                        RelativeLayout.YConstraint="200"
-                        WidthRequest="100"
-                         BackgroundColor= "#E4E4E4" TextColor="#E29F10" />
-                <Button Text="Return to search" RelativeLayout.XConstraint="200"
-                        RelativeLayout.YConstraint="100"
-                        WidthRequest="100"
-                         BackgroundColor= "#E4E4E4" TextColor="#E29F10" />
-                <Button Text="Delete cart" RelativeLayout.XConstraint="200"
-                        RelativeLayout.YConstraint="200"
-                        WidthRequest="100"
-                         BackgroundColor= "#E4E4E4" TextColor="#E29F10"/>
-                <Button Text="Home" RelativeLayout.XConstraint="215"
-                        RelativeLayout.YConstraint="275"
-                        WidthRequest="100"
-                         BackgroundColor= "#E4E4E4" TextColor="#E29F10" />
-            </RelativeLayout>
+                <Button Text="Check Out" Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
+                <Button Text="Return to results" Margin="50,5"  BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
+                <Button Text="Return to search" Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
+                <Button Text="Delete cart" Margin="50,5"  BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
+                <Button Text="Home" Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
+
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

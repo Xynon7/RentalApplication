@@ -9,7 +9,7 @@ namespace RentalApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SearchPage : ContentPage
 	{
-        public string username, itemName,brand,type =null;
+        public string userName, itemName,brand,type =null;
         StackLayout parent;
 		public SearchPage ()
 		{
@@ -20,7 +20,7 @@ namespace RentalApp
 
         void OnUserNameCompleted(object sender, EventArgs e)
         {
-            username = ((Entry)sender).Text;
+            userName = ((Entry)sender).Text;
         }
 
         void OnItemNameCompleted(object sender, EventArgs e)
@@ -43,13 +43,19 @@ namespace RentalApp
 
         void OnSearchClicked(object sender, EventArgs e) //was async void
         {
+            parent = layout;
+            while(parent.Children.Count > 6)
+            {
+                parent.Children.RemoveAt(6);
+            }
+
             List<RentalsApp.DBObjects.ItemListing> listy=new List<RentalsApp.DBObjects.ItemListing>();
             List<RentalsApp.DBObjects.Item> itemList;
             RentalsApp.DBObjects.SearchResult SearchResults;
             
-            if(username==null || username == "")
+            if(userName==null || userName == "")
             {
-                username ="%";
+                userName ="%";
             }
             if (itemName == null || itemName == "")
             {
@@ -64,29 +70,37 @@ namespace RentalApp
                 type = "%";
             }
 
-            SearchResults = RASQLManager.sqlManagerInstance.SearchForItems(); //change to search function
+            SearchResults = RASQLManager.sqlManagerInstance.SearchForItems(username:userName, name:itemName, brand:brand, type:type); //change to search function
+            
             itemList = SearchResults.items;
-            foreach(RentalsApp.DBObjects.Item item in itemList)
+            if (itemList != null)
             {
-                listy.Add(item.listingInfo);
-            }
-            foreach (RentalsApp.DBObjects.ItemListing item in listy)
-            {
-                //  string buttonTxt = item.itemNum + " " + item.brand + " " + item.description;
-                string buttonTxt = item.description + " Brand: " + item.brand;
-                Button button = new Button
+                foreach (RentalsApp.DBObjects.Item item in itemList)
                 {
+                    listy.Add(item.listingInfo);
+                }
+                foreach (RentalsApp.DBObjects.ItemListing item in listy)
+                {
+                    //  string buttonTxt = item.itemNum + " " + item.brand + " " + item.description;
+                    string buttonTxt = item.itemName + "\n" + item.description + "\nBrand: " + item.brand;
+                    Button button = new Button
+                    {
 
-                    Text = buttonTxt,
-                    TextColor = Color.FromHex("#E29F10"),
-                    FontAttributes = FontAttributes.Bold,
-                    FontSize = 23
+                        Text = buttonTxt,
+                        TextColor = Color.FromHex("#25B6D3"),
+                        BackgroundColor = Color.White,
+                        BorderWidth=1.5,
+                        BorderColor=Color.FromHex("#25B6D3"),
+                        FontAttributes = FontAttributes.Bold,
+                        FontSize = 23
 
-                };
-                button.Clicked += async (sender2, args) => await Navigation.PushAsync(new ConfirmationPage(item));
+                    };
+                    button.Clicked += async (sender2, args) => await Navigation.PushAsync(new ConfirmationPage(item));
 
-                parent = layout;
-                parent.Children.Add(button);
+                    //parent = layout;
+                    parent.Children.Add(button);
+                    
+                }
             }
 
         }

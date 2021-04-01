@@ -3,11 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.ConfirmationPage">
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
+        <StackLayout  x:Name="layout">
             
 
             <Label x:Name="ItemConfirm"/>
-            <Button Text="Confirm Exchange?" Clicked="OnConfirmClicked"/>
-        </StackLayout>
+            <Label Text="Choose a pick up date and a return date"/>
+            <DatePicker MinimumDate="3/10/2021" MaximumDate="12/31/2025"/>
+            <DatePicker MinimumDate="3/10/2021" MaximumDate="12/31/2025"/>
+
+
+                
+
+            </StackLayout>
+            
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

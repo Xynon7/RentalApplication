@@ -22,14 +22,8 @@ namespace RentalApp
 		string GetUserInfo()
 		{
 			string user = RASQLManager.currentUser.username;
-			string first = RASQLManager.currentUser.firstName;
-			string middle = RASQLManager.currentUser.middleInitial;
-			string last = RASQLManager.currentUser.lastName;
-			string gender = RASQLManager.currentUser.gender;
-			string date = RASQLManager.currentUser.dateOfBirth.ToString("yyyy-MM-dd HH:mm:ss");
-			string ID = RASQLManager.currentUser.stateId;
-			string ssn = RASQLManager.currentUser.ssn;
-			string INFO = user + '\n' + first + ' ' + middle + ' ' + last + '\n' + gender + date + '\n' + ID + ssn;
+
+			string INFO = user;
 			return INFO;
 
 		}

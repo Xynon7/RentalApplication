@@ -13,7 +13,7 @@ namespace RentalApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewListingPage : ContentPage
     {
-        public string desc, brand, type, city, state, zip;
+        public string itemName, desc, brand, type, city, state, zip;
         public double cost, replacementCost, deposit;
         public NewListingPage()
         {
@@ -28,6 +28,11 @@ namespace RentalApp
         void BrandCompleted(object sender, EventArgs e)
         {
             brand = ((Entry)sender).Text;
+        }
+
+        void ItemNameCompleted(object sender, EventArgs e)
+        {
+            itemName = ((Entry)sender).Text;
         }
 
 
@@ -70,12 +75,9 @@ namespace RentalApp
 
         async void OnSubmitClicked(object sender, EventArgs e)
         {
-            Dictionary<string, string> cityState = new Dictionary<string, string>();
-            List<String> zips = new List<string>();
-            zips.Add(zip);
-            cityState.Add(city, state);
+
             bool success;
-           success= RASQLManager.sqlManagerInstance.CreateItemListing(desc, brand, type, cost, replacementCost, deposit, cityState, zips);
+           success= RASQLManager.sqlManagerInstance.CreateItemListing(itemName, desc, brand, type, cost, replacementCost, deposit);
             if (success)
             {
                 await Navigation.PushAsync(new NewListingPage()); //need to add Listing creation here

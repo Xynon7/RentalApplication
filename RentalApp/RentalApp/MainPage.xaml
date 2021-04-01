@@ -10,7 +10,7 @@
 
         <Button Text="Welcome to the app" 
                 Clicked="OnWelcomeClicked"
-                 BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold" Margin="0,50"  />
+                 BackgroundColor= "White" CornerRadius="20" BorderWidth="2.5" Margin="15,280" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"   />
     </StackLayout>
 
 </ContentPage>

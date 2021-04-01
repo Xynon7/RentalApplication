@@ -42,5 +42,10 @@ namespace RentalApp
         {
             await Navigation.PushAsync(new ReportUserPage());
         }
+
+        async void OnHelpClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HomeHelp());
+        }
     }
 }

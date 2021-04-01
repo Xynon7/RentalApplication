@@ -56,7 +56,7 @@ namespace RentalApp
 			foreach (RentalsApp.DBObjects.Location location in listy)
 			{
 
-				toReturn = toReturn + " " + location.name + " " + location.city + " " + location.state + " " + location.zipCode + "\n";
+				toReturn = toReturn + " " + location.name + " " + location.city + " " + location.state + ", " + location.zipCode + "\n";
 			}
 			return toReturn;
 		}

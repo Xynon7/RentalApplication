@@ -4,10 +4,8 @@
              x:Class="RentalApp.DeveloperPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Den1S80 locations"/>
-
-            <Label x:Name="LocationDisplay" TextColor="#707070"/>
-            <Label x:Name="ItemDisplay" TextColor="#707070"/>
+            <Button Text="Pick an image" Clicked="OnClick"/>
+            <Image x:Name="resultImage"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

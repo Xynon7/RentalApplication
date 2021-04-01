@@ -5,6 +5,7 @@ namespace RentalsApp.DBObjects
 {
     public class ItemListing
     {
+        public string itemName;
         public string itemNum;
         public string brand;
         public string type;
@@ -18,8 +19,9 @@ namespace RentalsApp.DBObjects
         public Dictionary<string, string> leasingCityStatePairs;
         public List<string> leasingZipCodes;
 
-        public ItemListing(string ItemNum, string Brand, string Type, string Description, double CostPerDay, DateTime DatePosted) //removed DateTime DatePosted
+        public ItemListing(string ItemName, string ItemNum, string Brand, string Type, string Description, double CostPerDay, DateTime DatePosted) //removed DateTime DatePosted
         {
+            itemName = ItemName;
             itemNum = ItemNum;
            
             brand = Brand;

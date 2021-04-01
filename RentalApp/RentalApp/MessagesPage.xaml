@@ -6,21 +6,21 @@
         <ScrollView>
             <StackLayout BackgroundColor= "White">
 
-                <Label Text="All messages sent" TextColor="#1D9E91" FontAttributes="Bold" FontSize="Title"/>
-                <Label x:Name="sentDisplay" TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15"/>
-                <Label Text="All messages recieved" TextColor="#1D9E91" FontAttributes="Bold" FontSize="Title"/>
-                <Label x:Name="recDisplay" TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,15"/>
-                <Label Text="Create new message" TextColor="#228E7F"/>
+                <Label Text="All messages sent" TextColor= "#FBAE33" HorizontalTextAlignment="Center" Margin="0,25" FontSize="30" FontAttributes="Bold"/>
+                <Label x:Name="sentDisplay" TextColor= "#707070" Margin="20,5" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Label Text="All messages recieved" TextColor= "#FBAE33" HorizontalTextAlignment="Center" Margin="0,25" FontSize="30" FontAttributes="Bold"/>
+                <Label x:Name="recDisplay" TextColor= "#707070" Margin="20,5" FontSize="Subtitle" FontAttributes="Bold"/>
+                <Label Text="Create a new message:" FontSize="20" TextColor="#228E7F"/>
                 <Entry  Placeholder="Receiver" Completed="OnRecCompleted"
-                        PlaceholderColor="#1D9E91" FontAttributes="Bold" Margin="0,15"/>
+                        PlaceholderColor="#707070" FontAttributes="Bold" Margin="0,15"/>
             <Entry  Placeholder="Body" Completed="OnBodyCompleted"
-                    PlaceholderColor="#1D9E91" FontAttributes="Bold" Margin="0,15"/>
+                    PlaceholderColor="#707070" FontAttributes="Bold" Margin="0,15"/>
             <Button Text="Send" Clicked="OnSendClicked"
-                    BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold"/>
+                     Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             <Button Text="Cancel" Clicked="OnCancelClicked"
-                    BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold"/>
+                     Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             <Button Text="Home" Clicked="OnHomeClicked"
-                    BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold"/>
+                     Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
             
         </StackLayout>
         </ScrollView>
