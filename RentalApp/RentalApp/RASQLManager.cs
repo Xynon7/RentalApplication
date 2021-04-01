@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using RentalsApp.DBObjects;
-
 using MySqlConnector;
 using System.Threading.Tasks;
+using System.IO;
+using Xamarin.Forms;
 
 namespace RentalsApp
 {
@@ -240,6 +241,7 @@ namespace RentalsApp
                                 item.listingInfo = new ItemListing(sqlDataReader[2].ToString(), sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[6].ToString(), Double.Parse(sqlDataReader[5].ToString()), DateTime.MinValue);
                                 item.isAvailable = (bool)sqlDataReader[10];
                                 item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
+                                item.listingInfo.itemImages = GetImagesForItem(Convert.ToInt32(item.listingInfo.itemNum));
                             }
                         }
                     }
@@ -281,6 +283,7 @@ namespace RentalsApp
                                 item.listingInfo = new ItemListing(sqlDataReader[2].ToString(), sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[6].ToString(), Double.Parse(sqlDataReader[5].ToString()), DateTime.MinValue);
                                 item.isAvailable = (bool)sqlDataReader[10];
                                 item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
+                                item.listingInfo.itemImages = GetImagesForItem(Convert.ToInt32(item.listingInfo.itemNum));
                                 items.Add(item);
                             }
                         }
@@ -324,6 +327,7 @@ namespace RentalsApp
                                 item.listingInfo = new ItemListing(sqlDataReader[2].ToString(), sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[6].ToString(), Double.Parse(sqlDataReader[5].ToString()), DateTime.MinValue);
                                 item.isAvailable = (bool)sqlDataReader[10];
                                 item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
+                                item.listingInfo.itemImages = GetImagesForItem(Convert.ToInt32(item.listingInfo.itemNum));
                                 items.Add(item);
                             }
                         }
@@ -368,7 +372,8 @@ namespace RentalsApp
                                 //  item.isAvailable = (bool)sqlDataReader[10];
                                 //   item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
                                 //   items.Add(item);
-                                ItemListing item = new ItemListing(sqlDataReader[2].ToString(), sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[6].ToString(), Double.Parse(sqlDataReader[5].ToString()), DateTime.MinValue); //removed , DateTime.MinValue
+                                ItemListing item = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[2].ToString(), Convert.ToDouble(sqlDataReader[5]), DateTime.MinValue);
+                                item.itemImages = GetImagesForItem(Convert.ToInt32(item.itemNum));
                                 items.Add(item);
                             }
                         }
@@ -385,10 +390,57 @@ namespace RentalsApp
             return items;
         }
 
+        public List<ItemImage> GetImagesForItem(int itemNumber)
+        {
+            List<ItemImage> imageResults = new List<ItemImage>();
 
+            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.Open();
+                    Console.WriteLine("MySQL connection succeeded.");
 
+                    string sqlQueryText = "SELECT * FROM item_images WHERE item_number = @ItemNumber";
 
+                    using (MySqlCommand sqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@ItemNumber", itemNumber);
 
+                        using (MySqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            while (sqlDataReader.Read())
+                            {
+                                ItemImage result = new ItemImage();
+                                result.imageIdentifier = (int)sqlDataReader[0];
+                                result.itemNumber = (int)sqlDataReader[1];
+                                
+                                byte[] imageBinaryData = (byte[])sqlDataReader[2];
+                                using (MemoryStream ms = new MemoryStream())
+                                {
+                                    ms.Write(imageBinaryData, 0, imageBinaryData.Length);
+                                    result.image = new Image();
+                                    result.image.Source = ImageSource.FromStream(() => ms);
+                                }
+
+                                result.coverImage = (bool)sqlDataReader[3];
+
+                                imageResults.Add(result);
+                            }
+                        }
+                    }
+                    mySqlConnection.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("MySQL connection failed.");
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+
+            return imageResults;
+        }
 
         public Cart GetCart(string username)
         {
@@ -1190,6 +1242,49 @@ namespace RentalsApp
             return listingResults;
         }
 
+        /*
+         * Add an Image tied to an item to the DB.
+         */
+        public bool AddImage(int itemNumber, string filePath, bool isCoverImage)
+        {
+            bool successful = false;
+
+            try
+            {
+                using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+                {
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.Open();
+                    Console.WriteLine("MySQL connection succeeded.");
+
+                    string mySqlQueryText = "INSERT INTO item_images VALUES(DEFAULT, @ItemNumber, @Image, @IsCoverImage)";
+
+                    using (MySqlCommand mySqlCommand = new MySqlCommand(mySqlQueryText, mySqlConnection))
+                    {
+                        FileStream imageFileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+                        BinaryReader binaryReader = new BinaryReader(imageFileStream);
+                        byte[] imageData = binaryReader.ReadBytes((int)imageFileStream.Length);
+
+                        mySqlCommand.Parameters.AddWithValue("@ItemNumber", filePath);
+                        mySqlCommand.Parameters.AddWithValue("@Image", imageData);
+                        mySqlCommand.Parameters.AddWithValue("@IsCoverImage", isCoverImage);
+
+                        mySqlCommand.ExecuteNonQuery();
+                    }
+
+                    mySqlConnection.Close();
+                }
+                successful = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Data insertion failed.");
+                Console.WriteLine(ex.ToString());
+            }
+
+            return successful;
+        }
+
         private int GetNextItemNum()
         {
 
@@ -1277,13 +1372,6 @@ namespace RentalsApp
             return ExchangeNum + 1;
         }
 
-
-
-
-
-
-
-
         private int GetNextCommunicationNum()
         {
 
@@ -1322,14 +1410,6 @@ namespace RentalsApp
 
             return communicationNum + 2;
         }
-
-
-
-
-
-
-
-
 
         /*
          * Changes the current user's Terms and Conditons acceptance status.
@@ -1504,11 +1584,50 @@ namespace RentalsApp
                     mySqlConnection.Open();
                     Console.WriteLine("MySQL connection succeeded.");
 
-                    string sqlQueryText = "SELECT agreed_renter FROM renter WHERE renter_username = @Username";
+                    string sqlQueryText = "UPDATE renter SET agreed_renter = @Acceptance WHERE renter_username = @Username";
 
                     using (MySqlCommand mySqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
                     {
                         mySqlCommand.Parameters.AddWithValue("@Username", currentUser.username);
+                        mySqlCommand.Parameters.AddWithValue("@Acceptance", acceptance);
+
+                        mySqlCommand.ExecuteNonQuery();
+                    }
+
+                    mySqlConnection.Close();
+                }
+                successful = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Data update failed.");
+                Console.WriteLine(ex.ToString());
+            }
+
+            return successful;
+        }
+
+        /*
+         * Changes the image's cover image status.
+         */
+        public bool ChangeCoverImageStatus(int imageNumber, bool isCoverImage)
+        {
+            bool successful = false;
+
+            try
+            {
+                using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+                {
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.Open();
+                    Console.WriteLine("MySQL connection succeeded.");
+
+                    string sqlQueryText = "UPDATE item_images SET coverImage = @IsCoverImage WHERE image_id = @Id";
+
+                    using (MySqlCommand mySqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
+                    {
+                        mySqlCommand.Parameters.AddWithValue("@Id", imageNumber);
+                        mySqlCommand.Parameters.AddWithValue("@IsCoverImage", isCoverImage);
 
                         mySqlCommand.ExecuteNonQuery();
                     }
@@ -1565,7 +1684,7 @@ namespace RentalsApp
         }
 
         /*
-         * Changes the current renter's acceptance status.
+         * Checks the current renter's acceptance status.
          */
         public bool CheckRenterAcceptance()
         {
@@ -1601,7 +1720,6 @@ namespace RentalsApp
 
             return successful;
         }
-
 
         public bool DeleteAccount(string username)
         {
@@ -1664,7 +1782,6 @@ namespace RentalsApp
             return successful;
         }
 
-
         public bool DeleteAllItemsFromUser(string username)
         {
             bool successful = false;
@@ -1681,6 +1798,41 @@ namespace RentalsApp
                     using (MySqlCommand mySqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
                     {
                         mySqlCommand.Parameters.AddWithValue("@Username", username);
+
+                        mySqlCommand.ExecuteNonQuery();
+                    }
+
+                    mySqlConnection.Close();
+                }
+                successful = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Data deletion failed.");
+                Console.WriteLine(ex.ToString());
+                successful = false;
+            }
+
+            return successful;
+        }
+
+
+        public bool DeleteImage(int itemNumber)
+        {
+            bool successful = false;
+            try
+            {
+                using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+                {
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.Open();
+                    Console.WriteLine("MySQL connection succeeded.");
+
+                    string sqlQueryText = "DELETE FROM item_images WHERE item_id = @ItemNumber;";
+
+                    using (MySqlCommand mySqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
+                    {
+                        mySqlCommand.Parameters.AddWithValue("@ItemNumber", itemNumber);
 
                         mySqlCommand.ExecuteNonQuery();
                     }
