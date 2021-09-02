@@ -424,6 +424,8 @@ namespace RentalsApp
                                     result.image = new Image();
                                     result.image.Source = ImageSource.FromStream(() => ms);
                                 
+                                result.coverImage = (bool)sqlDataReader[3];
+                                result.coverImage = (bool)sqlDataReader[3];
 
                                 //result.coverImage = (bool)sqlDataReader[3];
                                 result.coverImage = false;
