@@ -8,7 +8,8 @@
 
 
             <Label x:Name="InfoDisplay" TextColor= "#707070" Margin="20,5" FontSize="Subtitle" FontAttributes="Bold"/>
-            
+            <Label Text="Average User Rating: 4.6"
+                    TextColor= "#707070" Margin="20,5" FontSize="Subtitle" FontAttributes="Bold"/>
             <Button Text="View Locations"
                     Clicked="OnLocationsClicked" 
                     Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
@@ -21,8 +22,7 @@
             <Button Text="View Payments"
                     Clicked="OnPaymentsClicked"
                     Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
-            <Label Text="Average User Rating"
-                    TextColor= "#707070" Margin="20,5" FontSize="Subtitle" FontAttributes="Bold"/>
+            
             <Button Text="Home"
                     Clicked="OnHomeClicked"
                     Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>

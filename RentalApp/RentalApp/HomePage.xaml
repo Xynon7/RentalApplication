@@ -4,22 +4,18 @@
              x:Class="RentalApp.HomePage">
     <ContentPage.Content>
         
-            <RelativeLayout>
-            <Image Source="BACKGROUNDIMAGE1.png" Opacity="1"
-                RelativeLayout.WidthConstraint=
-                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
-                RelativeLayout.HeightConstraint=
-                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
-            <StackLayout Padding="10"  RelativeLayout.XConstraint="20"
-                 RelativeLayout.YConstraint="50">
+           
+            <StackLayout Padding="10"  BackgroundColor="White">
                 <Label Text="Welcome, what would you like to do today?" TextColor= "#707070" 
                        Margin="25,20" FontSize="Subtitle" FontAttributes="Bold"
                  />
-
+            <!-- 
                 <Button Text="View my profile"
                     Clicked="OnViewProfileClicked"
+                    BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>-->
+            <Button Text="Add a location"
+                    Clicked="OnLocationClicked"
                     BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
-                
             <Button Text="View my wish list"
                     Clicked="OnViewWishListClicked"
                     BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
@@ -39,7 +35,6 @@
                     Clicked="OnHelpClicked"
                     BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
                 </StackLayout>
-                </RelativeLayout>
-
+                
     </ContentPage.Content>
 </ContentPage>

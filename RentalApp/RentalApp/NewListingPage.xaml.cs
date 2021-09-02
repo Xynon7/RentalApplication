@@ -80,7 +80,7 @@ namespace RentalApp
            success= RASQLManager.sqlManagerInstance.CreateItemListing(itemName, desc, brand, type, cost, replacementCost, deposit);
             if (success)
             {
-                await Navigation.PushAsync(new NewListingPage()); //need to add Listing creation here
+                await Navigation.PushAsync(new LessorHubPage()); //need to add Listing creation here
             }
             else
                 await Navigation.PushAsync(new ErrorPage(4));  

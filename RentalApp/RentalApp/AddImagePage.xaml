@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalApp.AddImagePage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+                <Label Text="Add an Image" TextColor="Black" FontAttributes="Bold" FontSize="Title"/>
+                
+
+            <Button Text="Select image" Clicked="AddImageClicked"
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold" Margin="0,15"/>
+            <Image x:Name="resultImage"/>
+                <Button Text="Home" Clicked="OnHomeClicked"
+                        BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold" Margin="0,15"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -44,7 +44,7 @@ namespace RentalApp
 
 			foreach (RentalsApp.DBObjects.Communication messageSent in sentList)
 			{
-				toReturn = toReturn + "TO:" + messageSent.receiver + " " + messageSent.messageBody + "\n";
+				toReturn = toReturn + "To " + messageSent.receiver + ": " + messageSent.messageBody + "\n";
 			}
 			return toReturn;
 
@@ -62,7 +62,7 @@ namespace RentalApp
 
 			foreach (RentalsApp.DBObjects.Communication messageRec in recList)
 			{
-				toReturn = toReturn + "From:" + messageRec.sender + " " + messageRec.messageBody + "\n";
+				toReturn = toReturn + "From " + messageRec.sender + ": " + messageRec.messageBody + "\n";
 			}
 			return toReturn;
 		}

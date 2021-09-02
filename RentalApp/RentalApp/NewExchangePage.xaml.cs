@@ -67,7 +67,7 @@ namespace RentalApp
        async void OnSubmitClicked(object sender, EventArgs e)
         {
             //need to create a new exchange
-            bool success =  RASQLManager.sqlManagerInstance.CreateExchange(Ruser, Luser, invoiceNum, itemnum, exchangeLoc, pickOrDrop, exchangeTime);
+            bool success =  RASQLManager.sqlManagerInstance.CreateExchange(Ruser, Luser,  itemnum, exchangeLoc, pickOrDrop, exchangeTime);
             if (success)
             {
                 await Navigation.PushAsync(new ExchangePage());

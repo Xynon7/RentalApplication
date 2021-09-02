@@ -3,11 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.WishListPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor = "#FAF0EB">
+        <StackLayout BackgroundColor = "White">
             <Label Text="Wish List" TextColor= "#228E7F"/>
             <Label x:Name="WishListDisplay" TextColor="#707070"/>
-            
-            <Entry Placeholder="Cost Range - High end"
+            <Label Text="Popcorn Machine -Owned by: AwesomeUser &#x0a; Avaliable?: Yes &#x0a;"
+                   TextColor= "#F95A42" Margin="10,5" FontSize="Subtitle" FontAttributes="Bold"/>
+            <Label Text="Cotton Candy Machine -Owned by: Jake408 &#x0a; Avaliable?:No &#x0a;"
+                   TextColor= "#F95A42" Margin="10,5" FontSize="Subtitle" FontAttributes="Bold"/>
+
+            <!-- <Entry Placeholder="Cost Range - High end"
                    PlaceholderColor="#707070"/>
             <Entry Placeholder="Cost Range - Low end"
                    PlaceholderColor="#707070"/>
@@ -20,9 +24,9 @@
             <Button Text="Add to Wish List"
                     BackgroundColor="#E29F10" TextColor="White"/>
             <Button Text="Return to Result"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    BackgroundColor="#E29F10" TextColor="White"/>-->
             <Button Text="Home"
-                    BackgroundColor="#E29F10" TextColor="White"/>
+                    Margin="50,5" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
 
         </StackLayout>
     </ContentPage.Content>

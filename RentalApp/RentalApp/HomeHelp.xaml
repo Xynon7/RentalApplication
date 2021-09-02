@@ -4,7 +4,7 @@
              x:Class="RentalApp.HomeHelp">
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout>
+        <StackLayout Padding="20">
                 <Label Text="The Home Page allows access to several key features of this application. &#x0a; &#x0a;
 
 
@@ -25,7 +25,8 @@ Report allows you to report another user who has not followed the policies &#x0a
 
 
 
-Any time you are on another page in this application and you see the home button it will bring you back to this page and these options." />
+Any time you are on another page in this application and you see the home button it will bring you back to this page and these options." 
+                       TextColor="Black"    />
         </StackLayout>
         </ScrollView>
     </ContentPage.Content>

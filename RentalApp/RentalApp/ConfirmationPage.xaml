@@ -4,16 +4,19 @@
              x:Class="RentalApp.ConfirmationPage">
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout  x:Name="layout">
-            
+        <StackLayout  x:Name="layout" Padding="5">
+                <Label Text="Rental Confirmation" TextColor="#1D9E91" FontAttributes="Bold" FontSize="Title"/>
+                <Label Text="Avaliable?: Yes" TextColor="Black" FontSize="Body"/>
+                <Label x:Name="ItemConfirm"/>
 
-            <Label x:Name="ItemConfirm"/>
-            <Label Text="Choose a pick up date and a return date"/>
+                <Image x:Name="ItemImage" />
+                <Label Text="Choose a pick up date and a return date" TextColor="Black" FontSize="Body"/>
+            <DatePicker MinimumDate="3/10/2021" MaximumDate="12/31/2025" DateSelected="OnDateSelected"/>
             <DatePicker MinimumDate="3/10/2021" MaximumDate="12/31/2025"/>
-            <DatePicker MinimumDate="3/10/2021" MaximumDate="12/31/2025"/>
+                <Button Text="Add to Wish List" BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold" Margin="0,15"/>
 
 
-                
+
 
             </StackLayout>
             

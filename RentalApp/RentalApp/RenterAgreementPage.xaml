@@ -13,8 +13,10 @@ Keep the item(s) as close as possible to its condition as originally arrived.
 Return the item(s) on the date and at the time and location agreed upon.
 "
                    TextColor="Black"/>
-            <Button Text="Agree" Clicked="OnAgreeClicked"/>
-            <Button Text="Disagre" Clicked="OnDisagreeClicked"/>
+            <Button Text="Agree" Clicked="OnAgreeClicked"
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold" Margin="0,15"/>
+            <Button Text="Disagre" Clicked="OnDisagreeClicked"
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold" Margin="0,15"/>
         </StackLayout>
         </ScrollView>
     </ContentPage.Content>

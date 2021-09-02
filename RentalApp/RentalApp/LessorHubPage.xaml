@@ -4,15 +4,9 @@
              x:Class="RentalApp.LessorHubPage">
     <ContentPage.Content>
         <ScrollView>
-        <RelativeLayout>
-            <Image Source="BACKGROUNDIMAGE1.png" Opacity="1"
-                RelativeLayout.WidthConstraint=
-                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
-                RelativeLayout.HeightConstraint=
-                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
-            <StackLayout Padding="10"
-                          RelativeLayout.XConstraint="50"
-                         RelativeLayout.YConstraint="20" WidthRequest="250">
+        
+            <StackLayout Padding="10" BackgroundColor="White"
+                           WidthRequest="250">
                 <Label Text="Lessor Hub" 
                        TextColor= "#FBAE33" HorizontalTextAlignment="Center" Margin="0,20" FontSize="30" FontAttributes="Bold"/>
             <Button Text="New item Listing"  Clicked="OnNewItemClicked" 
@@ -27,13 +21,13 @@
                     BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold" Margin="50,5"/>
             <Button Text="Lessor Agreement" Clicked="OnLAgreementsClicked"
                     BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold" Margin="50,5"/>
-            <Label Text="Average Lessor Rating: " TextColor="#1D9E91" FontAttributes="Bold" FontSize="Subtitle" Margin="0,10"/>
+            <Label Text="Average Lessor Rating: 4.6 " TextColor="#1D9E91" FontAttributes="Bold" FontSize="Subtitle" Margin="0,10"/>
             <Button Text="Home" Clicked="OnHomeClicked" 
                     BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold" Margin="50,5"/>
             <Button Text="Help" Clicked="OnHelpClicked" 
                     BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold" Margin="50,5"/>
         </StackLayout>
-            </RelativeLayout>
+            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -4,22 +4,30 @@
              x:Class="RentalApp.NewListingPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="New Item Listing" />
-            <Entry Placeholder="Item Name" Completed="ItemNameCompleted"/>
-            <Entry Placeholder="Item Description" Completed="DescriptionCompleted"/>
-            <Entry Placeholder="Item Brand" Completed="BrandCompleted"/>
-            <Entry Placeholder="Item type" Completed="TypeCompleted"/>
+            <Label Text="New Item Listing" TextColor="#1D9E91" FontAttributes="Bold" FontSize="Title"/>
+            <Entry Placeholder="Item Name" Completed="ItemNameCompleted"
+                   TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,10"/>
+            <Entry Placeholder="Item Description" Completed="DescriptionCompleted"
+                   TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,10"/>
+            <Entry Placeholder="Item Brand" Completed="BrandCompleted"
+                   TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,10"/>
+            <Entry Placeholder="Item type" Completed="TypeCompleted"
+                   TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,10"/>
             
             
             
-            <Entry Placeholder="Cost Per day" Completed="CostCompleted"/>
-            <Entry Placeholder="Replacement Cost" Completed="ReplacementCompleted"/>
-            <Entry Placeholder="Deposit" Completed="DepositCompleted"/>
-            <Button Text="Upload an image of your item" Clicked="OnUploadImageClicked"/>
+            <Entry Placeholder="Cost Per day" Completed="CostCompleted"
+                   TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,10"/>
+            <Entry Placeholder="Replacement Cost" Completed="ReplacementCompleted"
+                   TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,10"/>
+            <Entry Placeholder="Deposit" Completed="DepositCompleted"
+                   TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="0,10"/>
+            
 
             <Image x:Name="ItemImage"/>
 
-            <Button Text="Submit" Clicked="OnSubmitClicked"/>
+            <Button Text="Submit" Clicked="OnSubmitClicked"
+                    BackgroundColor="#E4E4E4" TextColor="#E29F10" FontAttributes="Bold" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

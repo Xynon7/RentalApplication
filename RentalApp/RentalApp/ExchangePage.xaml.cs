@@ -19,6 +19,7 @@ namespace RentalApp
 
 		string getExchanges()
         {
+			
 			string user = RASQLManager.currentUser.username;
 			List<RentalsApp.DBObjects.Exchange> listy;
 
@@ -26,7 +27,8 @@ namespace RentalApp
 			string toReturn = "";
 			foreach(RentalsApp.DBObjects.Exchange exch in listy)
             {
-				toReturn = toReturn + " Lessor: " + exch.lessor + " Renter:" + exch.renter  +   "\n";
+				
+				toReturn = toReturn + " Lessor: " + exch.lessor + "\n Renter:" + exch.renter  +   "\n \n";
             }
 			return toReturn;
 		}

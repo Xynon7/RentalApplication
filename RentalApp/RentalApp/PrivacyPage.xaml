@@ -58,7 +58,7 @@ Our clients are encouraged to go through our privacy policies and thus can termi
  
 11. How our clients can update, delete, or review the information we collect from them &#10;
  Our customers are provided with the right to access their personal information and delete them in some circumstances by submitting their request to our organization's supervisory authority." 
-                   TextColor="#FBAE33" FontAttributes="Bold" FontSize="25" 
+                   TextColor="Black"  
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
  />

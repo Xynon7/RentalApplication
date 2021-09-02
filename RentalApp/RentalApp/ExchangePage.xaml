@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.ExchangePage">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout BackgroundColor="White">
             <Label Text="Exchanges"  TextColor= "#FBAE33" HorizontalTextAlignment="Center" Margin="0,25" FontSize="30" FontAttributes="Bold"/>
             <Label x:Name="ExchangeDisplay" TextColor="#707070" FontAttributes="Bold" FontSize="Subtitle" Margin="20,30"/>
@@ -11,5 +12,6 @@
             <Button Text="Home" Clicked="OnHomeClicked"
                     BackgroundColor= "White" Margin="50,5" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -372,7 +372,7 @@ namespace RentalsApp
                                 //  item.isAvailable = (bool)sqlDataReader[10];
                                 //   item.availabilityDate = DateTime.Parse(sqlDataReader[10].ToString());
                                 //   items.Add(item);
-                                ItemListing item = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[2].ToString(), Convert.ToDouble(sqlDataReader[5]), DateTime.MinValue);
+                                   ItemListing item = new ItemListing(sqlDataReader[1].ToString(), sqlDataReader[3].ToString(), sqlDataReader[4].ToString(), sqlDataReader[2].ToString(),"foo",Convert.ToDouble(sqlDataReader[5]), DateTime.MinValue); //I don't think this function is used but stuff is wrong here
                                 item.itemImages = GetImagesForItem(Convert.ToInt32(item.itemNum));
                                 items.Add(item);
                             }
@@ -417,14 +417,16 @@ namespace RentalsApp
                                 result.itemNumber = (int)sqlDataReader[1];
                                 
                                 byte[] imageBinaryData = (byte[])sqlDataReader[2];
-                                using (MemoryStream ms = new MemoryStream())
-                                {
-                                    ms.Write(imageBinaryData, 0, imageBinaryData.Length);
+
+                                MemoryStream ms = new MemoryStream(imageBinaryData);
+                                
+                                   
                                     result.image = new Image();
                                     result.image.Source = ImageSource.FromStream(() => ms);
-                                }
+                                
 
-                                result.coverImage = (bool)sqlDataReader[3];
+                                //result.coverImage = (bool)sqlDataReader[3];
+                                result.coverImage = false;
 
                                 imageResults.Add(result);
                             }
@@ -533,7 +535,7 @@ namespace RentalsApp
         }
 
 
-        public bool CreateExchange(string renterUser, string lessorUser, string invoiceNum, string itemNum, string place, string PUorDO, DateTime exchangeDate)
+        public bool CreateExchange(string renterUser, string lessorUser, string itemNum, string place, string PUorDO, DateTime exchangeDate)
         {
             //need to find exchange number, invoice number, parse dateTime, and set bool paymentmade to false
             bool successful = false;
@@ -546,19 +548,19 @@ namespace RentalsApp
                     mySqlConnection.Open();
                     Console.WriteLine("MySQL connection succeeded.");
 
-                    string sqlQueryText = "INSERT INTO exchanges VALUES(@Renter_Username, @Lessor_Username, @Invoice_number, @Item_number, @Exchange_Place, @Pickup_Dropoff, @Exchange_date, @Exchange_time, @Payment_Made, @Exchange_Number)";
+                    string sqlQueryText = "INSERT INTO exchanges VALUES(@Renter_Username, @Lessor_Username, @Invoice_number, @Item_number, @Exchange_Place, @Pickup_Dropoff, @Exchange_date, @Exchange_time, @Exchange_Number)";
 
                     using (MySqlCommand mySqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
                     {
                         mySqlCommand.Parameters.AddWithValue("@Renter_Username", renterUser);
                         mySqlCommand.Parameters.AddWithValue("@Lessor_Username", lessorUser);
-                        mySqlCommand.Parameters.AddWithValue("@Invoice_number", invoiceNum);
+                        mySqlCommand.Parameters.AddWithValue("@Invoice_number", GetNextInvoiceNum());
                         mySqlCommand.Parameters.AddWithValue("@Item_number", itemNum);
                         mySqlCommand.Parameters.AddWithValue("@Exchange_Place", place);
                         mySqlCommand.Parameters.AddWithValue("@Pickup_Dropoff", PUorDO);
                         mySqlCommand.Parameters.AddWithValue("@Exchange_date", exchangeDate.Date);
                         mySqlCommand.Parameters.AddWithValue("@Exchange_time", DateTime.Now.TimeOfDay); //need to do for hours and seconds
-                        mySqlCommand.Parameters.AddWithValue("@Payment_Made", false);
+                        //mySqlCommand.Parameters.AddWithValue("@Payment_Made", false);
                         mySqlCommand.Parameters.AddWithValue("@Exchange_Number", GetNextExchangeNum());
                        // mySqlCommand.Parameters.AddWithValue("@Renter_Username", renterUser);
 
@@ -654,7 +656,7 @@ namespace RentalsApp
                             result.time.AddHours(DateTime.Parse(sqlDataReader[7].ToString()).Hour);
                             result.time.AddMinutes(DateTime.Parse(sqlDataReader[7].ToString()).Minute);
                             result.time.AddSeconds(DateTime.Parse(sqlDataReader[7].ToString()).Second);
-                            result.paymentComplete = Convert.ToBoolean(sqlDataReader[8].ToString());
+                           // result.paymentComplete = Convert.ToBoolean(sqlDataReader[8].ToString());
                             exchangeResults.Add(result);
                         }
                     }
@@ -692,6 +694,38 @@ namespace RentalsApp
             }
 
             return descriptionResult;
+        }
+
+
+
+        public string GetUserFromItem(string itemNum)
+        {
+            string userResult = "";
+
+            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+            {
+
+                Console.WriteLine("Connecting to MySQL...");
+                mySqlConnection.Open();
+                Console.WriteLine("MySQL connection succeeded.");
+
+                string sqlQueryText = "SELECT lessor_username FROM item_listing WHERE item_number = @ItemNumber";
+
+                using (MySqlCommand sqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@ItemNumber", itemNum);
+
+                    using (MySqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                    {
+                        while (sqlDataReader.Read())
+                        {
+                            userResult = sqlDataReader[0].ToString();
+                        }
+                    }
+                }
+            }
+
+            return userResult;
         }
 
         public bool ValidateLogin(string username, string password)
@@ -1265,7 +1299,7 @@ namespace RentalsApp
                         BinaryReader binaryReader = new BinaryReader(imageFileStream);
                         byte[] imageData = binaryReader.ReadBytes((int)imageFileStream.Length);
 
-                        mySqlCommand.Parameters.AddWithValue("@ItemNumber", filePath);
+                        mySqlCommand.Parameters.AddWithValue("@ItemNumber", itemNumber); //was filepath as second arg
                         mySqlCommand.Parameters.AddWithValue("@Image", imageData);
                         mySqlCommand.Parameters.AddWithValue("@IsCoverImage", isCoverImage);
 
@@ -1370,6 +1404,43 @@ namespace RentalsApp
             }
 
             return ExchangeNum + 1;
+        }
+        private int GetNextInvoiceNum()
+        {
+
+            int InvoiceNum = 0;
+
+            try
+            {
+                using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString))
+                {
+                    Console.WriteLine("Connecting to MySQL...");
+                    mySqlConnection.Open();
+                    Console.WriteLine("MySQL connection succeeded.");
+
+                    string sqlQueryText = "SELECT MAX(invoice_number) FROM invoice";
+
+                    using (MySqlCommand sqlCommand = new MySqlCommand(sqlQueryText, mySqlConnection))
+                    {
+                        using (MySqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            while (sqlDataReader.Read())
+                            {
+                                InvoiceNum = int.Parse(sqlDataReader[0].ToString());
+                            }
+                        }
+                    }
+
+                    mySqlConnection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Data retrieval failed.");
+                Console.WriteLine(ex.ToString());
+            }
+
+            return InvoiceNum + 1;
         }
 
         private int GetNextCommunicationNum()

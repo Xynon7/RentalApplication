@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.ListingsPage">
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
+        <StackLayout x:Name="layout">
             <Label Text="All items listed" />
             <Label x:Name="ListingsDisplay"/>
-            <Button Text="Return to Lessor Hub" Clicked="OnReturnClicked"/>
-            <Button Text="Home" Clicked="OnHomeClicked"/>
+           
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

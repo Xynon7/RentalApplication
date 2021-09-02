@@ -30,6 +30,7 @@ namespace RentalApp
 			{
 				Title = "Please pick a photo"
 			});
+			
 			var stream = await result.OpenReadAsync();
 
 			resultImage.Source = ImageSource.FromStream(() => stream);

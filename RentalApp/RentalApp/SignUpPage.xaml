@@ -4,19 +4,19 @@
              x:Class="RentalApp.SignUpPage">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="8"  BackgroundColor="#FAF0EB" >
+            <StackLayout Padding="8"  BackgroundColor="White" >
 
-                
+                <Label Text="Sign Up" TextColor="#1D9E91" FontAttributes="Bold" FontSize="Title"/>
 
-            <Label Text="Date of Birth:" TextColor="#228E7F"/>
-            <DatePicker MinimumDate="01/01/1900" MaximumDate="12/23/2010" DateSelected="OnDateSelected"/>
+                <Label Text="Date of Birth:" TextColor="#228E7F"/>
+            <DatePicker MinimumDate="01/01/1900" MaximumDate="12/23/2010" DateSelected="OnDateSelected" Date="12/23/1999" />
 
-                
-                <Entry Text="{Binding Username}" Placeholder="Username" PlaceholderColor="#228E7F" Completed="Username_Completed"/>
-                <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="#228E7F" Completed="Email_Completed"/>
-                <Entry Text="{Binding Password}" Placeholder="Password" PlaceholderColor="#228E7F" Completed="Password_Completed"/>
 
-                <Entry Placeholder="Phone Number" PlaceholderColor="#228E7F" Completed="PhoneNumber_Completed"/>
+                <Entry Text="{Binding Username}" Placeholder="Username" PlaceholderColor="#25B6D3" FontAttributes="Bold" Completed="Username_Completed"/>
+                <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="#25B6D3" FontAttributes=" Bold" Completed="Email_Completed"/>
+                <Entry Text="{Binding Password}" Placeholder="Password" PlaceholderColor="#25B6D3" FontAttributes=" Bold" Completed="Password_Completed"/>
+
+                <Entry Placeholder="Phone Number" PlaceholderColor="#25B6D3" FontAttributes=" Bold" Completed="PhoneNumber_Completed"/>
 
 
 
@@ -24,7 +24,8 @@
             
             
             <Button Text="Continue" 
-                    Clicked="OnSignUpAppClicked"/>
+                    Clicked="OnSignUpAppClicked"
+                    BorderColor="#FBAE33" CornerRadius="20" BorderWidth="1.5"  TextColor="#FBAE33" FontAttributes="Bold"/>
 
 
 

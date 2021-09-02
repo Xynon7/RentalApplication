@@ -47,5 +47,9 @@ namespace RentalApp
         {
             await Navigation.PushAsync(new HomeHelp());
         }
+        async void OnLocationClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LocationPage());
+        }
     }
 }

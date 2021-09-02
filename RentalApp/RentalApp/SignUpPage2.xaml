@@ -3,24 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalApp.SignUpPage2">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#FAF0EB" Padding="10" >
-            <Label Text="State ID"  TextColor="#228E7F"/>
+        <StackLayout BackgroundColor="White" Padding="10" >
+            <Label Text="Sign Up continued" TextColor="#1D9E91" FontAttributes="Bold" FontSize="Title"/>
+            <!--<Label Text="State ID"  TextColor="#228E7F"/>
             <Label Text="Upload Image of above *figure out how to do this*" TextColor="#228E7F"/>
-            <Entry Text="{Binding SSN}" Placeholder="SSN" PlaceholderColor="#228E7F"/>
+            <Entry Text="{Binding SSN}" Placeholder="SSN" PlaceholderColor="#228E7F"/>-->
             <Button Text="Add a location"
-                    Clicked="OnAddLoactionClicked" TranslationY="20" BackgroundColor="White" TextColor="#707070"/>
+                    Clicked="OnAddLoactionClicked" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold" />
             <Button Text="Terms and Conditions"
-                    Clicked="OnTermsClicked"    TranslationY="20" 
-                    BackgroundColor="White" TextColor="#707070"/>
+                    Clicked="OnTermsClicked"   BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold" />
             <Button Text="Privacy Policy"
-                    Clicked="OnPrivacyClicked" TranslationY="20"
-                    BackgroundColor="White" TextColor="#707070"/>
+                    Clicked="OnPrivacyClicked" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold" />
             <Button Text="Standards Policy"
-                    Clicked="OnStandardsClicked" TranslationY="20"
-                    BackgroundColor="White" TextColor="#707070"/>
+                    Clicked="OnStandardsClicked" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold" />
             <Button Text="Submit"
-                    Clicked="OnSubmitClicked" TranslationY="20"
-                    BackgroundColor="White" TextColor="#707070"/>
+                    Clicked="OnSubmitClicked" BackgroundColor= "White" CornerRadius="20" BorderWidth="1.5" BorderColor="#25B6D3" TextColor="#25B6D3" FontAttributes="Bold" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

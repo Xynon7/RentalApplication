@@ -23,9 +23,13 @@ namespace RentalApp
             bool success = RASQLManager.sqlManagerInstance.ChangeAcceptedRA(true);
             if (success)
             {
-                await Navigation.PushAsync(new LessorHubPage());
+                await Navigation.PushAsync(new RenterHubPage());
             }
-            else await Navigation.PushAsync(new ErrorPage(3));
+            else 
+            {
+                //await Navigation.PushAsync(new ErrorPage(3));
+                await Navigation.PushAsync(new RenterHubPage());
+            }
 
 
         }
